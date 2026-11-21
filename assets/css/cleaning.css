@@ -412,7 +412,7 @@ body.theme-cleaning {
   border-radius: var(--r-lg);
   overflow: hidden;
   background: var(--paper-soft);
-  box-shadow: 0 34px 60px -40px rgba(3, 105, 161, 0.75);
+  box-shadow: 0 22px 46px -34px rgba(3, 105, 161, 0.6);
 }
 
 .hero-photo img {
@@ -697,6 +697,7 @@ body.theme-cleaning {
 
 .rate-table {
   margin-top: 14px;
+  max-width: 780px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r);

@@ -297,14 +297,13 @@ body.theme-academy {
   overflow: hidden;
 }
 
-.page-hero::after {
+.page-hero .wrap::after {
   content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: block;
+  width: 96px;
   height: 3px;
-  background: linear-gradient(90deg, var(--gold) 0 96px, transparent 96px);
+  margin-top: clamp(26px, 3.4vw, 40px);
+  background: var(--gold);
 }
 
 .page-hero-grid {
@@ -321,7 +320,7 @@ body.theme-academy {
   font-size: 11.5px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-35);
+  color: var(--ink-55);
   margin-bottom: 22px;
 }
 
@@ -984,7 +983,7 @@ body.theme-academy {
 .a-step .s-when {
   margin-top: 6px;
   font-size: 11.5px;
-  color: var(--ink-35);
+  color: var(--ink-55);
   letter-spacing: 0.04em;
 }
 
@@ -1305,7 +1304,7 @@ body.theme-academy {
 }
 
 .a-principle:nth-child(2) {
-  border-top-color: var(--gold);
+  border-top-color: var(--navy);
 }
 
 .a-principle .pr-no {
@@ -1692,6 +1691,26 @@ body.theme-academy {
   color: var(--ink-55);
   border-top: 1px solid var(--line-soft);
   padding-top: 14px;
+}
+
+/* modal summary: keep long labels inside the card */
+
+.theme-academy .modal-summary div {
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.theme-academy .modal-summary dt {
+  flex: 0 1 auto;
+  max-width: 62%;
+  line-height: 1.6;
+}
+
+.theme-academy .modal-summary dd {
+  flex: 0 0 auto;
+  max-width: 38%;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 /* steps */
