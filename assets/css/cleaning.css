@@ -134,7 +134,12 @@ body.theme-cleaning {
   align-items: flex-end;
   line-height: 1.15;
   margin-left: auto;
-  margin-right: 4px;
+}
+
+@media (min-width: 960px) {
+  .head-phone {
+    margin-left: 20px;
+  }
 }
 
 .head-phone strong {
@@ -241,8 +246,7 @@ body.theme-cleaning {
 
 .hero h1 em {
   font-style: normal;
-  color: var(--sky-deep);
-  background: linear-gradient(transparent 64%, rgba(249, 115, 22, 0.3) 64%);
+  color: var(--amber-deep);
 }
 
 .hero-sub {
@@ -581,6 +585,7 @@ body.theme-cleaning {
 }
 
 .price-card--main {
+  padding-top: 30px;
   border-color: var(--sky-line);
   box-shadow: 0 22px 44px -34px rgba(3, 105, 161, 0.8);
 }
@@ -721,7 +726,7 @@ body.theme-cleaning {
 
 .rate-table td:nth-child(2),
 .rate-table th:nth-child(2) {
-  text-align: right;
+  text-align: center;
 }
 
 .rate-table td:last-child {
