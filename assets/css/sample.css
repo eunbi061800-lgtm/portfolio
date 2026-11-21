@@ -1,0 +1,326 @@
+/* ==========================================================================
+   Studio Naru — sample pages shared chrome
+   (theme tokens · section type · map · footer variants · sample-only bits)
+   ========================================================================== */
+
+body.theme-beauty {
+  --paper: #fbf8f2;
+  --paper-soft: #f1eade;
+  --ink: #2a241d;
+  --ink-70: rgba(42, 36, 29, 0.72);
+  --ink-55: rgba(42, 36, 29, 0.55);
+  --ink-35: rgba(42, 36, 29, 0.34);
+  --line: rgba(42, 36, 29, 0.14);
+  --line-soft: rgba(42, 36, 29, 0.08);
+  --clay: #a9765a;
+  --clay-soft: #e9dacd;
+  --sand: #e9dfce;
+  --olive: #55604f;
+}
+
+body.theme-consulting {
+  --paper: #f5f6f7;
+  --paper-soft: #e9ecef;
+  --ink: #111a26;
+  --ink-70: rgba(17, 26, 38, 0.72);
+  --ink-55: rgba(17, 26, 38, 0.55);
+  --ink-35: rgba(17, 26, 38, 0.32);
+  --line: rgba(17, 26, 38, 0.14);
+  --line-soft: rgba(17, 26, 38, 0.07);
+  --clay: #9c7a4c;
+  --clay-soft: #e6dccb;
+  --sand: #dfe3e6;
+  --olive: #16233a;
+}
+
+/* ---------- section type for samples ---------- */
+
+.s-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-55);
+}
+
+.s-label::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.s-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(27px, 3.6vw, 44px);
+  line-height: 1.42;
+  letter-spacing: -0.03em;
+}
+
+.s-lead {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ink-55);
+}
+
+/* ---------- map component ---------- */
+
+.map-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #e8e3d6;
+  border: 1px solid var(--line);
+  min-height: 320px;
+}
+
+.theme-consulting .map-card {
+  background: #e2e5e7;
+}
+
+.map-canvas {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(17, 26, 38, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 26, 38, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.map-canvas .river {
+  position: absolute;
+  left: -20%;
+  top: 62%;
+  width: 150%;
+  height: 170px;
+  background: #cfdbe0;
+  border-radius: 50%;
+  transform: rotate(-8deg);
+  opacity: 0.8;
+}
+
+.map-canvas .park {
+  position: absolute;
+  width: 200px;
+  height: 140px;
+  background: #d7ddc8;
+  border-radius: 40% 60% 45% 55%;
+  left: 8%;
+  top: 10%;
+  opacity: 0.85;
+}
+
+.map-canvas .road {
+  position: absolute;
+  background: #fbf8f2;
+  box-shadow: 0 0 0 1px rgba(17, 26, 38, 0.05);
+}
+
+.map-canvas .road.r1 {
+  left: 0;
+  right: 0;
+  top: 44%;
+  height: 14px;
+  transform: rotate(-3deg);
+}
+
+.map-canvas .road.r2 {
+  top: 0;
+  bottom: 0;
+  left: 57%;
+  width: 11px;
+  transform: rotate(6deg);
+}
+
+.map-canvas .road.r3 {
+  left: 0;
+  right: 0;
+  top: 24%;
+  height: 6px;
+  opacity: 0.75;
+}
+
+.map-pin {
+  position: absolute;
+  left: 54%;
+  top: 44%;
+  transform: translate(-50%, -100%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.map-pin .bubble {
+  background: var(--ink);
+  color: #fbf8f2;
+  font-size: 11.5px;
+  padding: 8px 13px;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-shadow: 0 10px 22px -12px rgba(0, 0, 0, 0.55);
+  position: relative;
+}
+
+.map-pin .bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--ink);
+}
+
+.map-pin .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--clay);
+  border: 3px solid #fbf8f2;
+  box-shadow: 0 0 0 5px rgba(169, 118, 90, 0.2);
+}
+
+.map-actions {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.map-actions .btn {
+  background: rgba(251, 248, 242, 0.96);
+  color: var(--ink);
+  border: 1px solid rgba(17, 26, 38, 0.08);
+  font-size: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 8px 18px -14px rgba(0, 0, 0, 0.5);
+}
+
+.map-actions .btn svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ---------- info table ---------- */
+
+.info-rows {
+  border-top: 1px solid var(--line);
+}
+
+.info-rows > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 13.5px;
+}
+
+.info-rows dt,
+.info-rows .k {
+  color: var(--ink-55);
+  flex: none;
+}
+
+.info-rows dd,
+.info-rows .v {
+  margin: 0;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* ---------- contact pill row ---------- */
+
+.contact-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contact-pills .btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ---------- footer (light) ---------- */
+
+.site-footer--light {
+  background: var(--paper-soft);
+  color: var(--ink-55);
+}
+
+.site-footer--light .footer-top {
+  border-bottom-color: var(--line);
+}
+
+.site-footer--light .footer-brand .brand-mark {
+  border-color: var(--ink-35);
+  color: var(--ink);
+}
+
+.site-footer--light .footer-brand .brand-text strong {
+  color: var(--ink);
+}
+
+.site-footer--light .footer-brand .brand-text em,
+.site-footer--light .footer-tagline,
+.site-footer--light .footer-col a,
+.site-footer--light .footer-bottom {
+  color: var(--ink-55);
+}
+
+.site-footer--light .footer-col h4 {
+  color: var(--ink-35);
+}
+
+.site-footer--light .footer-col a:hover {
+  color: var(--ink);
+}
+
+.sample-credit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--ink-55);
+}
+
+.sample-credit a {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+}
+
+.sample-credit a:hover {
+  border-color: var(--ink);
+}
+
+/* ---------- misc ---------- */
+
+.rule {
+  height: 1px;
+  background: var(--line);
+}
+
+@media (max-width: 720px) {
+  .map-card {
+    min-height: 280px;
+  }
+
+  .site-footer--light .footer-top {
+    gap: 28px;
+  }
+}
