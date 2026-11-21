@@ -33,6 +33,7 @@ body.theme-academy {
   background: var(--ivory);
   color: var(--navy);
   letter-spacing: -0.005em;
+  overflow-wrap: break-word;
 }
 
 .theme-academy .site-header {
@@ -646,6 +647,28 @@ body.theme-academy {
 
   .a-hero-media .frame img {
     aspect-ratio: 16 / 11;
+  }
+
+  .sample-ribbon .wrap {
+    min-height: 36px;
+    gap: 10px;
+  }
+
+  .sample-ribbon strong {
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+  }
+
+  .sample-ribbon a {
+    font-size: 11px;
+  }
+
+  .a-head {
+    gap: 18px;
+  }
+
+  .a-side-note {
+    max-width: none;
   }
 }
 
