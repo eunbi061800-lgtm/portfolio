@@ -697,7 +697,6 @@ body.theme-cleaning {
 
 .rate-table {
   margin-top: 14px;
-  max-width: 780px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r);
@@ -706,8 +705,25 @@ body.theme-cleaning {
 
 .rate-table table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 13px;
+}
+
+.rate-table th:nth-child(1),
+.rate-table td:nth-child(1) {
+  width: 26%;
+}
+
+.rate-table th:nth-child(2),
+.rate-table td:nth-child(2) {
+  width: 44%;
+  text-align: left;
+}
+
+.rate-table th:nth-child(3),
+.rate-table td:nth-child(3) {
+  width: 30%;
 }
 
 .rate-table th,
@@ -727,7 +743,7 @@ body.theme-cleaning {
 
 .rate-table td:nth-child(2),
 .rate-table th:nth-child(2) {
-  text-align: center;
+  text-align: left;
 }
 
 .rate-table td:last-child {
