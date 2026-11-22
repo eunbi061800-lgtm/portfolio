@@ -1220,3 +1220,141 @@
     min-height: 260px;
   }
 }
+
+/* ==========================================================================
+   2026-11 · 모션 (호흡하는 히어로 · 켄번즈 · 웨이브 디바이더 · 버튼 광택)
+   ========================================================================== */
+
+@keyframes pilKenBurns {
+  0% { transform: scale(1) translate3d(0, 0, 0); }
+  100% { transform: scale(1.09) translate3d(-1.5%, -1.5%, 0); }
+}
+
+@keyframes pilBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.045); }
+}
+
+@keyframes pilShine {
+  0% { transform: translateX(-140%) skewX(-14deg); }
+  55%, 100% { transform: translateX(240%) skewX(-14deg); }
+}
+
+@keyframes pilDrift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-26px, 3px, 0); }
+}
+
+@keyframes pilLift {
+  0% { opacity: 0; transform: translateY(22px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.b-hero-visual .frame {
+  overflow: hidden;
+}
+
+.b-hero-visual img {
+  animation: pilKenBurns 26s ease-in-out infinite alternate;
+}
+
+.b-hero-stamp {
+  animation: pilBreathe 6.5s ease-in-out infinite;
+}
+
+.b-hero-vertical {
+  animation: pilDrift 14s ease-in-out infinite;
+}
+
+/* 버튼 광택 */
+
+.theme-beauty .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-beauty .btn::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 34%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  pointer-events: none;
+  animation: pilShine 6.2s ease-in-out 1.4s infinite;
+}
+
+.theme-beauty .btn-line::after {
+  background: linear-gradient(100deg, transparent, rgba(169, 118, 90, 0.28), transparent);
+}
+
+/* 카드 부상 */
+
+.program-card,
+.b-review,
+.teacher-mini,
+.ticket-card {
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-card:hover .program-media {
+  box-shadow: 0 26px 44px -34px rgba(60, 44, 32, 0.45);
+}
+
+.b-review:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px -34px rgba(60, 44, 32, 0.4);
+}
+
+.teacher-mini:hover,
+.ticket-card:hover {
+  box-shadow: 0 26px 48px -38px rgba(60, 44, 32, 0.45);
+}
+
+/* 웨이브 디바이더 */
+
+.wave-sep {
+  display: block;
+  line-height: 0;
+  color: var(--paper-soft);
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.wave-sep--flip {
+  background: var(--paper-soft);
+  color: var(--paper);
+}
+
+.wave-sep svg {
+  display: block;
+  width: 100%;
+  height: clamp(32px, 4.4vw, 58px);
+}
+
+.wave-sep path {
+  animation: pilDrift 18s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.wave-sep--flip path {
+  animation-direction: reverse;
+}
+
+@media (max-width: 900px) {
+  .b-hero-visual img {
+    animation-duration: 32s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .b-hero-visual img,
+  .b-hero-stamp,
+  .b-hero-vertical,
+  .wave-sep path {
+    animation: none;
+  }
+}
