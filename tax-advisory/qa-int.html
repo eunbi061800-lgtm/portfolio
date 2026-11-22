@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>QA int</title>
+<style>html,body{margin:0;background:#3a3a3a}iframe{display:block;border:0;background:#fff}</style>
+</head><body>
+<iframe id="f" aria-hidden="true" tabindex="-1" src="index.html"></iframe>
+<script>
+  var q = new URLSearchParams(location.search);
+  var p = q.get('p') || 'index.html';
+  var w = q.get('w') || 'pc';
+  var f = document.getElementById('f');
+  f.style.width = w === 'mo' ? '390px' : '1280px';
+  f.style.height = w === 'mo' ? '844px' : '800px';
+  f.src = p + '?v=' + (q.get('v') || Date.now());
+</script>
+</body></html>
