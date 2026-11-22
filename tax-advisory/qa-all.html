@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>QA all</title>
+<style>body{margin:0;font:13px/1.5 monospace;background:#111;color:#ddd}pre{padding:12px;white-space:pre-wrap}iframe{position:absolute;left:-9999px;top:0;border:0}</style>
+</head><body>
+<pre id="out">measuring…</pre>
+<script>
+const pages = ['index.html','about.html','team.html','contact.html','tax.html','consulting.html','cases.html','calculator.html','insights.html','faq.html'];
+const v = Date.now();
+const results = [];
+function measure(src, w, h) {
+  return new Promise(res => {
+    const f = document.createElement('iframe');
+    f.style.width = w + 'px'; f.style.height = h + 'px';
+    f.src = src + '?v=' + v;
+    f.onload = () => {
+      setTimeout(() => {
+        try {
+          const d = f.contentDocument, win = f.contentWindow;
+          const imgs = [...d.images].map(i => ({src: i.getAttribute('src'), ok: i.complete && i.naturalWidth > 0}));
+          res({
+            page: src, width: w,
+            scrollW: d.documentElement.scrollWidth,
+            clientW: d.documentElement.clientWidth,
+            bodyScrollW: d.body.scrollWidth,
+            overflow: d.documentElement.scrollWidth > d.documentElement.clientWidth + 1,
+            brokenImgs: imgs.filter(i => !i.ok).map(i => i.src),
+            imgCount: imgs.length,
+            docH: d.documentElement.scrollHeight,
+            title: d.title
+          });
+        } catch (e) { res({page: src, width: w, error: String(e)}); }
+        f.remove();
+      }, 1200);
+    };
+    document.body.appendChild(f);
+  });
+}
+(async () => {
+  for (const p of pages) {
+    results.push(await measure(p, 1280, 800));
+    results.push(await measure(p, 390, 844));
+  }
+  document.getElementById('out').textContent = JSON.stringify(results, null, 1);
+  window.__qa = results;
+})();
+</script>
+</body></html>
