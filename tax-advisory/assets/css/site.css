@@ -949,6 +949,16 @@ textarea{min-height:118px;resize:vertical}
   .nav-link{padding:9px 9px;font-size:13.5px}
   .header-tel{display:none}
 }
+@media (max-width:760px){
+  .header-actions .btn{display:none}
+  .brand{min-width:0}
+  .brand-text{min-width:0}
+  .brand-text span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px}
+}
+@media (max-width:720px){
+  .reveal[data-dir="left"],.reveal[data-dir="right"]{transform:translateY(24px)}
+  .reveal.in[data-dir]{transform:none}
+}
 @media (max-width:960px){
   .nav{display:none}
   .menu-btn{display:inline-flex}
