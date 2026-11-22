@@ -2839,3 +2839,19 @@ body.theme-academy {
 .a-hero-facts dd {
   white-space: nowrap;
 }
+
+/* 신청 완료 요약: 긴 항목명이 카드 밖으로 넘치지 않게 */
+.form-success dl div {
+  flex-wrap: wrap;
+}
+
+.form-success dt {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.form-success dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

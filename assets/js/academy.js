@@ -244,7 +244,7 @@
 
       var rows = [];
       fields.forEach(function (field) {
-        if (!field.name) return;
+        if (!field.name || field.type === "checkbox") return;
         var value = readValue(field);
         if (!value) return;
         rows.push([labelOf(field), value]);
