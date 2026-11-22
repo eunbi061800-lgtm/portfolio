@@ -819,3 +819,404 @@
     font-size: 9.5px;
   }
 }
+
+/* ==========================================================================
+   2026-11 · 5섹션 압축 보강 (hero 수치 · 후기 · 시간표/체험가 · 예약 절차)
+   ========================================================================== */
+
+/* hero stats */
+
+.b-stats {
+  margin-top: clamp(34px, 4.2vw, 58px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border-block: 1px solid var(--line);
+}
+
+.b-stats div {
+  background: var(--paper);
+  padding: clamp(18px, 2.2vw, 26px) clamp(14px, 1.8vw, 22px);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.b-stats strong {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.7vw, 34px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.b-stats strong small {
+  font-size: 0.52em;
+  margin-left: 2px;
+  color: var(--ink-55);
+}
+
+.b-stats span {
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: var(--ink-55);
+}
+
+/* 프로그램 사이 인용 한 줄 */
+
+.b-programs-quote {
+  margin-top: clamp(34px, 4.4vw, 56px);
+  padding: clamp(22px, 3vw, 32px) 0;
+  border-block: 1px solid var(--line-soft);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 26px;
+}
+
+.b-programs-quote p {
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.9vw, 23px);
+  line-height: 1.65;
+  letter-spacing: -0.02em;
+}
+
+.b-programs-quote span {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-35);
+}
+
+/* 강사진 요약 */
+
+.teacher-mini {
+  margin-top: clamp(28px, 3.6vw, 44px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  align-items: center;
+  padding: clamp(20px, 2.6vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--paper-soft);
+}
+
+.teacher-mini-photo {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.teacher-mini-body h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-top: 12px;
+}
+
+.teacher-mini-body h3 small {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink-55);
+  margin-left: 8px;
+}
+
+.teacher-mini .teacher-quote {
+  margin-top: 12px;
+  font-family: var(--serif);
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--ink-70);
+}
+
+.teacher-mini .credentials {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+}
+
+.teacher-mini .credentials li {
+  font-size: 12px;
+  color: var(--ink-55);
+}
+
+/* 수강 후기 */
+
+.b-reviews {
+  margin-top: clamp(34px, 4.4vw, 56px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 22px);
+}
+
+.b-review {
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 2px;
+  padding: clamp(20px, 2.4vw, 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.b-review p {
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: var(--ink-70);
+}
+
+.b-review footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 11.5px;
+  color: var(--ink-45);
+}
+
+.b-review footer strong {
+  font-size: 12.5px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* 시간표 + 체험가 */
+
+.b-schedule {
+  padding: clamp(64px, 8vw, 112px) 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.b-schedule-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.68fr);
+  gap: clamp(22px, 3.2vw, 42px);
+  align-items: start;
+}
+
+.b-schedule .timetable-wrap {
+  margin-top: 0;
+}
+
+.timetable-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: 14px 22px;
+  border-top: 1px solid var(--line-soft);
+  background: var(--paper);
+  font-size: 11.5px;
+  color: var(--ink-55);
+}
+
+.timetable-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.timetable-legend .lg {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-35);
+  flex: none;
+}
+
+.timetable-legend .lg-on {
+  background: color-mix(in srgb, var(--clay) 55%, transparent);
+  border-color: transparent;
+}
+
+.timetable-legend .lg-pv {
+  background: var(--ink);
+  border-color: transparent;
+}
+
+.ticket-card {
+  background: var(--ink);
+  color: #f7f1e8;
+  border-radius: 3px;
+  padding: clamp(24px, 3vw, 34px);
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-card .s-label {
+  color: rgba(247, 241, 232, 0.55);
+}
+
+.ticket-card .s-label::before {
+  background: currentColor;
+}
+
+.ticket-kicker {
+  margin-top: 16px;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  color: rgba(247, 241, 232, 0.62);
+}
+
+.ticket-price {
+  margin-top: 6px;
+  font-family: var(--serif);
+  font-size: clamp(38px, 4.4vw, 52px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.ticket-price small {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 4px;
+  color: rgba(247, 241, 232, 0.7);
+}
+
+.ticket-desc {
+  margin-top: 12px;
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: rgba(247, 241, 232, 0.66);
+}
+
+.ticket-list {
+  margin-top: 20px;
+  border-top: 1px solid rgba(247, 241, 232, 0.16);
+}
+
+.ticket-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(247, 241, 232, 0.1);
+  font-size: 12px;
+}
+
+.ticket-list span {
+  color: rgba(247, 241, 232, 0.5);
+  flex: none;
+}
+
+.ticket-list strong {
+  font-weight: 500;
+  text-align: right;
+}
+
+.ticket-card .btn-light {
+  margin-top: 22px;
+}
+
+.ticket-note {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.7;
+  color: rgba(247, 241, 232, 0.45);
+  text-align: center;
+}
+
+/* 예약 절차 + 위치 임베드 */
+
+.reserve-steps {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.reserve-steps li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--ink-55);
+}
+
+.reserve-steps li span {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--clay);
+}
+
+.reserve-steps strong {
+  display: block;
+  font-size: 13.5px;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.b-reserve .reserve-channels {
+  margin-top: 20px;
+}
+
+.visit-embed {
+  margin-top: clamp(40px, 5vw, 64px);
+  padding-top: clamp(32px, 4vw, 52px);
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  gap: clamp(26px, 3.6vw, 52px);
+  align-items: start;
+  scroll-margin-top: 90px;
+}
+
+.visit-embed .map-card {
+  min-height: 360px;
+}
+
+@media (max-width: 1000px) {
+  .b-schedule-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .b-reviews {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .visit-embed {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .b-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teacher-mini {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .teacher-mini-photo {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 720px) {
+  .b-schedule {
+    padding: 56px 0;
+  }
+
+  .teacher-mini .credentials {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .visit-embed .map-card {
+    min-height: 260px;
+  }
+}

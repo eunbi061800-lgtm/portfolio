@@ -698,6 +698,109 @@ body.nav-open{overflow:hidden}
   .gal-type{padding:14px}
   .gal-type strong{font-size:14.5px}
 }
+
+/* ==========================================================================
+   2026-11 · 5섹션 압축 보강 (스토리 스트립 · 갤러리 블록)
+   ========================================================================== */
+.story-strip{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:clamp(28px,4.5vw,64px);
+  align-items:start;
+  margin-top:clamp(36px,4.6vw,60px);
+  padding-top:clamp(30px,3.8vw,46px);
+  border-top:1px solid var(--line);
+}
+.story-strip-quote .label{margin-bottom:14px}
+.story-strip-quote blockquote{
+  font-family:var(--serif-ko);
+  font-size:clamp(17px,1.9vw,22px);
+  line-height:1.75;
+  letter-spacing:-.02em;
+  color:var(--ink-75);
+}
+.story-strip-list{display:grid;gap:0;border-top:1px solid var(--line-soft)}
+.story-strip-list li{
+  display:grid;grid-template-columns:30px 1fr;gap:12px;
+  padding:14px 0;border-bottom:1px solid var(--line-soft);
+  font-size:12.5px;line-height:1.75;color:var(--ink-60);
+}
+.story-strip-list .num{font-family:var(--serif-en);font-size:13px;color:var(--clay);letter-spacing:.04em}
+.story-strip-list strong{display:block;font-size:13.5px;font-weight:600;color:var(--espresso);letter-spacing:-.01em;margin-bottom:2px}
+
+.gallery-block{
+  margin-top:clamp(44px,5.6vw,76px);
+  padding:clamp(28px,3.6vw,52px) clamp(18px,3vw,44px);
+  background:var(--cream-2);
+  border-radius:8px;
+}
+.gallery-block .reviews{border-top-color:var(--line)}
+
+/* ==========================================================================
+   2026-11 · 모션 (따뜻한 빛 일렁임 · 카드 플로팅 · 버튼 광택)
+   ========================================================================== */
+@keyframes cafeGlow{
+  0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.5}
+  50%{transform:translate3d(-4%,3%,0) scale(1.14);opacity:.78}
+}
+@keyframes cafeGlow2{
+  0%,100%{transform:translate3d(0,0,0) scale(1.05);opacity:.4}
+  50%{transform:translate3d(3%,-3%,0) scale(1);opacity:.66}
+}
+@keyframes cafeFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+}
+@keyframes cafeShine{
+  0%{transform:translateX(-140%) skewX(-14deg)}
+  55%,100%{transform:translateX(240%) skewX(-14deg)}
+}
+@keyframes cafeStir{
+  0%,100%{transform:rotate(0deg)}
+  50%{transform:rotate(6deg)}
+}
+
+.hero::after{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:520px;height:520px;right:-140px;top:-160px;border-radius:50%;
+  background:radial-gradient(circle,rgba(184,107,67,.20),transparent 68%);
+  filter:blur(50px);
+  animation:cafeGlow 17s ease-in-out infinite;
+}
+.hero-inner{position:relative;z-index:1}
+.oven-strip{position:relative;z-index:1;background:rgba(250,247,242,.55)}
+.oven-strip .t{transition:color .4s var(--ease)}
+.oven-strip li:hover .t{color:var(--clay-deep)}
+
+.hero-figure .stamp svg{animation:cafeStir 14s ease-in-out infinite;transform-origin:50% 50%}
+
+.sig-card{animation:cafeFloat 7s ease-in-out infinite}
+.sig-card:nth-child(2){animation-duration:8.4s;animation-delay:-1.6s}
+.sig-card:nth-child(3){animation-duration:9.2s;animation-delay:-3.2s}
+.sig-card:hover{animation-play-state:paused}
+
+.menu-item{transition:background .35s var(--ease),padding-left .35s var(--ease)}
+.menu-item:hover{background:rgba(255,255,255,.55)}
+
+.btn{position:relative;overflow:hidden}
+.btn::after{
+  content:"";position:absolute;inset:0 auto 0 0;width:34%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);
+  pointer-events:none;animation:cafeShine 5.6s ease-in-out 1.4s infinite;
+}
+.btn--line::after,.btn--outline-cream::after{background:linear-gradient(100deg,transparent,rgba(184,107,67,.28),transparent)}
+
+.gal-item img{transition:transform 1.4s var(--ease),filter .8s var(--ease)}
+.gal-item:hover img{transform:scale(1.06);filter:saturate(1.05)}
+
+@media (max-width:860px){
+  .story-strip{grid-template-columns:1fr}
+  .sig-card{animation:none}
+  .hero::after{width:340px;height:340px;filter:blur(40px)}
+}
+@media (max-width:720px){
+  .gallery-block{padding:24px 16px}
+}
 </style>
 </head>
 <body class="theme-cafe">
@@ -732,10 +835,9 @@ body.nav-open{overflow:hidden}
     </a>
 
     <nav class="nav" aria-label="주요 메뉴">
-      <a href="#story">스토리</a>
-      <a href="#menu">메뉴</a>
-      <a href="#space">공간</a>
-      <a href="#gallery">갤러리</a>
+      <a href="#menu">시그니처 메뉴</a>
+      <a href="#space">공간·오븐</a>
+      <a href="#reserve">단체·답례품</a>
       <a href="#visit">오시는 길</a>
     </nav>
 
@@ -749,11 +851,9 @@ body.nav-open{overflow:hidden}
 
 <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
   <div class="wrap">
-    <a href="#story">스토리 <span>Story</span></a>
-    <a href="#menu">메뉴 <span>Menu</span></a>
-    <a href="#space">공간 <span>Space</span></a>
-    <a href="#gallery">갤러리 <span>Gallery</span></a>
-    <a href="#reserve">예약 <span>Order</span></a>
+    <a href="#menu">시그니처 메뉴 <span>Menu</span></a>
+    <a href="#space">공간·오븐 타임 <span>Space</span></a>
+    <a href="#reserve">단체·답례품 주문 <span>Order</span></a>
     <a href="#visit">오시는 길 <span>Visit</span></a>
     <p class="mobile-nav-meta">밀과 아침 · WHEAT &amp; DAWN<br>인천 연수구 컨벤시아대로 123, 1층<br>매일 08:00 – 21:00</p>
   </div>
@@ -825,60 +925,25 @@ body.nav-open{overflow:hidden}
         </ul>
       </div>
     </div>
-  </section>
-
-  <!-- ============================ STORY ============================ -->
-  <section class="section story" id="story">
-    <div class="wrap story-inner">
-      <figure class="story-figure" data-reveal>
-        <div class="arch">
-          <img src="cafe-sourdough.jpg" alt="린넨 천 위에 놓인 사워도우 단면, 진한 껍질과 촉촉한 속" width="1200" height="960" loading="lazy">
-        </div>
-        <figcaption>
-          <span>Our sourdough, 8 years old</span>
-          <span>2018 — 2026</span>
-        </figcaption>
-      </figure>
-
-      <div class="story-copy">
-        <span class="label" data-reveal>Our story</span>
-        <h2 class="title" data-reveal>빵 굽는 시간에 맞춰<br>문을 여는 <em>가게</em>.</h2>
-        <p class="lead" data-reveal>
-          2018년 겨울, 6평 남짓한 공간에 오븐 하나로 시작했습니다.
-          지금도 사워도우 발효종은 그때 만든 것을 이어 쓰고 있고,
-          원두는 매달 두세 번 직접 마셔 보고 두 가지를 고릅니다.
-          손님이 가장 많은 시간보다, 빵이 가장 맛있는 시간을 기준으로 하루를 짭니다.
-        </p>
-
-        <blockquote class="story-quote" data-reveal>
-          “서두르지 않아도 되는 빵집이 되고 싶었습니다.<br>
-          앉아서 빵이 식는 걸 기다릴 수 있는 곳.”
-        </blockquote>
-
-        <div class="principles">
-          <article class="principle" data-reveal>
-            <span class="num">01</span>
-            <div>
-              <h3>매일 아침 굽는 사워도우 <span>Baked daily</span></h3>
-              <p>8년째 이어 온 발효종으로 하루 두 번 굽습니다. 그날 구운 빵은 그날 다 나가고, 남으면 다음 날 팔지 않습니다.</p>
-            </div>
-          </article>
-          <article class="principle" data-reveal data-reveal-delay="1">
-            <span class="num">02</span>
-            <div>
-              <h3>직접 고르는 스페셜티 원두 <span>Specialty coffee</span></h3>
-              <p>산미가 도는 원두와 묵직한 원두, 두 가지를 준비합니다. 아메리카노는 주문할 때 어느 쪽인지 여쭙습니다.</p>
-            </div>
-          </article>
-          <article class="principle" data-reveal data-reveal-delay="2">
-            <span class="num">03</span>
-            <div>
-              <h3>조금 느린 공간 <span>Slow space</span></h3>
-              <p>32석, 테이블 간격은 1.2m. 창가 자리는 비워 두고, 오래 앉아 있어도 눈치 주지 않습니다.</p>
-            </div>
-          </article>
-        </div>
+    <div class="wrap story-strip">
+      <div class="story-strip-quote" data-reveal>
+        <span class="label">Our story · since 2018</span>
+        <blockquote>“서두르지 않아도 되는 빵집이 되고 싶었습니다.<br>앉아서 빵이 식는 걸 기다릴 수 있는 곳.”</blockquote>
       </div>
+      <ul class="story-strip-list">
+        <li data-reveal>
+          <span class="num">01</span>
+          <div><strong>매일 아침 굽는 사워도우</strong>8년째 이어 온 발효종으로 하루 두 번. 그날 구운 빵만 팝니다.</div>
+        </li>
+        <li data-reveal data-reveal-delay="1">
+          <span class="num">02</span>
+          <div><strong>직접 고르는 스페셜티 원두</strong>산미와 묵직함, 두 가지를 준비하고 주문할 때 여쭙습니다.</div>
+        </li>
+        <li data-reveal data-reveal-delay="2">
+          <span class="num">03</span>
+          <div><strong>조금 느린 공간</strong>32석, 테이블 간격 1.2m. 창가 자리는 비워 둡니다.</div>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -956,6 +1021,7 @@ body.nav-open{overflow:hidden}
           <div class="menu-tabs" role="tablist" aria-label="메뉴 구분">
             <button class="menu-tab" type="button" role="tab" id="tab-coffee" aria-controls="panel-coffee" aria-selected="true">커피 · 음료</button>
             <button class="menu-tab" type="button" role="tab" id="tab-bakery" aria-controls="panel-bakery" aria-selected="false" tabindex="-1">베이커리 · 디저트</button>
+            <button class="menu-tab" type="button" role="tab" id="tab-brunch" aria-controls="panel-brunch" aria-selected="false" tabindex="-1">브런치</button>
           </div>
           <span class="menu-note-top">가격은 2026년 11월 기준 · 매장 요금</span>
         </div>
@@ -1038,6 +1104,42 @@ body.nav-open{overflow:hidden}
           </div>
         </div>
 
+
+        <div class="menu-panel" id="panel-brunch" role="tabpanel" aria-labelledby="tab-brunch" tabindex="0" hidden>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="row"><span class="name">에그 베네딕트<em>Eggs benedict</em></span><span class="dots"></span><span class="price">12,800원</span></div>
+              <p>수란 2개 · 홀랜다이즈 소스 · 사워도우 위에</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">아보카도 토스트<em>Avocado toast</em></span><span class="dots"></span><span class="price">11,500원</span></div>
+              <p>통밀 깜빠뉴 · 리코타 · 방울토마토</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">프렌치 토스트<em>French toast</em></span><span class="dots"></span><span class="price">10,800원</span></div>
+              <p>당일 구운 브리오슈 · 메이플 시럽</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">버섯 크림 수프<em>Mushroom soup</em></span><span class="dots"></span><span class="price">7,500원</span></div>
+              <p>빵 1조각 함께 나갑니다.</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">시저 샐러드<em>Caesar salad</em></span><span class="dots"></span><span class="price">9,800원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">베이커리 플래터<em>Bakery platter</em></span><span class="dots"></span><span class="price">16,000원</span></div>
+              <p>2인 · 그날 구운 빵 4종 · 잼 2종</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">리코타 팬케이크<em>Ricotta pancake</em></span><span class="dots"></span><span class="price">12,000원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">브런치 세트<em>Brunch set</em></span><span class="dots"></span><span class="price">15,800원</span></div>
+              <p>메인 1 + 음료 1 · 10:00 – 15:00</p>
+            </div>
+          </div>
+        </div>
+
         <div class="menu-foot">
           <span>빵은 매일 12:00 · 16:00 두 번 구워 냅니다. 소진되면 조기 마감될 수 있어요.</span>
           <span>개인 텀블러 지참 시 500원 할인</span>
@@ -1089,11 +1191,7 @@ body.nav-open{overflow:hidden}
         </div>
       </figure>
     </div>
-  </section>
-
-  <!-- ============================ GALLERY ============================ -->
-  <section class="section gallery" id="gallery">
-    <div class="wrap">
+    <div class="wrap gallery-block" id="gallery">
       <div class="gallery-head">
         <div>
           <span class="label" data-reveal>Gallery</span>

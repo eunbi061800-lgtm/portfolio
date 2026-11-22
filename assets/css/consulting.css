@@ -835,3 +835,408 @@
     padding-bottom: 68px;
   }
 }
+
+/* ==========================================================================
+   2026-11 · 5섹션 압축 보강 (시공 분야 · 평형별 참고 견적 · 위치 임베드)
+   ========================================================================== */
+
+.c-services-mini {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border-block: 1px solid var(--line);
+  margin-bottom: clamp(40px, 5vw, 72px);
+}
+
+.c-services-mini article {
+  background: var(--paper);
+  padding: clamp(20px, 2.6vw, 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.c-services-mini .num {
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--clay);
+}
+
+.c-services-mini h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.c-services-mini p {
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--ink-55);
+}
+
+.c-services-mini ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.c-services-mini li {
+  font-size: 11px;
+  letter-spacing: -0.01em;
+  color: var(--ink-55);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 10px;
+}
+
+/* promise inline (프로세스 섹션 안) */
+
+.c-promise--inline {
+  margin-top: clamp(40px, 5vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.c-promise--inline .c-promise-inner {
+  width: 100%;
+}
+
+/* 평형별 참고 견적 */
+
+.c-price {
+  padding: clamp(64px, 8vw, 112px) 0;
+  background: var(--paper-soft);
+  border-block: 1px solid var(--line-soft);
+}
+
+.c-price .s-title em {
+  font-style: normal;
+  color: var(--clay);
+}
+
+.price-table-wrap {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow-x: auto;
+  background: var(--paper);
+}
+
+.price-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.price-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 16px 22px;
+  font-size: 11.5px;
+  color: var(--ink-55);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.price-table th,
+.price-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line-soft);
+  text-align: left;
+  font-weight: 400;
+}
+
+.price-table thead th {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-55);
+  background: var(--paper-soft);
+  white-space: nowrap;
+}
+
+.price-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.price-table tbody tr:hover td {
+  background: color-mix(in srgb, var(--clay) 5%, transparent);
+}
+
+.price-table td strong {
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.price-table .amount {
+  font-family: var(--serif);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--clay);
+  white-space: nowrap;
+}
+
+.price-table .num {
+  color: var(--ink-55);
+  white-space: nowrap;
+}
+
+.price-extra {
+  margin-top: clamp(24px, 3vw, 36px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(20px, 2.6vw, 32px);
+}
+
+.price-part,
+.price-note {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: clamp(22px, 2.8vw, 32px);
+}
+
+.price-part h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.price-part ul {
+  margin-top: 16px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.price-part li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 12.5px;
+  color: var(--ink-55);
+}
+
+.price-part li strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.price-note strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.price-note p {
+  margin-top: 10px;
+  font-size: 12.5px;
+  line-height: 1.85;
+  color: var(--ink-55);
+}
+
+.price-note .quote-points {
+  margin-top: 16px;
+}
+
+/* 견적 + 위치 병합 섹션 */
+
+.c-contact .visit-embed {
+  padding: clamp(56px, 7vw, 96px) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+  scroll-margin-top: 90px;
+}
+
+.c-contact .visit-embed .map-card {
+  min-height: 380px;
+}
+
+.c-contact .visit-embed h2 {
+  margin-top: 16px;
+}
+
+.c-contact .visit-embed .address {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ink-70);
+}
+
+.c-contact .visit-embed .info-rows {
+  margin-top: 24px;
+}
+
+.c-contact .visit-embed .contact-pills {
+  margin-top: 24px;
+}
+
+@media (max-width: 1000px) {
+  .c-services-mini {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .price-extra {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .c-contact .visit-embed {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .price-table {
+    min-width: 640px;
+    font-size: 12px;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 13px 14px;
+  }
+}
+
+/* ==========================================================================
+   2026-11 · 모션 (슬라이드 등장 · 이미지 줌/패럴랙스 · 골드 쉬머)
+   ========================================================================== */
+
+@keyframes gyShimmer {
+  0% { transform: translateX(-120%) skewX(-12deg); }
+  60%, 100% { transform: translateX(220%) skewX(-12deg); }
+}
+
+@keyframes gyLine {
+  0%, 100% { opacity: 0.24; transform: scaleX(0.72); }
+  50% { opacity: 0.72; transform: scaleX(1); }
+}
+
+@keyframes gyFloatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* 방향을 가진 등장 */
+
+.js [data-reveal="left"] {
+  transform: translate3d(-42px, 0, 0);
+}
+
+.js [data-reveal="right"] {
+  transform: translate3d(42px, 0, 0);
+}
+
+.js [data-reveal="up"] {
+  transform: translate3d(0, 30px, 0);
+}
+
+.js [data-reveal="left"].is-visible,
+.js [data-reveal="right"].is-visible,
+.js [data-reveal="up"].is-visible {
+  transform: none;
+}
+
+/* 히어로 미디어 프레임 위 골드 쉬머 */
+
+.c-hero-media .frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-hero-media .frame::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 38%;
+  background: linear-gradient(100deg, transparent, rgba(206, 172, 118, 0.32), transparent);
+  z-index: 2;
+  pointer-events: none;
+  animation: gyShimmer 7.5s ease-in-out 1.2s infinite;
+}
+
+.c-hero-caption::before {
+  animation: gyLine 6s ease-in-out infinite;
+}
+
+/* 시공 사례 이미지 줌 + 패럴랙스 느낌 */
+
+.c-work-item img {
+  transition: transform 1.5s var(--ease), filter 1s var(--ease);
+}
+
+.c-work-item:hover img {
+  transform: scale(1.07) translateY(-8px);
+  filter: saturate(1.04) contrast(1.02);
+}
+
+.c-work-item {
+  transition: box-shadow 0.5s var(--ease);
+}
+
+.c-work-item:hover {
+  box-shadow: 0 26px 46px -34px rgba(17, 26, 38, 0.55);
+}
+
+/* 시공 분야 카드 호버 */
+
+.c-services-mini article {
+  transition: background 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.c-services-mini article:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+/* 프로세스 스텝 은은한 부상 */
+
+.step {
+  transition: transform 0.5s var(--ease);
+}
+
+.step:hover {
+  transform: translateY(-4px);
+}
+
+.step-num {
+  transition: color 0.4s var(--ease);
+}
+
+.step:hover .step-num {
+  color: #b98f4e;
+}
+
+/* 견적 표 행 강조는 CSS로, 가격 숫자 살짝 떠오름 */
+
+.price-table tbody tr {
+  transition: background 0.35s var(--ease);
+}
+
+.price-part,
+.price-note {
+  transition: box-shadow 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.price-part:hover,
+.price-note:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 40px -34px rgba(17, 26, 38, 0.5);
+}
+
+@media (max-width: 720px) {
+  .js [data-reveal="left"],
+  .js [data-reveal="right"] {
+    transform: translate3d(0, 24px, 0);
+  }
+
+  .c-hero-media .frame::before {
+    animation-duration: 9s;
+  }
+}
