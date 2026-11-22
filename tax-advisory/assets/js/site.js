@@ -27,11 +27,11 @@
     var pages = [
       { href: 'index.html', label: '홈' },
       { href: 'about.html', label: '법인소개' },
-      { href: 'team.html', label: '대표·파트너' },
-      { href: 'tax.html', label: '기장·신고' },
+      { href: 'team.html', label: '파트너' },
+      { href: 'tax.html', label: '기장신고' },
       { href: 'consulting.html', label: '컨설팅' },
       { href: 'cases.html', label: '성공사례' },
-      { href: 'calculator.html', label: '기장료 계산기' },
+      { href: 'calculator.html', label: '계산기' },
       { href: 'insights.html', label: '자료실' },
       { href: 'faq.html', label: 'FAQ' },
       { href: 'contact.html', label: '무료상담' }
