@@ -2833,3 +2833,9 @@ body.theme-academy {
 .a-form-panel form[hidden] {
   display: none;
 }
+
+/* 숫자 단위 줄바꿈 방지 */
+.a-stats .a-stat strong,
+.a-hero-facts dd {
+  white-space: nowrap;
+}
