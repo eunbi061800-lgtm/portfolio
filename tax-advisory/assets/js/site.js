@@ -22,6 +22,31 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* ---------------- mobile top nav strip (10 pages visible) ---------------- */
+  if (header && !$('.mobile-nav-strip')) {
+    var pages = [
+      { href: 'index.html', label: '홈' },
+      { href: 'about.html', label: '법인소개' },
+      { href: 'team.html', label: '대표·파트너' },
+      { href: 'tax.html', label: '기장·신고' },
+      { href: 'consulting.html', label: '컨설팅' },
+      { href: 'cases.html', label: '성공사례' },
+      { href: 'calculator.html', label: '기장료 계산기' },
+      { href: 'insights.html', label: '자료실' },
+      { href: 'faq.html', label: 'FAQ' },
+      { href: 'contact.html', label: '무료상담' }
+    ];
+    var cur = (location.pathname.split('/').pop() || 'index.html');
+    var strip = document.createElement('nav');
+    strip.className = 'mobile-nav-strip';
+    strip.setAttribute('aria-label', '페이지 바로가기');
+    strip.innerHTML = pages.map(function (p) {
+      var isAct = (cur === p.href) || (cur === '' && p.href === 'index.html');
+      return '<a href="' + p.href + '"' + (isAct ? ' class="active"' : '') + '>' + p.label + '</a>';
+    }).join('');
+    header.insertAdjacentElement('afterend', strip);
+  }
+
   /* ---------------- mobile drawer ---------------- */
   var menuBtn = $('#menu-toggle');
   var drawer = $('#drawer');
