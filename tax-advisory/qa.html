@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>QA viewport</title>
+<style>
+  body{margin:0;background:#222;font-family:sans-serif}
+  #pc,#mo{display:block;border:0;background:#fff}
+  #pc{width:1280px;height:800px}
+  #mo{width:390px;height:844px;margin-top:20px}
+</style></head>
+<body>
+<iframe id="pc" src="index.html"></iframe>
+<iframe id="mo" src="index.html"></iframe>
+<script>
+  var p = new URLSearchParams(location.search).get('p') || 'index.html';
+  var v = Date.now();
+  document.getElementById('pc').src = p + '?v=' + v;
+  document.getElementById('mo').src = p + '?v=' + v;
+</script>
+</body></html>
