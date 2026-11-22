@@ -1008,7 +1008,7 @@ button {
   font-weight: 600;
 }
 
-/* 상담 채널 (카톡 · 당근) */
+/* 상담 채널 (카톡 오픈채팅) */
 .channel-note {
   margin-top: 14px;
   display: flex;
@@ -1086,7 +1086,7 @@ button {
 
   .sticky-cta {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 8px;
     position: fixed;
     left: 0;
