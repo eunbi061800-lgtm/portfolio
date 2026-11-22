@@ -69,6 +69,9 @@
    * ------------------------------------------------------------------ */
   var countEls = $$("[data-count]");
   var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
+  var groupNumber = function (n) {
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
 
   function runCount(el) {
     var target = parseFloat(el.getAttribute("data-count"));
@@ -76,7 +79,7 @@
     var duration = parseInt(el.getAttribute("data-duration") || "1700", 10);
     if (isNaN(target)) return;
     if (reduced) {
-      el.textContent = target.toFixed(decimals);
+      el.textContent = decimals ? target.toFixed(decimals) : groupNumber(target);
       return;
     }
     var start = null;
@@ -86,9 +89,9 @@
       var value = target * easeOut(p);
       el.textContent = decimals
         ? value.toFixed(decimals)
-        : Math.round(value).toLocaleString("en-US");
+        : groupNumber(Math.round(value));
       if (p < 1) window.requestAnimationFrame(step);
-      else el.textContent = decimals ? target.toFixed(decimals) : target.toLocaleString("en-US");
+      else el.textContent = decimals ? target.toFixed(decimals) : groupNumber(target);
     };
     window.requestAnimationFrame(step);
   }
