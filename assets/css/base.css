@@ -1156,3 +1156,10 @@ body.nav-open {
     font-size: 13px;
   }
 }
+
+/* 샘플 리본: 좁은 화면에서 부가 문구 숨김 */
+@media (max-width: 620px) {
+  .sample-ribbon strong .rb-tail {
+    display: none;
+  }
+}
