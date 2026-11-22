@@ -50,6 +50,7 @@
   /* ---------------- mobile drawer ---------------- */
   var menuBtn = $('#menu-toggle');
   var drawer = $('#drawer');
+  if (drawer && drawer.parentElement !== document.body) { document.body.appendChild(drawer); }
   function closeDrawer() {
     if (!drawer) return;
     drawer.classList.remove('open');
