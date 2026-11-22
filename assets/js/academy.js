@@ -8,6 +8,27 @@
   var reduceMotion =
     window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- 0. 모바일 5페이지 상단 메뉴 바 ---------- */
+  var header = document.querySelector(".academy-header");
+  if (header && !document.querySelector(".academy-mobile-strip")) {
+    var pages = [
+      { href: "index.html", label: "홈" },
+      { href: "curriculum.html", label: "커리큘럼" },
+      { href: "mentors.html", label: "강사진" },
+      { href: "reviews.html", label: "수강후기" },
+      { href: "contact.html", label: "입학상담" }
+    ];
+    var cur = (location.pathname.split("/").pop() || "index.html");
+    var strip = document.createElement("nav");
+    strip.className = "academy-mobile-strip";
+    strip.setAttribute("aria-label", "페이지 바로가기");
+    strip.innerHTML = pages.map(function (p) {
+      var act = (cur === p.href) || (cur === "" && p.href === "index.html");
+      return '<a href="' + p.href + '"' + (act ? ' class="is-active" aria-current="page"' : '') + '>' + p.label + '</a>';
+    }).join("");
+    header.insertAdjacentElement("afterend", strip);
+  }
+
   /* ---------- 1. 커리큘럼 탭 ---------- */
   document.querySelectorAll("[data-tabs]").forEach(function (group) {
     var tabs = Array.prototype.slice.call(group.querySelectorAll('[role="tab"]'));
