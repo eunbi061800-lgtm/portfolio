@@ -489,13 +489,13 @@
       if (map[t]) typeSel.value = map[t];
     }
     if (plan) {
-      var summary = '계산기 결과를 바탕으로 상담을 신청합니다.\n- 추천 패키지: ' + plan + (fee ? '\n- 예상 월 기장료: ' + Number(fee).toLocaleString('ko-KR') + '원 (VAT 별도)' : '') + (revp ? '\n- 월 매출: ' + Number(revp).toLocaleString('ko-KR') + '만 원' : '') + (staffp ? '\n- 직원 수: ' + staffp : '') + (indp ? '\n- 업종: ' + indp : '');
+      var summary = '계산기 결과를 바탕으로 상담을 신청합니다.\n- 추천 패키지: ' + plan + (fee ? '\n- 예상 월 기장료: ' + parseInt(fee, 10).toLocaleString('ko-KR') + '원 (VAT 별도)' : '') + (revp ? '\n- 월 매출: ' + parseInt(revp, 10).toLocaleString('ko-KR') + '만 원' : '') + (staffp ? '\n- 직원 수: ' + staffp : '') + (indp ? '\n- 업종: ' + indp : '');
       var msg = $('#c-message');
       if (msg && !msg.value) msg.value = summary;
       var badge = $('#calc-summary');
       if (badge) {
         badge.style.display = 'block';
-        badge.innerHTML = '<b>계산기에서 넘어온 상담입니다.</b> ' + plan + (fee ? ' · 월 ' + Number(fee).toLocaleString('ko-KR') + '원 예상' : '');
+        badge.innerHTML = '<b>계산기에서 넘어온 상담입니다.</b> ' + plan + (fee ? ' · 월 ' + parseInt(fee, 10).toLocaleString('ko-KR') + '원 예상' : '');
       }
     }
     form.addEventListener('submit', function (e) {
@@ -514,6 +514,8 @@
       var name = ($('#c-name') || {}).value || '고객';
       showToast('<b>' + name + '님, 무료 세무 진단 신청이 접수되었습니다.</b> 영업일 기준 4시간 이내에 담당 세무사가 연락드립니다. (예시 페이지이므로 실제 발송은 되지 않습니다.)', 5600);
       form.reset();
+      var dEl = $('#c-date');
+      if (dEl && dEl.min) dEl.value = dEl.min;
       var badge2 = $('#calc-summary'); if (badge2) badge2.style.display = 'none';
     });
     $$('input,select,textarea', form).forEach(function (el) {
