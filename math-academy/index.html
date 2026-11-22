@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>결수학학원 | 중등·고등 내신 & 수능 수학 소수 정예 — 송도</title>
+<meta name="description" content="결수학학원(KYEOL MATH)은 중1~고3 수학 소수 정예 학원입니다. 반 정원 8명, 누적 진단 테스트 1,240회+, 재등록률 88%. 개념완성 → 오답 클리닉 → 주간 매듭 테스트 3단계 시스템으로 개념까지 잡아 드립니다. 겨울방학 특강 및 무료 진단 상담 예약.">
+<meta name="theme-color" content="#0F172A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="결수학학원 | 개념, 끝까지 잡힐 때까지.">
+<meta property="og:description" content="중1~고3 수학 소수 정예. 반 정원 8명, 재등록률 88%. 무료 진단 테스트 & 1:1 학습 상담.">
+<meta property="og:image" content="assets/classroom.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F172A'/%3E%3Cpath d='M9 21.5 16 9l7 12.5' fill='none' stroke='%23FACC15' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.5 17.5h7' stroke='%23FACC15' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<style>
+:root{
+  --navy:#0F172A;
+  --navy-2:#111C36;
+  --panel:#182545;
+  --panel-2:#1E2B4F;
+  --line:rgba(148,163,184,.18);
+  --line-soft:rgba(148,163,184,.10);
+  --text:#EDF1F9;
+  --muted:#9AA7C2;
+  --yellow:#FACC15;
+  --yellow-deep:#EAB308;
+  --mint:#34D399;
+  --gold:#F0C98F;
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --header-h:64px;
+  --ticker-h:38px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:120px}
+body{
+  margin:0;background:var(--navy);color:var(--text);
+  font-family:var(--sans);font-size:16px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  word-break:keep-all;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,h4{margin:0;line-height:1.3;letter-spacing:-.02em}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+
+/* ---------- ticker ---------- */
+.ticker{
+  background:var(--yellow);color:var(--navy);
+  font-size:13px;font-weight:600;height:var(--ticker-h);
+  display:flex;align-items:center;overflow:hidden;
+}
+.ticker .wrap{display:flex;align-items:center;gap:14px;min-width:100%}
+.ticker .tk-tag{
+  flex:none;background:var(--navy);color:var(--yellow);
+  font-size:11px;font-weight:800;letter-spacing:.08em;
+  padding:3px 8px;border-radius:4px;
+}
+.ticker .tk-body{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.ticker .tk-right{margin-left:auto;flex:none;font-weight:800;display:none}
+@media (min-width:900px){.ticker .tk-right{display:block}}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(15,23,42,.86);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line-soft);
+}
+.header-inner{height:var(--header-h);display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{
+  width:36px;height:36px;border-radius:9px;background:var(--navy-2);
+  border:1px solid rgba(250,204,21,.4);
+  display:grid;place-items:center;flex:none;
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text strong{font-size:17px;font-weight:800;letter-spacing:-.01em}
+.brand-text em{font-style:normal;font-size:10px;letter-spacing:.22em;color:var(--muted);margin-top:3px}
+.nav{display:none;align-items:center;gap:26px;font-size:15px;font-weight:600;color:#C7D0E4}
+.nav a:hover{color:var(--yellow)}
+.header-tools{margin-left:auto;display:flex;align-items:center;gap:12px}
+.header-tel{display:none;font-size:14px;font-weight:700;color:#C7D0E4}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:0;border-radius:10px;font-weight:800;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn-yellow{
+  background:var(--yellow);color:var(--navy);
+  box-shadow:0 8px 24px -8px rgba(250,204,21,.55);
+}
+.btn-yellow:hover{background:#FFE042}
+.btn-ghost{
+  background:transparent;color:var(--text);
+  border:1px solid rgba(237,241,249,.35);
+}
+.btn-ghost:hover{border-color:var(--yellow);color:var(--yellow)}
+.btn-sm{height:40px;padding:0 18px;font-size:14px;border-radius:9px}
+.btn-lg{height:56px;padding:0 26px;font-size:16px;border-radius:12px}
+.nav-toggle{
+  display:grid;place-items:center;width:42px;height:42px;margin-left:auto;
+  background:none;border:1px solid var(--line);border-radius:9px;
+}
+.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{
+  content:"";display:block;width:18px;height:2px;background:var(--text);
+  border-radius:2px;position:relative;
+}
+.nav-toggle span::before{position:absolute;top:-6px}
+.nav-toggle span::after{position:absolute;top:6px}
+.mobile-nav{
+  display:none;position:sticky;top:calc(var(--ticker-h) + var(--header-h));z-index:55;
+  background:var(--navy-2);border-bottom:1px solid var(--line);
+  padding:10px 0 16px;
+}
+.mobile-nav.open{display:block}
+.mobile-nav a{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:13px 6px;font-weight:700;font-size:16px;
+  border-bottom:1px solid var(--line-soft);
+}
+.mobile-nav a::after{content:"→";color:var(--yellow)}
+@media (min-width:960px){
+  .nav{display:flex}
+  .header-tel{display:block}
+  .nav-toggle{display:none}
+  .mobile-nav{display:none !important}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(52,211,153,.10), transparent 60%),
+    radial-gradient(700px 460px at -10% 110%, rgba(250,204,21,.07), transparent 60%),
+    var(--navy);
+}
+.hero-shape{position:absolute;pointer-events:none}
+.hero-shape.s1{
+  width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #FFE042, var(--yellow-deep));
+  top:-140px;right:22%;opacity:.92;
+  clip-path:polygon(0 0,100% 0,100% 100%);
+  border-radius:0;
+}
+.hero-shape.s2{
+  width:420px;height:210px;background:var(--mint);
+  bottom:-118px;right:-60px;border-radius:210px 210px 0 0;
+  opacity:.9;
+}
+.hero-shape.s3{
+  width:260px;height:260px;border-radius:50%;
+  border:56px solid rgba(167,139,250,.85);
+  background:transparent;
+  top:44px;right:-90px;opacity:.85;
+}
+.hero-inner{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr;gap:36px;
+  padding:52px 0 56px;align-items:center;
+}
+@media (min-width:1024px){
+  .hero-inner{grid-template-columns:1.06fr .94fr;gap:48px;padding:76px 0 84px}
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.35);
+  color:var(--yellow);font-size:13px;font-weight:700;
+  padding:7px 14px;border-radius:999px;margin:0 0 22px;
+}
+.hero h1{
+  font-size:clamp(46px,8.5vw,84px);font-weight:900;line-height:1.08;
+  letter-spacing:-.035em;margin:0 0 20px;
+}
+.hero h1 .hl{color:var(--yellow)}
+.hero-sub{margin:0 0 28px;font-size:clamp(15px,1.8vw,17.5px);color:var(--muted);max-width:30em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 34px}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+  border-top:1px solid var(--line);padding-top:22px;max-width:560px;
+}
+.hstat b{display:block;font-size:clamp(20px,3vw,27px);font-weight:900;letter-spacing:-.02em}
+.hstat b i{font-style:normal;color:var(--yellow);font-size:.62em;margin-left:1px}
+.hstat span{display:block;font-size:12.5px;color:var(--muted);margin-top:3px}
+
+/* hero visual : teacher cards */
+.hero-visual{position:relative;min-height:420px}
+.teacher-strip{
+  position:relative;display:grid;grid-template-columns:repeat(3,1fr);
+  gap:12px;align-items:end;height:100%;
+}
+.tcard{
+  position:relative;border-radius:16px;overflow:hidden;
+  background:var(--panel);border:1px solid var(--line-soft);
+  box-shadow:0 30px 60px -28px rgba(0,0,0,.7);
+}
+.tcard img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.tcard.t1{aspect-ratio:3/4.3;z-index:1;transform:translateY(10px)}
+.tcard.t2{aspect-ratio:3/4.6;z-index:3;transform:translateY(0)}
+.tcard.t3{aspect-ratio:3/4.3;z-index:2;transform:translateY(22px)}
+.tcard figcaption{
+  position:absolute;left:8px;right:8px;bottom:8px;z-index:2;
+  background:rgba(15,23,42,.88);backdrop-filter:blur(6px);
+  border:1px solid rgba(250,204,21,.28);
+  border-radius:10px;padding:8px 10px;
+}
+.tcard .t-role{display:block;font-size:10.5px;font-weight:800;letter-spacing:.06em;color:var(--yellow)}
+.tcard .t-name{display:block;font-size:14px;font-weight:800;margin-top:2px}
+.tcard .t-sub{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.tcard.t2 figcaption{background:rgba(250,204,21,.94);border-color:transparent}
+.tcard.t2 .t-role{color:var(--navy);opacity:.75}
+.tcard.t2 .t-name,.tcard.t2 .t-sub{color:var(--navy)}
+.tcard.t2 .t-sub{opacity:.7}
+.hero-visual .hv-note{
+  position:absolute;z-index:4;left:50%;top:-6px;transform:translateX(-50%);
+  background:var(--mint);color:#06301F;font-size:11.5px;font-weight:800;
+  padding:5px 12px;border-radius:999px;white-space:nowrap;
+  box-shadow:0 10px 24px -10px rgba(52,211,153,.7);
+}
+@media (max-width:1023px){
+  .hero-visual{min-height:0}
+  .teacher-strip{height:auto}
+  .tcard.t1,.tcard.t2,.tcard.t3{transform:none}
+  .hero-visual .hv-note{top:-14px}
+}
+
+/* ---------- sections ---------- */
+.section{padding:clamp(56px,8vw,96px) 0}
+.section.alt{background:var(--navy-2);border-block:1px solid var(--line-soft)}
+.s-head{margin-bottom:36px;max-width:640px}
+.s-label{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--yellow);
+  text-transform:uppercase;margin:0 0 14px;
+}
+.s-label::before{content:"";width:22px;height:2px;background:var(--yellow)}
+.s-title{font-size:clamp(26px,4vw,42px);font-weight:900}
+.s-title .hl{color:var(--yellow)}
+.s-lead{margin:14px 0 0;color:var(--muted);font-size:15.5px}
+
+/* system cards */
+.sys-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:820px){.sys-grid{grid-template-columns:repeat(3,1fr)}}
+.sys-card{
+  position:relative;background:var(--panel);border:1px solid var(--line-soft);
+  border-radius:18px;padding:28px 24px 26px;overflow:hidden;
+  transition:transform .25s ease,border-color .25s ease;
+}
+.sys-card:hover{transform:translateY(-4px);border-color:rgba(250,204,21,.4)}
+.sys-num{
+  font-size:44px;font-weight:900;color:transparent;
+  -webkit-text-stroke:1.5px rgba(250,204,21,.55);line-height:1;
+}
+.sys-card h3{font-size:20px;font-weight:800;margin:14px 0 8px}
+.sys-card h3 i{font-style:normal;color:var(--yellow)}
+.sys-card p{margin:0;font-size:14.5px;color:var(--muted)}
+.sys-tag{
+  display:inline-block;margin-top:16px;font-size:12px;font-weight:700;
+  color:var(--mint);background:rgba(52,211,153,.1);
+  border:1px solid rgba(52,211,153,.3);border-radius:999px;padding:4px 11px;
+}
+
+/* mentors */
+.mentor-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media (min-width:640px){.mentor-grid{grid-template-columns:repeat(3,1fr)}}
+.mentor-card{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:18px;
+  overflow:hidden;transition:transform .25s ease,border-color .25s ease;
+}
+.mentor-card:hover{transform:translateY(-4px);border-color:rgba(250,204,21,.4)}
+.mentor-photo{position:relative;aspect-ratio:1/1.05;overflow:hidden}
+.mentor-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.mentor-photo .m-badge{
+  position:absolute;left:12px;top:12px;
+  background:var(--yellow);color:var(--navy);
+  font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:999px;
+}
+.mentor-body{padding:20px 20px 22px}
+.mentor-body h3{font-size:19px;font-weight:800}
+.mentor-body .m-sub{font-size:13px;color:var(--yellow);font-weight:700;margin:3px 0 10px}
+.mentor-body p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.75}
+
+/* curriculum tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.tab-btn{
+  height:44px;padding:0 20px;border-radius:999px;
+  background:var(--panel);border:1px solid var(--line);
+  color:#C7D0E4;font-weight:700;font-size:14.5px;
+}
+.tab-btn:hover{border-color:var(--yellow);color:var(--yellow)}
+.tab-btn[aria-selected="true"]{background:var(--yellow);border-color:var(--yellow);color:var(--navy)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cur-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:900px){.cur-grid{grid-template-columns:1fr 1fr;align-items:start}}
+.course-list{display:grid;gap:12px}
+.course{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:14px;
+  padding:18px 20px;display:flex;gap:14px;align-items:flex-start;
+}
+.course .c-ico{
+  flex:none;width:40px;height:40px;border-radius:10px;
+  display:grid;place-items:center;font-size:18px;
+  background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.3);
+}
+.course h4{font-size:16.5px;font-weight:800}
+.course h4 b{color:var(--yellow);font-weight:900;margin-left:6px;font-size:13px}
+.course p{margin:4px 0 0;font-size:13.5px;color:var(--muted)}
+.tt-card{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:14px;
+  padding:20px;overflow-x:auto;
+}
+.tt-card h4{font-size:15.5px;font-weight:800;margin:0 0 12px}
+.tt-card h4 span{color:var(--muted);font-weight:600;font-size:12.5px;margin-left:8px}
+table.tt{width:100%;border-collapse:collapse;font-size:13.5px;min-width:420px}
+table.tt caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+table.tt th,table.tt td{border:1px solid var(--line-soft);padding:9px 10px;text-align:center;vertical-align:middle}
+table.tt thead th{background:rgba(250,204,21,.1);color:var(--yellow);font-weight:800}
+table.tt tbody th{background:rgba(148,163,184,.07);font-weight:700;color:#C7D0E4;white-space:nowrap}
+table.tt td{color:var(--muted)}
+table.tt td.on{color:var(--text);font-weight:700;background:rgba(52,211,153,.10)}
+
+/* results */
+.res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:0 0 20px}
+@media (min-width:900px){.res-grid{grid-template-columns:repeat(4,1fr)}}
+.res-card{
+  background:linear-gradient(160deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line-soft);border-radius:16px;padding:20px 18px;
+}
+.res-card .r-change{font-size:12.5px;font-weight:800;color:var(--mint)}
+.res-card .r-num{font-size:clamp(24px,3vw,32px);font-weight:900;letter-spacing:-.02em;margin:4px 0 2px}
+.res-card .r-num i{font-style:normal;color:var(--yellow)}
+.res-card .r-cap{font-size:12.5px;color:var(--muted)}
+.review-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:900px){.review-grid{grid-template-columns:repeat(3,1fr)}}
+.review{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:16px;
+  padding:22px;display:flex;flex-direction:column;gap:12px;
+}
+.review .stars{color:var(--yellow);font-size:14px;letter-spacing:2px}
+.review blockquote{margin:0;font-size:14.5px;line-height:1.8;color:#D7DEEC}
+.review .r-who{font-size:12.5px;color:var(--muted);font-weight:700}
+.review .r-who b{color:var(--text)}
+
+/* visit + form */
+.visit-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media (min-width:900px){.visit-grid{grid-template-columns:1fr 1.1fr;align-items:start}}
+.info-card{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:18px;
+  overflow:hidden;height:100%;
+}
+.info-card img{width:100%;aspect-ratio:16/8.5;object-fit:cover}
+.info-body{padding:22px}
+.info-body h3{font-size:18px;font-weight:800;margin:0 0 12px}
+.info-rows{display:grid;gap:10px;font-size:14px}
+.info-rows .row{display:flex;gap:12px}
+.info-rows .row b{flex:none;width:56px;color:var(--yellow);font-weight:800}
+.info-rows .row span{color:#D7DEEC}
+.info-note{margin-top:14px;font-size:12.5px;color:var(--muted)}
+.form-card{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:18px;
+  padding:26px 22px;
+}
+.form-card h3{font-size:20px;font-weight:800;margin:0 0 6px}
+.form-card .f-sub{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f-field{display:flex;flex-direction:column;gap:6px}
+.f-field.full{grid-column:1/-1}
+.f-field label{font-size:13px;font-weight:700;color:#C7D0E4}
+.f-field input,.f-field select,.f-field textarea{
+  width:100%;height:46px;border-radius:10px;
+  background:var(--navy-2);border:1px solid var(--line);
+  color:var(--text);font:inherit;font-size:14.5px;padding:0 14px;
+}
+.f-field textarea{height:auto;min-height:88px;padding:12px 14px;resize:vertical}
+.f-field input:focus,.f-field select:focus,.f-field textarea:focus{
+  outline:none;border-color:var(--yellow);
+}
+.f-field select{appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%239AA7C2' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;
+}
+.form-card .f-submit{width:100%;margin-top:16px;height:54px;font-size:16px}
+.f-privacy{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
+.form-ok{
+  display:none;margin-top:14px;padding:14px 16px;border-radius:12px;
+  background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.4);
+  color:#A7F3D0;font-size:13.5px;font-weight:600;line-height:1.6;
+}
+.form-ok.show{display:block}
+
+/* faq */
+.faq-list{display:grid;gap:10px;max-width:820px}
+details.faq{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:14px;
+  padding:0;overflow:hidden;
+}
+details.faq summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:14px;
+  padding:18px 20px;font-weight:800;font-size:15px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--yellow);font-size:20px;line-height:1.2;transition:transform .2s ease}
+details.faq[open] summary::after{transform:rotate(45deg)}
+details.faq .a{padding:0 20px 18px;font-size:14px;color:var(--muted);line-height:1.8}
+
+/* footer */
+.footer{border-top:1px solid var(--line-soft);background:#0C1222;padding:44px 0 calc(40px + env(safe-area-inset-bottom))}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:24px;font-size:13.5px;color:var(--muted)}
+@media (min-width:760px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.footer h4{color:var(--text);font-size:14px;margin:0 0 10px}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.footer .f-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer .f-brand strong{color:var(--text);font-size:17px}
+.footer .sample-note{
+  margin-top:26px;padding:14px 16px;border-radius:12px;
+  background:rgba(250,204,21,.08);border:1px dashed rgba(250,204,21,.4);
+  color:var(--gold);font-size:12.5px;line-height:1.7;
+}
+.footer .copy{margin-top:14px;font-size:12px;color:#64748B}
+
+/* mobile bottom bar */
+.bottom-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;
+  display:grid;grid-template-columns:1fr 1.4fr 1fr;
+  background:rgba(15,23,42,.97);backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.bottom-bar a,.bottom-bar button{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  min-height:58px;font-size:11.5px;font-weight:700;color:#C7D0E4;
+  background:none;border:0;padding:6px 4px;
+}
+.bottom-bar .bb-ico{font-size:18px;line-height:1}
+.bottom-bar .bb-cta{background:var(--yellow);color:var(--navy);font-weight:800}
+@media (min-width:960px){.bottom-bar{display:none}}
+@media (max-width:959px){
+  body{padding-bottom:58px}
+}
+
+/* demo toast */
+.toast{
+  position:fixed;z-index:90;left:50%;bottom:76px;transform:translate(-50%,20px);
+  background:var(--panel-2);border:1px solid rgba(250,204,21,.45);color:var(--text);
+  font-size:13px;font-weight:600;line-height:1.6;
+  padding:12px 18px;border-radius:12px;max-width:min(420px,calc(100vw - 40px));
+  box-shadow:0 20px 40px -16px rgba(0,0,0,.7);
+  opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast b{color:var(--yellow)}
+</style>
+</head>
+<body>
+
+<!-- 상단 공지 티커 -->
+<div class="ticker" role="note" aria-label="학원 공지">
+  <div class="wrap">
+    <span class="tk-tag">NOTICE</span>
+    <span class="tk-body">겨울방학 특강 접수 중 &nbsp;·&nbsp; 무료 진단 테스트 &amp; 1:1 학습 상담 진행</span>
+    <span class="tk-right">설명회 D-4 | 12월 28일 개강</span>
+  </div>
+</div>
+
+<!-- 헤더 -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="결수학학원 홈으로">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+          <path d="M9 21.5 16 9l7 12.5" stroke="#FACC15" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.5 17.5h7" stroke="#FACC15" stroke-width="2.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>결수학학원</strong>
+        <em>KYEOL MATH</em>
+      </span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#about">학원소개</a>
+      <a href="#mentors">강사진</a>
+      <a href="#curriculum">커리큘럼</a>
+      <a href="#results">성과·후기</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+    <div class="header-tools">
+      <span class="header-tel">T. 032-000-0000</span>
+      <a class="btn btn-yellow btn-sm" href="#consult">상담 예약</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav"><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴">
+  <div class="wrap">
+    <a href="#about">학원소개</a>
+    <a href="#mentors">강사진</a>
+    <a href="#curriculum">커리큘럼</a>
+    <a href="#results">성과·후기</a>
+    <a href="#visit">오시는 길</a>
+    <a href="#consult">상담 예약</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- 히어로 -->
+  <section class="hero" aria-label="결수학학원 소개">
+    <span class="hero-shape s1" aria-hidden="true"></span>
+    <span class="hero-shape s2" aria-hidden="true"></span>
+    <span class="hero-shape s3" aria-hidden="true"></span>
+    <div class="wrap hero-inner">
+      <div>
+        <p class="hero-eyebrow">중1 ~ 고3 수학 &nbsp;·&nbsp; 소수 정예 내신·수능</p>
+        <h1>
+          <span class="hl">개념,</span><br>
+          끝까지<br>
+          잡힐 때까지.
+        </h1>
+        <p class="hero-sub">
+          단원이 끝날 때마다 매듭 테스트를 통과해야 다음 단원으로 갑니다.
+          미완의 개념을 남기지 않는 것이, 결수학의 원칙입니다.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-yellow btn-lg" href="#consult">상담·진단 테스트 예약 →</a>
+          <button class="btn btn-ghost btn-lg" type="button" data-demo="겨울방학 설명회 신청">설명회 신청</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><b>8<i>명</i></b><span>반 정원</span></div>
+          <div class="hstat"><b>1,240<i>회+</i></b><span>누적 진단 (2025년 실시)</span></div>
+          <div class="hstat"><b>88<i>%</i></b><span>재등록률 (2025년 기준)</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <span class="hv-note">전 강사 국내 4년제 수학과 · 학원 강의 경력 8년+</span>
+        <div class="teacher-strip">
+          <figure class="tcard t1">
+            <img src="assets/teacher-middle.jpg" alt="중등부 이준호 강사 프로필 사진" width="860" height="573">
+            <figcaption>
+              <span class="t-role">중등부</span>
+              <span class="t-name">이준호</span>
+              <span class="t-sub">중1 · 중2 · 중3</span>
+            </figcaption>
+          </figure>
+          <figure class="tcard t2">
+            <img src="assets/teacher-director.jpg" alt="박서연 원장 프로필 사진" width="860" height="1075">
+            <figcaption>
+              <span class="t-role">원장 · 중등 수학</span>
+              <span class="t-name">박서연</span>
+              <span class="t-sub">경희대 수학과 · 15년</span>
+            </figcaption>
+          </figure>
+          <figure class="tcard t3">
+            <img src="assets/teacher-high.jpg" alt="고등부 김도윤 강사 프로필 사진" width="860" height="573">
+            <figcaption>
+              <span class="t-role">고등부</span>
+              <span class="t-name">김도윤</span>
+              <span class="t-sub">고1 · 고2 · 고3 수능</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. 왜 성적이 오르는가 -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="s-label">Why it works</p>
+        <h2 class="s-title">성적은 매번 반복되는 <span class="hl">3단계</span>에서 올라옵니다</h2>
+        <p class="s-lead">결수학학원은 수업·문제·시험을 한 시스템으로 묶습니다. 매 단원의 끝을 정확히 매듭지어야 다음 단원으로 넘어갑니다.</p>
+      </div>
+      <div class="sys-grid">
+        <article class="sys-card">
+          <span class="sys-num" aria-hidden="true">01</span>
+          <h3>개념<i>완성</i></h3>
+          <p>교과 개념을 0번부터 다시 세웁니다. 학교 진도 앞선 선학습이 아니라, 학교 시험에 나오는 개념을 100% 이해할 때까지 반복 수업합니다.</p>
+          <span class="sys-tag">학교별 내신 유형 분석 수업</span>
+        </article>
+        <article class="sys-card">
+          <span class="sys-num" aria-hidden="true">02</span>
+          <h3>오답 <i>클리닉</i></h3>
+          <p>틀린 문제는 그날그날 유형별로 분류해 재시험합니다. "틀렸으니 고치자"가 아니라, 같은 유형을 통과할 때까지 문제를 갈아 바꿔 줍니다.</p>
+          <span class="sys-tag">주 2회 개인 오답 복습 시간</span>
+        </article>
+        <article class="sys-card">
+          <span class="sys-num" aria-hidden="true">03</span>
+          <h3>주간 매듭 <i>테스트</i></h3>
+          <p>일주일 학습을 매주 테스트로 매듭짓습니다. 미달 과목은 다음 주에 보충 일정을 다시 잡습니다. 성적표가 아니라 이 테스트 기록이 성적을 만듭니다.</p>
+          <span class="sys-tag">매주 토요일 · 결과 문자 통보</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 강사진 -->
+  <section class="section alt" id="mentors">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="s-label">Mentors</p>
+        <h2 class="s-title">담당 강사진 소개</h2>
+        <p class="s-lead">모든 반은 담당 강사 1인이 수업부터 테스트 grading, 학부모 상담까지 책임집니다.</p>
+      </div>
+      <div class="mentor-grid">
+        <article class="mentor-card">
+          <div class="mentor-photo">
+            <img src="assets/teacher-director.jpg" alt="박서연 원장 프로필 사진" width="860" height="1075" loading="lazy">
+            <span class="m-badge">원장</span>
+          </div>
+          <div class="mentor-body">
+            <h3>박서연 원장</h3>
+            <p class="m-sub">중등 수학 · 학습 설계</p>
+            <p>경희대 수학과. 중등 수학 전문 15년, 누적 학부모 상담 3,000회 이상. 학교별 내신 기출을 분석한 반별 맞춤 커리큘럼 설계를 담당합니다.</p>
+          </div>
+        </article>
+        <article class="mentor-card">
+          <div class="mentor-photo">
+            <img src="assets/teacher-high.jpg" alt="김도윤 강사 프로필 사진" width="860" height="573" loading="lazy">
+            <span class="m-badge">고등부</span>
+          </div>
+          <div class="mentor-body">
+            <h3>김도윤 강사</h3>
+            <p class="m-sub">고1·고2 내신 · 고3 수능</p>
+            <p>서울대 수리과학부. 수능 수학 만점자 12인 배출. 4점·킬러 중급 문항을 개념 복기로 푸는 훈련 루틴을 고등부 전 과정에 적용합니다.</p>
+          </div>
+        </article>
+        <article class="mentor-card">
+          <div class="mentor-photo">
+            <img src="assets/teacher-middle.jpg" alt="이준호 강사 프로필 사진" width="860" height="573" loading="lazy">
+            <span class="m-badge">중등부</span>
+          </div>
+          <div class="mentor-body">
+            <h3>이준호 강사</h3>
+            <p class="m-sub">중1·중2·중3 내신</p>
+            <p>연세대 수학과. 중등 8년. 기초 개념이 무너진 학생의 복구 수업을 전문으로 하며, 주간 매듭 테스트의 grading과 보충 설계를 맡습니다.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 커리큘럼 & 시간표 -->
+  <section class="section" id="curriculum">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="s-label">Curriculum</p>
+        <h2 class="s-title">학년별 커리큘럼 &amp; 시간표</h2>
+        <p class="s-lead">학년 탭을 누르면 담당 강사, 과목 구성, 주간 시간표가 바뀝니다. 모든 반은 정원 8명입니다.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="학년별 커리큘럼">
+        <button class="tab-btn" id="tab-mid" role="tab" aria-selected="true" aria-controls="panel-mid">중등부 (중1~중3)</button>
+        <button class="tab-btn" id="tab-h12" role="tab" aria-selected="false" aria-controls="panel-h12">고1·고2 내신</button>
+        <button class="tab-btn" id="tab-g3" role="tab" aria-selected="false" aria-controls="panel-g3">고3 수능</button>
+      </div>
+
+      <!-- 중등부 -->
+      <div class="tab-panel active" id="panel-mid" role="tabpanel" aria-labelledby="tab-mid">
+        <div class="cur-grid">
+          <div class="course-list">
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">📘</span>
+              <div>
+                <h4>중등 개념완성반 <b>중1 · 중2</b></h4>
+                <p>교과서 단원별 개념 재구성 + 학교 기출 유형 훈련. 학교 시험 2주 전부터 기출 실전으로 전환합니다.</p>
+              </div>
+            </article>
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">🧮</span>
+              <div>
+                <h4>중3 내신·선수학습반 <b>중3</b></h4>
+                <p>중3 내신 관리와 고1 선수 개념(수학Ⅰ·연립)을 병행해 고등부 진급 공백을 없앱니다.</p>
+              </div>
+            </article>
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">⏱</span>
+              <div>
+                <h4>주간 매듭 테스트 <b>전 학년</b></h4>
+                <p>매주 토요일 오전 진행. 주간 학습 단원 전 범위로 출제하며, 미달 시 다음 주 보충 수업을 배정합니다.</p>
+              </div>
+            </article>
+          </div>
+          <div class="tt-card">
+            <h4>주간 시간표 <span>중등부 · 월요일 시작 기준</span></h4>
+            <table class="tt">
+              <caption>중등부 주간 시간표</caption>
+              <thead>
+                <tr><th scope="col">시간</th><th scope="col">월</th><th scope="col">수</th><th scope="col">금</th><th scope="col">토</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">16:00–17:30</th><td>중1 (8명)</td><td>중1 (8명)</td><td>중1 (8명)</td><td class="on">매듭 테스트</td></tr>
+                <tr><th scope="row">17:40–19:10</th><td>중2 (8명)</td><td>중2 (8명)</td><td>중2 (8명)</td><td class="on">매듭 테스트</td></tr>
+                <tr><th scope="row">19:20–20:50</th><td>중3 (8명)</td><td>중3 (8명)</td><td>중3 (8명)</td><td class="on">오답 클리닉</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 고1·2 -->
+      <div class="tab-panel" id="panel-h12" role="tabpanel" aria-labelledby="tab-h12" hidden>
+        <div class="cur-grid">
+          <div class="course-list">
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">📗</span>
+              <div>
+                <h4>고1 내신 정규반 <b>공통수학</b></h4>
+                <p>학교 진도(수학Ⅰ·수학Ⅱ)에 맞춘 개념 + 서술형 채점 기준 훈련. 학교별 서술형 모범답안 형식까지 연습합니다.</p>
+              </div>
+            </article>
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">📙</span>
+              <div>
+                <h4>고2 내신 심화반 <b>미적분·확률과통계</b></h4>
+                <p>선택 과목별 담당 반 운영. 3점 문제를 0실수로 잠그는 계산 훈련과 4점 문항 개념 복기 루틴을 함께 돌립니다.</p>
+              </div>
+            </article>
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">🧪</span>
+              <div>
+                <h4>주간 매듭 테스트 <b>전 반</b></h4>
+                <p>주간 범위 단원-test 방식. 결과는 매주 학부모 문자 통보, 70% 미달 반은 주말 보충 수업 배정입니다.</p>
+              </div>
+            </article>
+          </div>
+          <div class="tt-card">
+            <h4>주간 시간표 <span>고1·고2 · 월요일 시작 기준</span></h4>
+            <table class="tt">
+              <caption>고1·고2 주간 시간표</caption>
+              <thead>
+                <tr><th scope="col">시간</th><th scope="col">화</th><th scope="col">목</th><th scope="col">금</th><th scope="col">토</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">17:00–18:40</th><td>고1 (8명)</td><td>고1 (8명)</td><td>고1 (8명)</td><td class="on">매듭 테스트</td></tr>
+                <tr><th scope="row">18:50–20:30</th><td>고2 (8명)</td><td>고2 (8명)</td><td>고2 (8명)</td><td class="on">매듭 테스트</td></tr>
+                <tr><th scope="row">20:40–21:40</th><td class="on">오답 클리닉</td><td class="on">오답 클리닉</td><td>개인 자율</td><td>개인 자율</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 고3 -->
+      <div class="tab-panel" id="panel-g3" role="tabpanel" aria-labelledby="tab-g3" hidden>
+        <div class="cur-grid">
+          <div class="course-list">
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">📕</span>
+              <div>
+                <h4>수능 실전 모의고사반 <b>고3</b></h4>
+                <p>주 2회 실전 모의고사(주말 제외 실시) + 회차별 백지 복습. 등급컷까지 남은 단원을 매주 데이터로 관리합니다.</p>
+              </div>
+            </article>
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">🎯</span>
+              <div>
+                <h4>킬러 문항 캐치반 <b>고3 · 17~22번</b></h4>
+                <p>수능 17~22번을 구간별로 분해해 유형 공략. "풀이 암기"가 아니라 개념 조합으로 푸는 훈련입니다.</p>
+              </div>
+            </article>
+            <article class="course">
+              <span class="c-ico" aria-hidden="true">📋</span>
+              <div>
+                <h4>1:1 수능 전략 상담 <b>월 1회</b></h4>
+                <p>월 1회 30분 1:1 상담으로 시험지 전략(풀이 순서·시간 배분)과 주간 학습량을 함께 조정합니다.</p>
+              </div>
+            </article>
+          </div>
+          <div class="tt-card">
+            <h4>주간 시간표 <span>고3 · 월요일 시작 기준</span></h4>
+            <table class="tt">
+              <caption>고3 주간 시간표</caption>
+              <thead>
+                <tr><th scope="col">시간</th><th scope="col">월</th><th scope="col">수</th><th scope="col">목</th><th scope="col">금</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">14:00–16:00</th><td class="on">실전 모의고사</td><td>킬러 캐치 (8명)</td><td class="on">실전 모의고사</td><td>킬러 캐치 (8명)</td></tr>
+                <tr><th scope="row">16:10–17:40</th><td>백지 복습</td><td>백지 복습</td><td>백지 복습</td><td>1:1 전략 상담</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 성과 & 후기 -->
+  <section class="section alt" id="results">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="s-label">Results</p>
+        <h2 class="s-title">실제 성적 상승 사례 &amp; 학부모 후기</h2>
+        <p class="s-lead">2026학년도 2학기 기말고사 기준, 결수학학원 재학생의 성적 변화입니다. (등수는 학년 전체 기준)</p>
+      </div>
+
+      <div class="res-grid">
+        <div class="res-card">
+          <span class="r-change">▲ 84등수 상승</span>
+          <span class="r-num">3<i>등급</i> → 1<i>등급</i></span>
+          <span class="r-cap">중3 김모군 · 수학 (3개월)</span>
+        </div>
+        <div class="res-card">
+          <span class="r-change">▲ 62등수 상승</span>
+          <span class="r-num">2<i>등급</i> → 1<i>등급</i></span>
+          <span class="r-cap">고1 이모양 · 수학Ⅱ (2개월)</span>
+        </div>
+        <div class="res-card">
+          <span class="r-change">평균 +21.4점</span>
+          <span class="r-num">수능 모의 <i>2</i>등급 유지</span>
+          <span class="r-cap">고3 박모군 · 6~9월 평균 (10월 평가원 기준)</span>
+        </div>
+        <div class="res-card">
+          <span class="r-change">미달률 34% → 6%</span>
+          <span class="r-num">매듭 테스트 <i>통과율</i></span>
+          <span class="r-cap">전체 재학생 · 2026년 2학기</span>
+        </div>
+      </div>
+
+      <div class="review-grid">
+        <article class="review">
+          <span class="stars" aria-label="만점">★★★★★</span>
+          <blockquote>“중간고사에서 3등급을 받고 학원을 옮겼는데, 주말마다 오는 테스트 문자가 가장 도움이 됐어요. 아이가 뭘 모르는지 선생님이 저보다 먼저 알고 있었습니다. 기말엔 1등급 받았어요.”</blockquote>
+          <p class="r-who"><b>중3 학부모 김OO</b> · 재등록 2학기</p>
+        </article>
+        <article class="review">
+          <span class="stars" aria-label="만점">★★★★★</span>
+          <blockquote>“고1 올라오면서 수학시간 따라가기 힘들다고 했는데, 8명 반이라 질문을 편하게 하겠더라고요. 학교 서술형 답안 형식까지 연습시켜 줘서 내신이 바로 올랐습니다.”</blockquote>
+          <p class="r-who"><b>고1 학부모 이OO</b> · 재등록 3학기</p>
+        </article>
+        <article class="review">
+          <span class="stars" aria-label="만점">★★★★★</span>
+          <blockquote>“다른 곳에서는 문제집만 나왔는데 여기선 틀린 문제 유형을 정리해 주고 다음 주에 다시 봅니다. 수능 모의고사 등급이 4등급에서 2등급으로 왔고, 아이가 자신감을 찾았어요.”</blockquote>
+          <p class="r-who"><b>고3 학부모 박OO</b> · 재등록 1학기</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 오시는 길 & 상담 예약 -->
+  <section class="section" id="visit">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="s-label">Visit &amp; Consult</p>
+        <h2 class="s-title">오시는 길 &amp; 빠른 상담 예약</h2>
+        <p class="s-lead">무료 진단 테스트(40분) + 1:1 학습 상담(20분)을 함께 진행합니다. 아래 폼을 남겨 주시면 순서대로 연락드립니다.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="info-card">
+          <img src="assets/classroom.jpg" alt="결수학학원 강의실 내부 모습" width="1400" height="933" loading="lazy">
+          <div class="info-body">
+            <h3>결수학학원 위치</h3>
+            <div class="info-rows">
+              <div class="row"><b>주소</b><span>인천광역시 연수구 송도동 · 송도 센트럴로 00, 4층 (샘플 예시)</span></div>
+              <div class="row"><b>전화</b><span>032-000-0000 (평일 14:00–21:30 / 토 10:00–18:00)</span></div>
+              <div class="row"><b>주차</b><span>건물 지하 주차장 1시간 무료 (상담 보호자 대상)</span></div>
+              <div class="row"><b>교통</b><span>인천지하철 1선 캠퍼스타운역 3번 출구 도보 5분</span></div>
+            </div>
+            <p class="info-note">※ 본 페이지의 주소·전화·인물·수치는 포트폴리오 시연용 예시입니다.</p>
+          </div>
+        </div>
+
+        <div class="form-card" id="consult">
+          <h3>무료 진단 테스트 · 상담 예약</h3>
+          <p class="f-sub">평균 1영업일 이내 전화 회신드립니다.</p>
+          <form id="consult-form" novalidate>
+            <div class="f-grid">
+              <div class="f-field">
+                <label for="f-name">학생 이름</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="예) 김결" required>
+              </div>
+              <div class="f-field">
+                <label for="f-grade">학년</label>
+                <select id="f-grade" name="grade" required>
+                  <option value="" selected disabled>선택</option>
+                  <option>중1</option><option>중2</option><option>중3</option>
+                  <option>고1</option><option>고2</option><option>고3</option>
+                </select>
+              </div>
+              <div class="f-field full">
+                <label for="f-phone">연락처</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="010-0000-0000" required>
+              </div>
+              <div class="f-field full">
+                <label for="f-course">희망 과정</label>
+                <select id="f-course" name="course">
+                  <option selected>무료 진단 테스트 + 상담</option>
+                  <option>중등 개념완성반</option>
+                  <option>중3 내신·선수학습반</option>
+                  <option>고1 내신 정규반</option>
+                  <option>고2 내신 심화반</option>
+                  <option>고3 수능 실전 모의고사반</option>
+                  <option>겨울방학 특강</option>
+                </select>
+              </div>
+              <div class="f-field full">
+                <label for="f-msg">학습 고민 (선택)</label>
+                <textarea id="f-msg" name="message" placeholder="예) 수학 기초 개념이 부족해 학교 수업을 따라가기 어려워요."></textarea>
+              </div>
+            </div>
+            <button class="btn btn-yellow f-submit" type="submit">상담 예약 신청하기 →</button>
+            <div class="form-ok" id="form-ok" role="status">
+              예약 요청이 접수되었습니다. (데모 페이지 — 실제 전송되지 않습니다.)
+            </div>
+            <p class="f-privacy">수집한 정보는 상담 목적으로만 이용하며, 상담 완료 후 즉시 파기합니다.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (GEO) -->
+  <section class="section alt" id="faq">
+    <div class="wrap">
+      <div class="s-head">
+        <p class="s-label">FAQ</p>
+        <h2 class="s-title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>반 인원은 실제로 몇 명인가요?</summary>
+          <div class="a">모든 반은 정원 8명입니다. 8명을 넘기지 않으며, 정원이 찬 반은 다음 학기 대기로 안내해 드립니다.</div>
+        </details>
+        <details class="faq">
+          <summary>수학을 전혀 못 따라가는 학생도 등록할 수 있나요?</summary>
+          <div class="a">가능합니다. 무료 진단 테스트(40분)로 현재 이해 수준을 먼저 확인하고, 중등부는 개념완성반에서 교과서 개념부터 다시 세웁니다. 고등부는 1:1 전략 상담에서 출발 단원을 정합니다.</div>
+        </details>
+        <details class="faq">
+          <summary>매듭 테스트 결과는 어떻게 알 수 있나요?</summary>
+          <div class="a">매주 토요일 테스트 후 점수, 틀린 유형, 보충 여부를 학부모 문자로 통보합니다. 70% 미달 시 다음 주 보충 수업이 자동 배정됩니다.</div>
+        </details>
+        <details class="faq">
+          <summary>겨울방학 특강은 어떻게 신청하나요?</summary>
+          <div class="a">12월 28일 개강 기준으로 접수 중입니다. 하단 상담 예약 폼에서 희망 과정을 '겨울방학 특강'으로 선택하거나, 전화(032-000-0000)로 신청하실 수 있습니다. 기존 재학생은 주간 시간표에 그대로 연결됩니다.</div>
+        </details>
+        <details class="faq">
+          <summary>진단 테스트와 상담은 유료인가요?</summary>
+          <div class="a">무료입니다. 진단 테스트 40분 + 1:1 학습 상담 20분을 함께 진행하며, 결과지를 그날 받아 가실 수 있습니다.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 푸터 -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+              <path d="M9 21.5 16 9l7 12.5" stroke="#FACC15" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.5 17.5h7" stroke="#FACC15" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <strong>결수학학원 KYEOL MATH</strong>
+        </div>
+        <p>중등·고등 내신 &amp; 수능 수학 소수 정예 학원.<br>개념, 끝까지 잡힐 때까지.</p>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="#about">학원소개</a></li>
+          <li><a href="#mentors">강사진</a></li>
+          <li><a href="#curriculum">커리큘럼</a></li>
+          <li><a href="#results">성과·후기</a></li>
+          <li><a href="#consult">상담 예약</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>운영 안내</h4>
+        <ul>
+          <li>평일 14:00 – 21:30</li>
+          <li>토요일 10:00 – 18:00</li>
+          <li>일요일·공휴일 휴무</li>
+          <li>T. 032-000-0000</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sample-note">본 페이지는 도어릿(DOORLIT) 웹 스튜디오 제작 포트폴리오 샘플입니다. 학원명·강사·주소·연락처·성적 수치는 모두 가상의 예시이며 실제 학원과 무관합니다.</p>
+    <p class="copy">© 2026 DOORLIT Web Studio. Portfolio sample.</p>
+  </div>
+</footer>
+
+<!-- 모바일 하단 고정 CTA -->
+<nav class="bottom-bar" aria-label="빠른 연락">
+  <a href="tel:0320000000" data-demo-tel>
+    <span class="bb-ico" aria-hidden="true">📞</span>전화
+  </a>
+  <a href="#consult" class="bb-cta">
+    <span class="bb-ico" aria-hidden="true">📝</span>진단 테스트 예약
+  </a>
+  <button type="button" data-demo="카카오톡 채널 상담 연결 (데모)">
+    <span class="bb-ico" aria-hidden="true">💬</span>카톡 상담
+  </button>
+</nav>
+
+<!-- 데모 토스트 -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"반 인원은 실제로 몇 명인가요?","acceptedAnswer":{"@type":"Answer","text":"모든 반은 정원 8명입니다. 8명을 넘기지 않으며, 정원이 찬 반은 다음 학기 대기로 안내합니다."}},
+    {"@type":"Question","name":"수학을 전혀 못 따라가는 학생도 등록할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"가능합니다. 무료 진단 테스트(40분)로 현재 수준을 확인하고, 중등부는 개념완성반에서 교과 개념부터 다시 세웁니다. 고등부는 1:1 전략 상담에서 출발 단원을 정합니다."}},
+    {"@type":"Question","name":"매듭 테스트 결과는 어떻게 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"매주 토요일 테스트 후 점수, 틀린 유형, 보충 여부를 학부모 문자로 통보합니다. 70% 미달 시 다음 주 보충 수업이 자동 배정됩니다."}},
+    {"@type":"Question","name":"겨울방학 특강은 어떻게 신청하나요?","acceptedAnswer":{"@type":"Answer","text":"12월 28일 개강 기준 접수 중입니다. 상담 예약 폼에서 '겨울방학 특강'을 선택하거나 전화로 신청할 수 있습니다."}},
+    {"@type":"Question","name":"진단 테스트와 상담은 유료인가요?","acceptedAnswer":{"@type":"Answer","text":"무료입니다. 진단 테스트 40분 + 1:1 학습 상담 20분을 함께 진행하며 결과지를 그날 받아 가실 수 있습니다."}}
+  ]
+}
+</script>
+<script>
+// 학년 탭 전환
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); p.hidden = true; });
+    btn.setAttribute('aria-selected','true');
+    var panel = document.getElementById(btn.getAttribute('aria-controls'));
+    panel.hidden = false;
+    panel.classList.add('active');
+  });
+});
+
+// 모바일 메뉴
+var navToggle = document.querySelector('.nav-toggle');
+var mobileNav = document.getElementById('mobile-nav');
+navToggle.addEventListener('click', function(){
+  var open = mobileNav.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+mobileNav.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){
+    mobileNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+  });
+});
+
+// 데모 토스트
+var toast = document.getElementById('toast');
+var toastTimer = null;
+function showToast(html){
+  toast.innerHTML = html;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 3200);
+}
+document.querySelectorAll('[data-demo]').forEach(function(el){
+  el.addEventListener('click', function(){
+    showToast('<b>데모 페이지</b> 안내 — 실제 동작 대신 미리보기로 표시됩니다: ' + el.getAttribute('data-demo'));
+  });
+});
+document.querySelector('[data-demo-tel]').addEventListener('click', function(){
+  showToast('<b>데모 페이지</b> 안내 — 실제 학원 전화가 아니라 미리보기용 번호입니다.');
+});
+
+// 상담 폼 (데모)
+document.getElementById('consult-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  ['f-name','f-grade','f-phone'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el.value || (id==='f-grade' && !el.value)){ el.style.borderColor = '#F87171'; ok = false; }
+    else { el.style.borderColor = ''; }
+  });
+  if(!ok){ showToast('이름·학년·연락처를 확인해 주세요.'); return; }
+  document.getElementById('form-ok').classList.add('show');
+  showToast('<b>데모 페이지</b> — 실제 전송은 이루어지지 않습니다.');
+  this.querySelector('.form-ok').scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+</script>
+</body>
+</html>
