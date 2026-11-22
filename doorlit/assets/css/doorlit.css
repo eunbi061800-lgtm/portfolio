@@ -36,6 +36,14 @@ body {
   line-height: 1.65;
   letter-spacing: -0.015em;
   overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 한글 단어가 줄 끝에서 잘리지 않도록, 긴 영문·URL만 필요할 때 나눔 */
+p, li, dd, dt, td, th, figcaption, .sec-desc, .hero-sub, .price-desc, .work-body p, .faq-a {
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 img {
@@ -501,11 +509,85 @@ button {
   border-bottom: none;
 }
 
+/* 390px 모바일: 3열 표를 항목별 카드로 전환 */
 @media (max-width: 680px) {
+  .compare-wrap {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .compare-table,
+  .compare-table thead,
+  .compare-table tbody,
+  .compare-table tr,
+  .compare-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .compare-table {
+    font-size: 14px;
+  }
+
+  .compare-table thead {
+    display: none;
+  }
+
+  .compare-table tr {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: #ffffff;
+    padding: 6px 0 4px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
   .compare-table th,
   .compare-table td {
-    padding: 14px 12px;
-    font-size: 13.5px;
+    border-bottom: 0;
+    padding: 8px 16px;
+  }
+
+  .compare-table tbody td.col-key {
+    width: 100%;
+    min-width: 0;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    padding-bottom: 2px;
+  }
+
+  .compare-table tbody td.col-other,
+  .compare-table tbody td.col-doorlit {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .compare-table tbody td.col-other {
+    color: var(--ink-3);
+    padding-top: 0;
+  }
+
+  .compare-table tbody td.col-other::before {
+    content: "일반 저가형 · ";
+    font-weight: 700;
+    color: var(--ink-3);
+  }
+
+  .compare-table tbody td.col-doorlit {
+    background: var(--accent-soft);
+    padding-top: 6px;
+    padding-bottom: 12px;
+  }
+
+  .compare-table tbody td.col-doorlit::before {
+    content: "도어릿 · ";
+    font-weight: 800;
+    color: var(--accent);
   }
 }
 
@@ -764,8 +846,11 @@ button {
 }
 
 .price-amount small {
+  display: inline-block;
+  margin-left: 7px;
   font-size: 15px;
   font-weight: 600;
+  letter-spacing: 0;
   opacity: 0.72;
 }
 
@@ -921,4 +1006,111 @@ button {
   flex-wrap: wrap;
   gap: 20px;
   font-weight: 600;
+}
+
+/* 상담 채널 (카톡 · 당근) */
+.channel-note {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  font-size: 13.5px;
+  color: var(--ink-3);
+}
+
+.channel-note strong {
+  color: var(--ink-2);
+}
+
+.pricing-note + .channel-note {
+  margin-top: 12px;
+}
+
+.footer-channels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-channels .btn {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 13.5px;
+}
+
+.footer-meta {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 12.5px;
+  color: var(--ink-3);
+}
+
+.footer-meta a {
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+/* 모바일 하단 고정 상담 바 */
+.sticky-cta {
+  display: none;
+}
+
+.drawer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.drawer-actions .btn {
+  flex: 1;
+  min-width: 132px;
+}
+
+@media (max-width: 860px) {
+  .header-actions .btn-channel-desk {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  body {
+    padding-bottom: 82px;
+  }
+
+  .sticky-cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--line);
+  }
+
+  .sticky-cta .btn {
+    height: 46px;
+    padding: 0 12px;
+    font-size: 14.5px;
+  }
+
+  .compare-table tbody td.col-key {
+    padding-top: 10px;
+  }
+
+  .hero-metrics {
+    gap: 10px;
+  }
 }

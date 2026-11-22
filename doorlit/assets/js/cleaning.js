@@ -28,8 +28,8 @@
     document.querySelectorAll("[data-demo-kakao]").forEach(function (trigger) {
       trigger.addEventListener("click", function (event) {
         event.preventDefault();
-        if (window.NaruUI) {
-          window.NaruUI.showModal(kakaoModal);
+        if (window.DoorlitUI) {
+          window.DoorlitUI.showModal(kakaoModal);
         } else {
           kakaoModal.hidden = false;
         }

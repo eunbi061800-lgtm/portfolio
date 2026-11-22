@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Studio Naru — common UI (header, mobile nav, reveal, modal helpers)
+   DOORLIT — common UI (header, mobile nav, reveal, modal helpers)
    ========================================================================== */
 (function () {
   "use strict";
@@ -136,5 +136,5 @@
     });
   }
 
-  window.NaruUI = { showModal: show, hideModal: hide };
+  window.DoorlitUI = { showModal: show, hideModal: hide };
 })();

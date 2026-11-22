@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>밀과 아침 | 송도 감성 베이커리 카페 · 사워도우와 스페셜티 커피</title>
+<meta name="description" content="송도 골목 끝, 8년 된 발효종으로 굽는 작은 베이커리 카페 밀과 아침. 매일 아침 구운 사워도우와 직접 고른 원두, 홀케이크·단체주문 예약 안내.">
+<meta name="theme-color" content="#FAF7F2">
+<meta property="og:title" content="밀과 아침 | 매일 아침, 오븐이 여는 하루">
+<meta property="og:description" content="송도 감성 베이커리 카페, 밀과 아침. 사워도우·크루아상·스페셜티 커피와 홀케이크 예약.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="cafe-hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%232C221E'/%3E%3Cpath d='M16 25V13' stroke='%23FAF7F2' stroke-width='1.3' stroke-linecap='round'/%3E%3Cpath d='M16 17.5c-3 0-5-2-5-5 3 0 5 2 5 5Zm0 0c3 0 5-2 5-5-3 0-5 2-5 5Zm0-4c-2.4 0-4-1.6-4-4 2.4 0 4 1.6 4 4Zm0 0c2.4 0 4-1.6 4-4-2.4 0-4 1.6-4 4Z' fill='none' stroke='%23FAF7F2' stroke-width='1.1' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Serif+KR:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+/* ==========================================================================
+   Doorlit Standard Sample 05 — 감성 카페·베이커리 (밀과 아침)
+   cream · espresso · terracotta
+   ========================================================================== */
+
+:root{
+  --cream:#FAF7F2;
+  --cream-2:#F3ECE2;
+  --cream-3:#EDE3D6;
+  --espresso:#2C221E;
+  --espresso-2:#3A2C26;
+  --clay:#B86B43;
+  --clay-deep:#9C5533;
+  --sage:#6E7259;
+
+  --ink-75:rgba(44,34,30,.75);
+  --ink-60:rgba(44,34,30,.60);
+  --ink-45:rgba(44,34,30,.45);
+  --ink-30:rgba(44,34,30,.30);
+  --line:rgba(44,34,30,.14);
+  --line-soft:rgba(44,34,30,.08);
+
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --serif-ko:"Noto Serif KR","Nanum Myeongjo",Batang,"바탕",serif;
+  --serif-en:"Cormorant Garamond","Times New Roman",Georgia,serif;
+
+  --wrap:1180px;
+  --header-h:78px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --radius:5px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
+}
+
+body{
+  margin:0;
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.78;
+  color:var(--espresso);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  word-break:keep-all;
+  overflow-x:hidden;
+}
+
+img,svg{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4,p,figure,blockquote,dl,dd,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+
+::selection{background:var(--espresso);color:var(--cream)}
+:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+
+/* ---------- layout ---------- */
+.wrap{width:min(var(--wrap),100% - 64px);margin-inline:auto}
+.section{padding:clamp(76px,9vw,128px) 0}
+.section-tight{padding:clamp(56px,6vw,84px) 0}
+
+/* ---------- type ---------- */
+.label{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--ink-60);
+}
+.label::before{content:"";width:26px;height:1px;background:currentColor;opacity:.55}
+.label--light{color:rgba(250,247,242,.6)}
+
+.title{
+  font-family:var(--serif-ko);
+  font-weight:400;
+  font-size:clamp(27px,3.4vw,44px);
+  line-height:1.44;
+  letter-spacing:-.03em;
+}
+.title em{font-style:normal;color:var(--clay)}
+.title .en{
+  font-family:var(--serif-en);
+  font-weight:300;
+  font-style:italic;
+  letter-spacing:0;
+  color:var(--clay);
+}
+
+.lead{margin-top:20px;max-width:54ch;color:var(--ink-60);font-size:15.5px;line-height:1.9}
+.en-display{
+  font-family:var(--serif-en);
+  font-weight:300;
+  letter-spacing:.02em;
+  line-height:1.05;
+}
+.mono{font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+.section-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:clamp(34px,4.4vw,60px)}
+.section-head > div{max-width:640px}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- buttons ---------- */
+.btn{
+  --bg:var(--espresso);
+  --fg:var(--cream);
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:15px 26px;border-radius:999px;border:1px solid transparent;
+  background:var(--bg);color:var(--fg);
+  font-size:14px;font-weight:600;letter-spacing:-.01em;line-height:1;white-space:nowrap;
+  transition:transform .4s var(--ease),background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),box-shadow .4s var(--ease);
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -20px rgba(44,34,30,.75)}
+.btn:active{transform:translateY(0)}
+.btn svg{width:15px;height:15px;flex:none}
+.btn--clay{--bg:var(--clay);--fg:#fff}
+.btn--clay:hover{--bg:var(--clay-deep)}
+.btn--line{--bg:transparent;--fg:var(--espresso);border-color:var(--line)}
+.btn--line:hover{border-color:var(--espresso)}
+.btn--cream{--bg:var(--cream);--fg:var(--espresso)}
+.btn--outline-cream{--bg:transparent;--fg:var(--cream);border-color:rgba(250,247,242,.35)}
+.btn--outline-cream:hover{border-color:var(--cream)}
+.btn--sm{padding:11px 19px;font-size:13px}
+.btn--block{width:100%}
+.link-arrow{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;border-bottom:1px solid var(--line);padding-bottom:4px;transition:border-color .3s var(--ease),gap .3s var(--ease)}
+.link-arrow:hover{border-color:var(--espresso);gap:14px}
+.link-arrow svg{width:13px;height:13px}
+
+/* ---------- ribbon ---------- */
+.ribbon{position:relative;z-index:61;background:var(--espresso);color:var(--cream);font-size:12.5px}
+.ribbon .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:42px;padding-block:7px}
+.ribbon strong{font-weight:600;font-size:10.5px;letter-spacing:.2em;color:rgba(250,247,242,.62);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ribbon a{display:inline-flex;align-items:center;gap:7px;border-bottom:1px solid rgba(250,247,242,.4);padding-bottom:2px;white-space:nowrap}
+.ribbon a:hover{border-color:var(--cream)}
+.ribbon .rb-short{display:none}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  background:color-mix(in srgb,var(--cream) 84%,transparent);
+  backdrop-filter:saturate(150%) blur(14px);
+  -webkit-backdrop-filter:saturate(150%) blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .4s var(--ease),background .4s var(--ease);
+}
+.site-header.is-scrolled{border-bottom-color:var(--line-soft);background:color-mix(in srgb,var(--cream) 96%,transparent)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:22px;height:var(--header-h)}
+
+.brand{display:inline-flex;align-items:center;gap:11px;flex:none}
+.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--espresso);overflow:hidden;flex:none}
+.brand-mark svg{width:23px;height:23px}
+.brand-text{display:flex;flex-direction:column;line-height:1.05}
+.brand-text strong{font-family:var(--serif-ko);font-size:15.5px;font-weight:500;letter-spacing:.1em}
+.brand-text em{font-style:normal;font-family:var(--serif-en);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-60);margin-top:4px}
+
+.nav{display:flex;align-items:center;gap:clamp(16px,2.2vw,32px);margin-left:auto}
+.nav a{position:relative;font-size:13.5px;font-weight:500;color:var(--ink-75);padding:6px 0;transition:color .25s var(--ease)}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--espresso);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav a:hover{color:var(--espresso)}
+.nav a:hover::after{transform:scaleX(1)}
+.header-cta{flex:none}
+
+.nav-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;place-items:center}
+.nav-toggle span{position:relative;display:block;width:15px;height:1.5px;background:var(--espresso);transition:background .2s var(--ease)}
+.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:15px;height:1.5px;background:var(--espresso);transition:transform .3s var(--ease)}
+.nav-toggle span::before{top:-5px}
+.nav-toggle span::after{top:5px}
+.nav-open .nav-toggle span{background:transparent}
+.nav-open .nav-toggle span::before{transform:translateY(5px) rotate(45deg)}
+.nav-open .nav-toggle span::after{transform:translateY(-5px) rotate(-45deg)}
+
+.mobile-nav{
+  position:fixed;inset:0;z-index:55;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:96px 32px 40px;
+  background:var(--cream);
+  opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity .35s var(--ease),transform .35s var(--ease),visibility .35s;
+}
+.nav-open .mobile-nav{opacity:1;visibility:visible;transform:none}
+.mobile-nav a{font-family:var(--serif-ko);font-size:clamp(23px,6.6vw,30px);letter-spacing:-.02em;padding:14px 0;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;justify-content:space-between}
+.mobile-nav a span{font-family:var(--serif-en);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-45)}
+.mobile-nav-meta{margin-top:26px;font-size:12.5px;color:var(--ink-60);line-height:1.8}
+body.nav-open{overflow:hidden}
+
+/* ---------- reveal ---------- */
+.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js [data-reveal].is-visible{opacity:1;transform:none}
+.js [data-reveal-delay="1"]{transition-delay:.08s}
+.js [data-reveal-delay="2"]{transition-delay:.16s}
+.js [data-reveal-delay="3"]{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js [data-reveal]{opacity:1;transform:none;transition:none}
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero{position:relative;overflow:hidden;background:var(--cream)}
+.hero::before{
+  content:"";position:absolute;inset:auto -10% 30% 40%;height:620px;
+  background:radial-gradient(closest-side,rgba(184,107,67,.10),transparent 72%);
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;
+  display:grid;grid-template-columns:1.02fr .98fr;
+  gap:clamp(32px,5vw,72px);align-items:center;
+  padding-block:clamp(48px,6vw,84px) clamp(40px,4vw,56px);
+}
+.hero-copy{max-width:560px}
+.hero h1{
+  font-family:var(--serif-ko);
+  font-weight:300;
+  font-size:clamp(37px,5.1vw,66px);
+  line-height:1.3;
+  letter-spacing:-.045em;
+  margin-top:24px;
+}
+.hero h1 em{font-style:normal;color:var(--clay);position:relative}
+.hero-desc{margin-top:24px;max-width:44ch;color:var(--ink-60);font-size:15.5px;line-height:1.95}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:36px;padding-top:22px;border-top:1px solid var(--line-soft);font-size:12.5px;color:var(--ink-60)}
+.hero-meta li{display:flex;align-items:center;gap:8px}
+.hero-meta li::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--clay);flex:none}
+
+.hero-figure{position:relative;justify-self:end;width:100%;max-width:470px}
+.hero-figure .frame{
+  position:absolute;inset:16px -14px -14px 16px;
+  border:1px solid var(--line);border-radius:260px 260px 6px 6px;
+  pointer-events:none;
+}
+.hero-figure .arch{
+  position:relative;overflow:hidden;
+  border-radius:260px 260px 6px 6px;
+  aspect-ratio:4/4.9;
+  background:var(--cream-3);
+}
+.hero-figure img{width:100%;height:100%;object-fit:cover;object-position:58% 50%}
+.hero-figure .stamp{
+  position:absolute;left:-26px;bottom:36px;
+  width:112px;height:112px;border-radius:50%;
+  background:var(--cream);
+  display:grid;place-items:center;
+  box-shadow:0 18px 40px -26px rgba(44,34,30,.6);
+}
+.hero-figure .stamp svg{width:100%;height:100%}
+.hero-figure .stamp text{font-family:var(--sans);font-size:7.6px;font-weight:600;letter-spacing:.16em;fill:var(--espresso)}
+.hero-vertical{
+  position:absolute;right:-34px;top:50%;transform:translateY(-50%);
+  writing-mode:vertical-rl;font-family:var(--serif-en);font-style:italic;
+  font-size:12.5px;letter-spacing:.26em;color:var(--ink-45);
+}
+
+/* oven strip */
+.oven-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.oven-strip ul{display:grid;grid-template-columns:repeat(3,1fr)}
+.oven-strip li{display:flex;align-items:flex-start;gap:18px;padding:26px 0}
+.oven-strip li + li{border-left:1px solid var(--line-soft);padding-left:clamp(20px,3vw,42px)}
+.oven-strip .t{font-family:var(--serif-en);font-size:26px;font-weight:400;letter-spacing:.01em;color:var(--clay);line-height:1;flex:none;font-variant-numeric:tabular-nums}
+.oven-strip strong{display:block;font-size:14px;font-weight:600;letter-spacing:-.01em}
+.oven-strip span{display:block;font-size:12.5px;color:var(--ink-60);margin-top:3px;line-height:1.6}
+
+/* ==========================================================================
+   STORY
+   ========================================================================== */
+.story{background:var(--cream)}
+.story-inner{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(32px,5.5vw,80px);align-items:start}
+.story-figure{position:relative}
+.story-figure .arch{border-radius:6px 6px 88px 88px;overflow:hidden;aspect-ratio:4/4.7;background:var(--cream-3)}
+.story-figure img{width:100%;height:100%;object-fit:cover}
+.story-figure figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font-size:11.5px;letter-spacing:.02em;color:var(--ink-45)}
+.story-copy .title{margin-top:22px}
+.story-quote{
+  margin-top:28px;padding:22px 0 22px 26px;
+  border-left:2px solid var(--clay);
+  font-family:var(--serif-ko);font-size:clamp(16px,1.5vw,19px);
+  line-height:1.85;letter-spacing:-.02em;color:var(--ink-75);
+}
+.principles{margin-top:36px;border-top:1px solid var(--line)}
+.principle{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line-soft)}
+.principle .num{font-family:var(--serif-en);font-size:22px;color:var(--clay);line-height:1.2;font-variant-numeric:tabular-nums}
+.principle h3{font-size:15.5px;font-weight:600;letter-spacing:-.01em}
+.principle h3 span{font-family:var(--serif-en);font-style:italic;font-weight:400;font-size:13.5px;letter-spacing:.03em;color:var(--ink-60);margin-left:8px}
+.principle p{margin-top:7px;font-size:13.8px;line-height:1.82;color:var(--ink-60)}
+
+/* ==========================================================================
+   MENU
+   ========================================================================== */
+.menu{background:var(--cream-2);position:relative}
+.sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sig-card{
+  display:flex;flex-direction:column;
+  padding:30px 28px 26px;
+  background:color-mix(in srgb,var(--cream) 70%,#fff);
+  border:1px solid var(--line-soft);
+  border-radius:6px;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease);
+}
+.sig-card:hover{transform:translateY(-4px);box-shadow:0 26px 50px -36px rgba(44,34,30,.5);border-color:var(--line)}
+.sig-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.sig-icon{width:44px;height:44px;color:var(--clay);flex:none}
+.sig-icon svg{width:100%;height:100%}
+.sig-en{font-family:var(--serif-en);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-45)}
+.sig-card h3{font-family:var(--serif-ko);font-size:20px;font-weight:500;letter-spacing:-.02em;margin-top:22px}
+.sig-card p{margin-top:9px;font-size:13.5px;line-height:1.8;color:var(--ink-60)}
+.sig-price{margin-top:18px;padding-top:14px;border-top:1px solid var(--line-soft);font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.sig-price small{font-weight:400;font-size:12px;color:var(--ink-45);margin-left:6px}
+
+.menu-board{margin-top:clamp(40px,5vw,64px)}
+.menu-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+.menu-tabs{display:inline-flex;gap:4px;padding:5px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.45)}
+.menu-tab{padding:10px 22px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-60);transition:background .35s var(--ease),color .35s var(--ease)}
+.menu-tab[aria-selected="true"]{background:var(--espresso);color:var(--cream)}
+.menu-tab:hover{color:var(--espresso)}
+.menu-tab[aria-selected="true"]:hover{color:var(--cream)}
+.menu-note-top{font-size:12px;color:var(--ink-45)}
+
+.menu-panel[hidden]{display:none}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(36px,5vw,72px)}
+.menu-item{padding:17px 0;border-bottom:1px solid var(--line-soft)}
+.menu-item .row{display:flex;align-items:baseline;gap:12px}
+.menu-item .name{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.menu-item .name em{font-style:normal;font-family:var(--serif-en);font-style:italic;font-size:13px;font-weight:400;color:var(--ink-60);margin-left:7px;letter-spacing:.02em}
+.menu-item .dots{flex:1;border-bottom:1px dotted var(--ink-30);transform:translateY(-3px);min-width:16px}
+.menu-item .price{font-size:14.5px;font-weight:600;font-variant-numeric:tabular-nums;flex:none}
+.menu-item p{margin-top:3px;font-size:12.5px;color:var(--ink-45);line-height:1.7}
+.menu-foot{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:26px;font-size:12.5px;color:var(--ink-60)}
+.menu-foot span{display:flex;align-items:center;gap:8px}
+.menu-foot span::before{content:"";width:3px;height:3px;border-radius:50%;background:var(--clay);flex:none}
+
+/* ==========================================================================
+   SPACE
+   ========================================================================== */
+.space{background:var(--cream)}
+.space-inner{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(32px,5vw,72px);align-items:center}
+.space-figure{position:relative}
+.space-figure .arch{border-radius:220px 220px 6px 6px;overflow:hidden;aspect-ratio:4/4.6;background:var(--cream-3)}
+.space-figure img{width:100%;height:100%;object-fit:cover}
+.space-figure .badge{
+  position:absolute;right:-14px;top:26px;
+  background:var(--cream);border:1px solid var(--line);
+  padding:12px 16px;border-radius:4px;
+  font-size:11.5px;line-height:1.5;color:var(--ink-60);
+  box-shadow:0 18px 36px -30px rgba(44,34,30,.6);
+}
+.space-figure .badge strong{display:block;font-family:var(--serif-en);font-size:15px;letter-spacing:.12em;color:var(--espresso);font-weight:500}
+.space-copy .title{margin-top:22px}
+.space-facts{margin-top:30px;border-top:1px solid var(--line)}
+.space-facts > div{display:flex;justify-content:space-between;gap:18px;padding:14px 0;border-bottom:1px solid var(--line-soft);font-size:13.5px}
+.space-facts dt{color:var(--ink-60);flex:none}
+.space-facts dd{text-align:right;font-weight:500}
+.space-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}
+.space-chips span{padding:7px 13px;border:1px solid var(--line);border-radius:999px;font-size:11.5px;color:var(--ink-75);background:rgba(255,255,255,.4)}
+.space-notes{margin-top:22px;font-size:12.5px;color:var(--ink-45);line-height:1.85}
+
+/* ==========================================================================
+   GALLERY
+   ========================================================================== */
+.gallery{background:var(--cream-2)}
+.gallery-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(28px,3.6vw,44px)}
+.ig-handle{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;border-bottom:1px solid var(--line);padding-bottom:4px}
+.ig-handle svg{width:15px;height:15px}
+.ig-handle:hover{border-color:var(--espresso)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gal-item{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:1/1;background:var(--cream-3)}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.gal-item:hover img{transform:scale(1.045)}
+.gal-item .cap{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:26px 16px 13px;
+  background:linear-gradient(180deg,transparent,rgba(30,22,18,.62));
+  color:#fff;font-size:11.5px;letter-spacing:.02em;opacity:0;
+  transition:opacity .5s var(--ease);
+}
+.gal-item:hover .cap{opacity:1}
+.gal-type{
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:24px;background:var(--espresso);color:var(--cream);
+}
+.gal-type .t-en{font-family:var(--serif-en);font-style:italic;font-size:13px;letter-spacing:.08em;color:rgba(250,247,242,.55)}
+.gal-type strong{font-family:var(--serif-ko);font-size:clamp(17px,1.8vw,21px);font-weight:400;line-height:1.6;letter-spacing:-.02em}
+.gal-type strong em{font-style:normal;color:#D98F65}
+.gal-type .t-time{font-family:var(--serif-en);font-size:13px;letter-spacing:.22em;color:rgba(250,247,242,.6);text-transform:uppercase}
+
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:clamp(40px,5vw,60px);border-top:1px solid var(--line)}
+.review{padding:30px 34px 30px 0}
+.review + .review{border-left:1px solid var(--line);padding-left:34px;padding-right:0}
+.review blockquote{font-family:var(--serif-ko);font-size:15px;line-height:1.95;letter-spacing:-.02em;color:var(--ink-75)}
+.review .who{margin-top:14px;font-size:11.5px;letter-spacing:.04em;color:var(--ink-60);display:flex;align-items:center;gap:8px}
+.review .who::before{content:"";width:16px;height:1px;background:var(--ink-30)}
+
+@media (max-width:720px){
+  .ribbon-tail{display:none}
+  .ribbon .rb-full{display:none}
+  .ribbon .rb-short{display:inline}
+}
+
+/* ==========================================================================
+   RESERVE (dark)
+   ========================================================================== */
+.reserve{background:var(--espresso);color:var(--cream);padding:clamp(76px,9vw,124px) 0}
+.reserve .title{color:var(--cream)}
+.reserve .title em{color:#D98F65}
+.reserve-inner{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(36px,5.5vw,80px);align-items:start}
+.reserve-copy .lead{color:rgba(250,247,242,.62)}
+.reserve-guide{margin-top:36px;border-top:1px solid rgba(250,247,242,.16)}
+.reserve-guide li{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid rgba(250,247,242,.1);font-size:13.5px;color:rgba(250,247,242,.72);line-height:1.75}
+.reserve-guide .n{font-family:var(--serif-en);font-size:14px;color:#D98F65;letter-spacing:.04em}
+.reserve-guide strong{color:var(--cream);font-weight:600;display:block;font-size:13.5px;letter-spacing:-.01em}
+.reserve-contact{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+
+.form-card{
+  background:rgba(250,247,242,.045);
+  border:1px solid rgba(250,247,242,.16);
+  border-radius:8px;
+  padding:clamp(24px,3vw,40px);
+}
+.form-card-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid rgba(250,247,242,.14)}
+.form-card-head strong{font-family:var(--serif-ko);font-size:18px;font-weight:500;letter-spacing:-.02em}
+.form-card-head span{font-size:11.5px;color:rgba(250,247,242,.45)}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field--full{grid-column:1/-1}
+.field > label,.field-label{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.01em;color:rgba(250,247,242,.68)}
+.field .req{width:4px;height:4px;border-radius:50%;background:#D98F65;flex:none}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 15px;
+  border:1px solid rgba(250,247,242,.2);
+  border-radius:4px;
+  background:rgba(250,247,242,.05);
+  color:var(--cream);
+  font-size:14.5px;line-height:1.5;
+  transition:border-color .25s var(--ease),background .25s var(--ease);
+  appearance:none;
+}
+.field textarea{min-height:104px;resize:vertical}
+.field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%23FAF7F2' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 15px center;background-size:10px;
+  padding-right:38px;cursor:pointer;
+}
+.field select option{color:var(--espresso);background:var(--cream)}
+.field input::placeholder,.field textarea::placeholder{color:rgba(250,247,242,.32)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:rgba(250,247,242,.65);background:rgba(250,247,242,.09)}
+.field input[type="date"]{color-scheme:dark}
+.field.has-error input,.field.has-error select,.field.has-error textarea{border-color:#E08B72}
+.field-error{display:none;font-size:11.5px;color:#EBA48F}
+.field.has-error .field-error{display:block}
+
+.check{display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.65;color:rgba(250,247,242,.6);cursor:pointer}
+.check input{appearance:none;width:17px;height:17px;margin:1px 0 0;border:1px solid rgba(250,247,242,.42);border-radius:50%;flex:none;display:grid;place-items:center;cursor:pointer;transition:background .2s var(--ease),border-color .2s var(--ease)}
+.check input::after{content:"";width:7px;height:4px;border-left:1.5px solid var(--espresso);border-bottom:1.5px solid var(--espresso);transform:rotate(-45deg) scale(.6);opacity:0;transition:opacity .2s var(--ease),transform .2s var(--ease)}
+.check input:checked{background:var(--cream);border-color:var(--cream)}
+.check input:checked::after{opacity:1;transform:rotate(-45deg) scale(1)}
+.form-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:4px}
+.form-note{font-size:11.5px;color:rgba(250,247,242,.42);line-height:1.6}
+
+/* ==========================================================================
+   VISIT
+   ========================================================================== */
+.visit{background:var(--cream)}
+.visit-inner{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(32px,5vw,68px);align-items:center}
+.map-card{position:relative;border:1px solid var(--line);border-radius:6px;overflow:hidden;min-height:360px;background:#EFE8DB;aspect-ratio:4/3.3}
+.map-canvas{position:absolute;inset:0;background:#EFE8DB;overflow:hidden}
+.map-canvas .blk{position:absolute;background:rgba(44,34,30,.055);border-radius:2px}
+.map-canvas .blk.b1{left:9%;top:64%;width:16%;height:14%}
+.map-canvas .blk.b2{left:28%;top:70%;width:11%;height:10%}
+.map-canvas .blk.b3{left:44%;top:62%;width:14%;height:13%}
+.map-canvas .blk.b4{left:71%;top:70%;width:17%;height:15%}
+.map-canvas .blk.b5{left:12%;top:8%;width:12%;height:9%}
+.map-canvas .blk.b6{left:71%;top:32%;width:13%;height:11%}
+.map-canvas .blk.b7{left:84%;top:56%;width:9%;height:12%}
+.map-canvas .park{position:absolute;left:4%;top:10%;width:31%;height:33%;background:#D9E0C9;border-radius:34px;display:grid;place-items:center;font-size:10px;letter-spacing:.2em;color:rgba(44,34,30,.5);text-indent:.2em}
+.map-canvas .water{position:absolute;left:-12%;bottom:-24%;width:132%;height:32%;background:#D7E2E1;border-radius:50%;transform:rotate(-4deg)}
+.map-canvas .compass{position:absolute;right:14px;top:12px;width:26px;height:26px;border:1px solid rgba(44,34,30,.18);border-radius:50%;display:grid;place-items:center;font-size:9px;letter-spacing:.04em;color:rgba(44,34,30,.5);background:rgba(251,247,239,.6)}
+.map-canvas .compass::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);border:3px solid transparent;border-bottom-color:var(--clay)}
+.map-canvas .road{position:absolute;background:#FBF7EF;box-shadow:0 0 0 1px rgba(44,34,30,.05)}
+.map-canvas .road.r1{left:0;right:0;top:51%;height:11px;transform:rotate(-3deg)}
+.map-canvas .road.r2{top:-10%;bottom:-10%;left:60%;width:9px;transform:rotate(5deg)}
+.map-canvas .road.r3{left:0;right:0;top:27%;height:5px;transform:rotate(-3deg);opacity:.9}
+.map-canvas .road.r4{left:0;right:0;top:78%;height:4px;transform:rotate(-3deg);opacity:.7}
+.map-canvas .street{position:absolute;font-size:9px;letter-spacing:.24em;color:rgba(44,34,30,.45);background:#EFE8DB;padding:1px 6px;white-space:nowrap}
+.map-canvas .street.s1{left:8%;top:46%;transform:rotate(-3deg)}
+.map-canvas .street.s2{right:6%;top:20%;transform:rotate(5deg);writing-mode:vertical-rl;letter-spacing:.2em}
+.map-pin{position:absolute;left:52%;top:50%;transform:translate(-50%,-100%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:7px}
+.map-pin .bubble{background:var(--espresso);color:var(--cream);font-size:11.5px;padding:8px 13px;border-radius:3px;white-space:nowrap;position:relative;box-shadow:0 10px 22px -14px rgba(0,0,0,.6)}
+.map-pin .bubble::after{content:"";position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);border:4px solid transparent;border-top-color:var(--espresso)}
+.map-pin .dot{width:11px;height:11px;border-radius:50%;background:var(--clay);border:3px solid var(--cream);box-shadow:0 0 0 5px rgba(184,107,67,.22)}
+.map-actions{position:absolute;left:12px;right:12px;bottom:12px;z-index:4;display:flex;flex-wrap:wrap;gap:6px}
+.map-actions .btn{background:rgba(250,247,242,.96);color:var(--espresso);border:1px solid rgba(44,34,30,.08);font-size:11.5px;padding:9px 13px;box-shadow:0 8px 18px -16px rgba(0,0,0,.6)}
+.map-actions .btn svg{width:12px;height:12px}
+
+.visit-copy .title{margin-top:22px}
+.addr{margin-top:20px;font-size:14.5px;line-height:1.85}
+.addr span{display:block;margin-top:4px;font-size:12.5px;color:var(--ink-45)}
+.hours{margin-top:26px;border-top:1px solid var(--line)}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-soft);font-size:13.5px}
+.hours .k{color:var(--ink-60);flex:none}
+.hours .v{font-weight:500;font-variant-numeric:tabular-nums}
+.hours .v.off{color:var(--clay);font-weight:500}
+.visit-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer{background:#241C19;color:rgba(250,247,242,.66);padding:clamp(48px,6vw,76px) 0 30px;font-size:13px}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px;padding-bottom:38px;border-bottom:1px solid rgba(250,247,242,.14)}
+.footer-brand .brand-mark{border-color:rgba(250,247,242,.45);color:var(--cream)}
+.footer-brand .brand-text strong{color:var(--cream)}
+.footer-brand .brand-text em{color:rgba(250,247,242,.45)}
+.footer-tagline{margin-top:18px;max-width:34ch;color:rgba(250,247,242,.5);font-size:12.5px;line-height:1.85}
+.footer-cols{display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px)}
+.footer-col h4{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,247,242,.38);margin-bottom:13px;font-weight:600}
+.footer-col li{margin-bottom:8px}
+.footer-col a:hover{color:var(--cream)}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-top:22px;font-size:11.5px;color:rgba(250,247,242,.34)}
+.sample-credit{margin-top:20px;padding-top:18px;border-top:1px solid rgba(250,247,242,.1);font-size:11.5px;color:rgba(250,247,242,.4)}
+.sample-credit a{border-bottom:1px solid rgba(250,247,242,.28);padding-bottom:1px}
+.sample-credit a:hover{color:var(--cream);border-color:var(--cream)}
+
+/* ---------- sticky mobile bar ---------- */
+.sticky-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:56;
+  display:none;gap:8px;
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  background:color-mix(in srgb,var(--cream) 94%,transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);
+}
+.sticky-bar .btn{flex:1;padding:14px 10px;font-size:13.5px}
+
+/* ---------- modal ---------- */
+.modal{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:20px}
+.modal[hidden]{display:none}
+.modal-overlay{position:absolute;inset:0;background:rgba(28,20,16,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:fade-in .3s var(--ease)}
+.modal-card{position:relative;width:min(460px,100%);max-height:calc(100vh - 40px);overflow:auto;background:var(--cream);color:var(--espresso);border-radius:10px;padding:38px 32px 30px;box-shadow:0 40px 100px -40px rgba(0,0,0,.7);animation:pop-in .42s var(--ease)}
+.modal-card h3{font-family:var(--serif-ko);font-size:22px;font-weight:500;letter-spacing:-.02em;line-height:1.5}
+.modal-card > p{margin-top:10px;color:var(--ink-60);font-size:13.5px;line-height:1.8}
+.modal-summary{margin:20px 0 24px;border-top:1px solid var(--line);font-size:13px}
+.modal-summary div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.modal-summary dt{color:var(--ink-45);flex:none}
+.modal-summary dd{margin:0;text-align:right;font-weight:500}
+.modal-close{position:absolute;top:14px;right:14px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;color:var(--ink-45);transition:background .2s var(--ease),color .2s var(--ease)}
+.modal-close:hover{background:var(--line-soft);color:var(--espresso)}
+.modal-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line);margin-bottom:18px;color:var(--clay)}
+.modal .form-note{color:var(--ink-45);text-align:center;margin-top:12px}
+@keyframes fade-in{from{opacity:0}}
+@keyframes pop-in{from{opacity:0;transform:translateY(16px) scale(.98)}}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width:1080px){
+  .hero-figure{max-width:420px}
+  .hero-vertical{display:none}
+}
+
+@media (max-width:960px){
+  .nav{display:none}
+  .nav-toggle{display:grid}
+  .header-cta{display:none}
+
+  .hero-inner{grid-template-columns:1fr;gap:44px}
+  .hero-copy{max-width:none}
+  .hero-figure{justify-self:stretch;max-width:none}
+  .hero-figure .arch{aspect-ratio:4/4.2}
+  .hero-figure img{object-position:55% 55%}
+  .hero-figure .frame{inset:12px -10px -10px 12px}
+  .hero-figure .stamp{left:auto;right:14px;bottom:-26px;width:96px;height:96px}
+
+  .story-inner,.space-inner,.visit-inner{grid-template-columns:1fr;gap:36px}
+  .story-figure{max-width:460px}
+  .space-figure{max-width:520px;order:2}
+  .space-copy{order:1}
+
+  .sig-grid{grid-template-columns:1fr;gap:12px}
+  .sig-card{padding:24px}
+  .sig-card h3{margin-top:14px}
+
+  .reserve-inner{grid-template-columns:1fr;gap:40px}
+
+  .gallery .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews{grid-template-columns:1fr}
+  .review{padding:26px 0}
+  .review + .review{border-left:0;border-top:1px solid var(--line);padding-left:0}
+}
+
+@media (max-width:720px){
+  :root{--header-h:62px}
+  body{font-size:15px;padding-bottom:0}
+  .wrap{width:calc(100% - 40px)}
+  .brand-text em{display:none}
+  .brand-mark{width:36px;height:36px}
+  .ribbon strong{font-size:10px;letter-spacing:.16em}
+  .ribbon a{font-size:11.5px}
+
+  .hero-inner{padding-block:34px 44px;gap:38px}
+  .hero h1{font-size:clamp(31px,8.4vw,42px);margin-top:18px;line-height:1.32}
+  .hero-desc{font-size:14.5px;margin-top:20px}
+  .hero-actions .btn{flex:1;min-width:140px}
+  .hero-meta{gap:6px 16px;font-size:11.5px;margin-top:26px;padding-top:18px}
+  .hero-figure .arch{aspect-ratio:4/4.4}
+  .hero-figure .frame{inset:10px -8px -8px 10px}
+  .hero-figure .stamp{width:84px;height:84px;bottom:-22px;right:10px}
+
+  .oven-strip ul{grid-template-columns:1fr}
+  .oven-strip li{padding:18px 0}
+  .oven-strip li + li{border-left:0;border-top:1px solid var(--line-soft);padding-left:0}
+  .oven-strip .t{font-size:22px}
+
+  .section{padding:64px 0}
+  .title{font-size:clamp(24px,6.8vw,30px)}
+  .lead{font-size:14px;margin-top:16px}
+
+  .story-quote{padding-left:18px;font-size:15.5px}
+  .principle{grid-template-columns:38px 1fr;gap:12px;padding:20px 0}
+  .principle .num{font-size:19px}
+  .principle h3{font-size:14.5px}
+  .principle h3 span{display:block;margin:3px 0 0}
+  .principle p{font-size:13px}
+
+  .menu-tabs{width:100%}
+  .menu-tab{flex:1;padding:10px 8px;font-size:13px}
+  .menu-note-top{display:none}
+  .menu-grid{grid-template-columns:1fr;gap:0}
+  .menu-item{padding:14px 0}
+  .menu-item .name{font-size:14.5px}
+  .menu-item .name em{font-size:11.5px}
+  .menu-foot{font-size:12px;line-height:1.7}
+
+  .space-figure .badge{right:8px;top:12px;padding:9px 12px;font-size:10.5px}
+  .space-facts > div{font-size:13px;padding:12px 0}
+
+  .gal-grid{gap:6px}
+  .gal-type{padding:16px}
+  .gal-type strong{font-size:15.5px;line-height:1.55}
+  .gal-type .t-en{font-size:11px}
+  .gal-type .t-time{font-size:10.5px;letter-spacing:.16em}
+
+  .reserve{padding:64px 0 76px}
+  .form-card{padding:22px 18px 24px}
+  .form-grid{grid-template-columns:1fr;gap:15px}
+  .form-card-head strong{font-size:16.5px}
+  .reserve-guide li{font-size:13px}
+
+  .map-card{min-height:260px;aspect-ratio:4/3.6}
+  .hours li{font-size:13px}
+  .visit-actions .btn{flex:1}
+
+  .footer-top{gap:28px}
+  .footer-cols{gap:28px 40px}
+  .footer-bottom{flex-direction:column;gap:6px}
+
+  .sticky-bar{display:flex}
+  body{padding-bottom:72px}
+}
+
+@media (max-width:390px){
+  .wrap{width:calc(100% - 32px)}
+  .hero h1{font-size:29px}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{width:100%}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-type{padding:14px}
+  .gal-type strong{font-size:14.5px}
+}
+</style>
+</head>
+<body class="theme-cafe">
+
+<a class="sr-only" href="#main">본문으로 바로가기</a>
+
+<!-- sample ribbon -->
+<div class="ribbon">
+  <div class="wrap">
+    <strong>PORTFOLIO · SAMPLE 05<span class="ribbon-tail"> · CAFE &amp; BAKERY</span></strong>
+    <a href="https://eunbi061800-lgtm.github.io/portfolio/">← <span class="rb-full">포트폴리오 목록으로</span><span class="rb-short">목록으로</span></a>
+  </div>
+</div>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="밀과 아침 홈으로">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21.5V8"/>
+          <path d="M12 13.4c-2.7 0-4.6-1.9-4.6-4.6 2.7 0 4.6 1.9 4.6 4.6Z"/>
+          <path d="M12 13.4c2.7 0 4.6-1.9 4.6-4.6-2.7 0-4.6 1.9-4.6 4.6Z"/>
+          <path d="M12 8.6C9.8 8.6 8.2 7 8.2 4.8 10.4 4.8 12 6.4 12 8.6Z"/>
+          <path d="M12 8.6c2.2 0 3.8-1.6 3.8-3.8C13.6 4.8 12 6.4 12 8.6Z"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>밀과 아침</strong>
+        <em>Wheat &amp; Dawn</em>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#story">스토리</a>
+      <a href="#menu">메뉴</a>
+      <a href="#space">공간</a>
+      <a href="#gallery">갤러리</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+
+    <a class="btn btn--clay btn--sm header-cta" href="#reserve">홀케이크 예약</a>
+
+    <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <div class="wrap">
+    <a href="#story">스토리 <span>Story</span></a>
+    <a href="#menu">메뉴 <span>Menu</span></a>
+    <a href="#space">공간 <span>Space</span></a>
+    <a href="#gallery">갤러리 <span>Gallery</span></a>
+    <a href="#reserve">예약 <span>Order</span></a>
+    <a href="#visit">오시는 길 <span>Visit</span></a>
+    <p class="mobile-nav-meta">밀과 아침 · WHEAT &amp; DAWN<br>인천 연수구 컨벤시아대로 123, 1층<br>매일 08:00 – 21:00</p>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="label">Wheat &amp; Dawn · Songdo · Since 2018</span>
+        <h1>매일 아침,<br><em>오븐</em>이 여는 하루.</h1>
+        <p class="hero-desc">
+          송도 골목 끝, 8년 된 발효종으로 빵을 굽는 작은 베이커리 카페.
+          빵이 가장 맛있는 시간에 맞춰 문을 열고,
+          원두는 매달 직접 마셔 보고 고릅니다.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#menu">
+            시그니처 메뉴
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 3.5 13.5 8 9 12.5"/></svg>
+          </a>
+          <a class="btn btn--line" href="#reserve">홀케이크 · 단체 예약</a>
+        </div>
+        <ul class="hero-meta">
+          <li>매일 08:00 – 21:00</li>
+          <li>오븐 타임 12:00 · 16:00</li>
+          <li>주차 3대</li>
+        </ul>
+      </div>
+
+      <figure class="hero-figure">
+        <div class="frame" aria-hidden="true"></div>
+        <div class="arch">
+          <img src="cafe-hero.jpg" alt="아침 빛이 드는 밀과 아침 매장 안, 나무 카운터 위에 놓인 사워도우와 도자기 그릇" width="1600" height="900" fetchpriority="high">
+        </div>
+        <div class="stamp" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs>
+              <path id="stampPath" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/>
+            </defs>
+            <circle cx="60" cy="60" r="55" fill="none" stroke="rgba(44,34,30,.18)" stroke-width="1"/>
+            <text><textPath href="#stampPath" startOffset="6%">BAKED EVERY MORNING · 2018</textPath></text>
+            <path d="M60 76V44" stroke="#B86B43" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M60 56c-5.5 0-9.4-3.9-9.4-9.4 5.5 0 9.4 3.9 9.4 9.4Zm0 0c5.5 0 9.4-3.9 9.4-9.4-5.5 0-9.4 3.9-9.4 9.4Z" fill="none" stroke="#B86B43" stroke-width="1.2" stroke-linejoin="round"/>
+            <path d="M60 66c-4.6 0-7.8-3.2-7.8-7.8 4.6 0 7.8 3.2 7.8 7.8Zm0 0c4.6 0 7.8-3.2 7.8-7.8-4.6 0-7.8 3.2-7.8 7.8Z" fill="none" stroke="#B86B43" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="hero-vertical" aria-hidden="true">Bread &amp; Coffee, baked at dawn</span>
+      </figure>
+    </div>
+
+    <div class="oven-strip">
+      <div class="wrap">
+        <ul>
+          <li>
+            <span class="t">08:00</span>
+            <div><strong>문을 엽니다</strong><span>첫 커피와 함께 갓 구운 크루아상이 나옵니다.</span></div>
+          </li>
+          <li>
+            <span class="t">12:00</span>
+            <div><strong>첫 번째 오븐</strong><span>사워도우와 깜빠뉴, 이 시간에 가장 좋습니다.</span></div>
+          </li>
+          <li>
+            <span class="t">16:00</span>
+            <div><strong>두 번째 오븐</strong><span>바스크 치즈케이크와 카눌레를 꺼냅니다.</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ STORY ============================ -->
+  <section class="section story" id="story">
+    <div class="wrap story-inner">
+      <figure class="story-figure" data-reveal>
+        <div class="arch">
+          <img src="cafe-sourdough.jpg" alt="린넨 천 위에 놓인 사워도우 단면, 진한 껍질과 촉촉한 속" width="1200" height="960" loading="lazy">
+        </div>
+        <figcaption>
+          <span>Our sourdough, 8 years old</span>
+          <span>2018 — 2026</span>
+        </figcaption>
+      </figure>
+
+      <div class="story-copy">
+        <span class="label" data-reveal>Our story</span>
+        <h2 class="title" data-reveal>빵 굽는 시간에 맞춰<br>문을 여는 <em>가게</em>.</h2>
+        <p class="lead" data-reveal>
+          2018년 겨울, 6평 남짓한 공간에 오븐 하나로 시작했습니다.
+          지금도 사워도우 발효종은 그때 만든 것을 이어 쓰고 있고,
+          원두는 매달 두세 번 직접 마셔 보고 두 가지를 고릅니다.
+          손님이 가장 많은 시간보다, 빵이 가장 맛있는 시간을 기준으로 하루를 짭니다.
+        </p>
+
+        <blockquote class="story-quote" data-reveal>
+          “서두르지 않아도 되는 빵집이 되고 싶었습니다.<br>
+          앉아서 빵이 식는 걸 기다릴 수 있는 곳.”
+        </blockquote>
+
+        <div class="principles">
+          <article class="principle" data-reveal>
+            <span class="num">01</span>
+            <div>
+              <h3>매일 아침 굽는 사워도우 <span>Baked daily</span></h3>
+              <p>8년째 이어 온 발효종으로 하루 두 번 굽습니다. 그날 구운 빵은 그날 다 나가고, 남으면 다음 날 팔지 않습니다.</p>
+            </div>
+          </article>
+          <article class="principle" data-reveal data-reveal-delay="1">
+            <span class="num">02</span>
+            <div>
+              <h3>직접 고르는 스페셜티 원두 <span>Specialty coffee</span></h3>
+              <p>산미가 도는 원두와 묵직한 원두, 두 가지를 준비합니다. 아메리카노는 주문할 때 어느 쪽인지 여쭙습니다.</p>
+            </div>
+          </article>
+          <article class="principle" data-reveal data-reveal-delay="2">
+            <span class="num">03</span>
+            <div>
+              <h3>조금 느린 공간 <span>Slow space</span></h3>
+              <p>32석, 테이블 간격은 1.2m. 창가 자리는 비워 두고, 오래 앉아 있어도 눈치 주지 않습니다.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ MENU ============================ -->
+  <section class="section menu" id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="label" data-reveal>Signature</span>
+          <h2 class="title" data-reveal>가장 많이 찾는 <em>세 가지</em>.</h2>
+        </div>
+        <p class="lead" data-reveal style="max-width:32ch;margin-top:0">
+          처음 오셨다면 이 셋 중 하나를 권합니다.
+          빵은 오븐에서 나온 시간에 맞춰 가장 맛있습니다.
+        </p>
+      </div>
+
+      <div class="sig-grid">
+        <article class="sig-card" data-reveal>
+          <div class="sig-top">
+            <span class="sig-icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 30c0-9 6.3-16 14-16s14 7 14 16"/>
+                <path d="M8 30h28"/>
+                <path d="M13 34h18"/>
+                <path d="M22 14V9M16.5 15.5 14 11.5M27.5 15.5 30 11.5"/>
+                <path d="M18 30v-6.5M26 30v-8"/>
+              </svg>
+            </span>
+            <span class="sig-en">Sourdough</span>
+          </div>
+          <h3>오븐의 사워도우</h3>
+          <p>겉은 진하게, 속은 촉촉하게. 12시와 4시에 오븐에서 나옵니다. 하프로도 살 수 있어요.</p>
+          <p class="sig-price">9,800원 <small>통 · 하프 5,400원</small></p>
+        </article>
+
+        <article class="sig-card" data-reveal data-reveal-delay="1">
+          <div class="sig-top">
+            <span class="sig-icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 17h20v11a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6V17Z"/>
+                <path d="M30 20h3a3.5 3.5 0 0 1 0 7h-3"/>
+                <path d="M14 34h16"/>
+                <path d="M17 13c0-2 1.6-2.4 1.6-4.4M22 13c0-2 1.6-2.4 1.6-4.4M27 13c0-2 1.6-2.4 1.6-4.4"/>
+              </svg>
+            </span>
+            <span class="sig-en">Flat white</span>
+          </div>
+          <h3>플랫화이트</h3>
+          <p>에스프레소 두 샷에 우유 120ml. 우유의 단맛이 살아나는 온도로 내립니다.</p>
+          <p class="sig-price">5,800원 <small>HOT · ICE</small></p>
+        </article>
+
+        <article class="sig-card" data-reveal data-reveal-delay="2">
+          <div class="sig-top">
+            <span class="sig-icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 24c0-6 4.5-11 10-11s10 5 10 11v3H12v-3Z"/>
+                <path d="M9 30h26"/>
+                <path d="M8 36h28"/>
+                <path d="M20 13c.6-3 1.7-4.4 2-7M24 13c.4-2.4 1.2-3.6 1.6-6"/>
+              </svg>
+            </span>
+            <span class="sig-en">Basque cake</span>
+          </div>
+          <h3>바스크 치즈케이크</h3>
+          <p>하루 숙성해 잘라 냅니다. 오후 두 시 이후가 가장 부드럽습니다.</p>
+          <p class="sig-price">7,500원 <small>1조각 · 홀케이크 예약</small></p>
+        </article>
+      </div>
+
+      <!-- menu board -->
+      <div class="menu-board" data-reveal>
+        <div class="menu-bar">
+          <div class="menu-tabs" role="tablist" aria-label="메뉴 구분">
+            <button class="menu-tab" type="button" role="tab" id="tab-coffee" aria-controls="panel-coffee" aria-selected="true">커피 · 음료</button>
+            <button class="menu-tab" type="button" role="tab" id="tab-bakery" aria-controls="panel-bakery" aria-selected="false" tabindex="-1">베이커리 · 디저트</button>
+          </div>
+          <span class="menu-note-top">가격은 2026년 11월 기준 · 매장 요금</span>
+        </div>
+
+        <div class="menu-panel" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" tabindex="0">
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="row"><span class="name">에스프레소<em>Espresso</em></span><span class="dots"></span><span class="price">4,000원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">아메리카노<em>Americano</em></span><span class="dots"></span><span class="price">5,000원</span></div>
+              <p>산미 · 묵직 중에서 골라 드립니다.</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">플랫화이트<em>Flat white</em></span><span class="dots"></span><span class="price">5,800원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">카푸치노<em>Cappuccino</em></span><span class="dots"></span><span class="price">5,500원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">콜드브루<em>Cold brew</em></span><span class="dots"></span><span class="price">5,500원</span></div>
+              <p>12시간 저온 추출 · 매일 아침 내립니다.</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">바닐라빈 라떼<em>Vanilla bean</em></span><span class="dots"></span><span class="price">6,300원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">말차 라떼<em>Matcha</em></span><span class="dots"></span><span class="price">6,300원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">유자 생강차<em>Yuja &amp; ginger</em></span><span class="dots"></span><span class="price">6,000원</span></div>
+              <p>직접 담근 유자청으로 만듭니다.</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">자몽 에이드<em>Grapefruit</em></span><span class="dots"></span><span class="price">6,500원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">생수 · 탄산수<em>Water</em></span><span class="dots"></span><span class="price">2,000원</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-bakery" role="tabpanel" aria-labelledby="tab-bakery" tabindex="0" hidden>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="row"><span class="name">사워도우<em>Sourdough</em></span><span class="dots"></span><span class="price">9,800원</span></div>
+              <p>8년 된 발효종 · 하프 5,400원</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">깜빠뉴<em>Campagne</em></span><span class="dots"></span><span class="price">7,500원</span></div>
+              <p>통밀 30% · 견과 토핑</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">크루아상<em>Croissant</em></span><span class="dots"></span><span class="price">4,500원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">아몬드 크루아상<em>Almond</em></span><span class="dots"></span><span class="price">5,800원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">카눌레<em>Canelé</em></span><span class="dots"></span><span class="price">3,800원</span></div>
+              <p>당일 구운 것만 · 오후 4시 이후</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">휘낭시에<em>Financier</em></span><span class="dots"></span><span class="price">3,500원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">바스크 치즈케이크<em>Basque</em></span><span class="dots"></span><span class="price">7,500원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">계절 과일 타르트<em>Fruit tart</em></span><span class="dots"></span><span class="price">8,500원</span></div>
+              <p>지금은 무화과 · 11월 한정</p>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">버터 스콘<em>Scone</em></span><span class="dots"></span><span class="price">4,200원</span></div>
+            </div>
+            <div class="menu-item">
+              <div class="row"><span class="name">홀케이크<em>Whole cake</em></span><span class="dots"></span><span class="price">38,000원</span></div>
+              <p>3일 전 예약 · 문구 무료</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-foot">
+          <span>빵은 매일 12:00 · 16:00 두 번 구워 냅니다. 소진되면 조기 마감될 수 있어요.</span>
+          <span>개인 텀블러 지참 시 500원 할인</span>
+          <span>단체 주문 20개 이상 10% 할인 (3일 전 예약)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SPACE ============================ -->
+  <section class="section space" id="space">
+    <div class="wrap space-inner">
+      <div class="space-copy">
+        <span class="label" data-reveal>Space &amp; guide</span>
+        <h2 class="title" data-reveal>오래 앉아 있고 싶은<br><em>32석</em>의 방.</h2>
+        <p class="lead" data-reveal>
+          창가 8석은 비워 두고, 가운데 테이블은 넓게 배치했습니다.
+          모든 테이블에 콘센트가 있고, 와이파이는 매장 전체에서 잡힙니다.
+          노트북 작업도, 수다도, 혼자만의 오후도 각자의 속도대로.
+        </p>
+
+        <dl class="space-facts" data-reveal>
+          <div><dt>좌석</dt><dd>32석 · 창가 8 · 룸 6</dd></div>
+          <div><dt>콘센트 · 와이파이</dt><dd>모든 테이블 · 무료</dd></div>
+          <div><dt>포장</dt><dd>전 메뉴 가능 · 텀블러 500원 할인</dd></div>
+          <div><dt>단체 · 대관</dt><dd>20명까지 · 3일 전 문의</dd></div>
+          <div><dt>주차</dt><dd>건물 뒤 3대 · 1시간 무료</dd></div>
+          <div><dt>반려동물</dt><dd>테라스만 동반 가능</dd></div>
+        </dl>
+
+        <div class="space-chips" data-reveal>
+          <span>노트북 평일 2시간</span>
+          <span>브레이크 타임 없음</span>
+          <span>단체석 예약 가능</span>
+        </div>
+        <p class="space-notes" data-reveal>
+          · 주말에는 5인 이상부터 미리 예약해 주시면 자리를 잡아 둡니다.<br>
+          · 케이크 문구는 픽업 당일 매장에서 적어 드립니다.
+        </p>
+      </div>
+
+      <figure class="space-figure" data-reveal data-reveal-delay="1">
+        <div class="arch">
+          <img src="cafe-space.jpg" alt="햇살이 드는 밀과 아침 창가 자리, 린넨 소파와 작은 원형 테이블" width="1100" height="1375" loading="lazy">
+        </div>
+        <div class="badge">
+          <strong>WINDOW 8</strong>
+          창가 자리는 예약 없이<br>비워 둡니다.
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ GALLERY ============================ -->
+  <section class="section gallery" id="gallery">
+    <div class="wrap">
+      <div class="gallery-head">
+        <div>
+          <span class="label" data-reveal>Gallery</span>
+          <h2 class="title" data-reveal>오늘의 <em>오븐</em>.</h2>
+        </div>
+        <a class="ig-handle" href="https://www.instagram.com/" target="_blank" rel="noopener" data-reveal>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="2.6" y="2.6" width="14.8" height="14.8" rx="4.4"/><circle cx="10" cy="10" r="3.4"/><circle cx="14.6" cy="5.4" r=".9" fill="currentColor" stroke="none"/></svg>
+          @wheatanddawn
+        </a>
+      </div>
+
+      <div class="gal-grid" data-reveal>
+        <figure class="gal-item">
+          <img src="cafe-latte.jpg" alt="플랫화이트와 크루아상이 놓인 린넨 테이블" width="1100" height="1100" loading="lazy">
+          <figcaption class="cap">아침의 플랫화이트 · 08:10</figcaption>
+        </figure>
+        <figure class="gal-item">
+          <img src="cafe-bakery.jpg" alt="유리 진열장 안의 크루아상과 카눌레" width="1200" height="800" loading="lazy">
+          <figcaption class="cap">오븐에서 막 나온 크루아상</figcaption>
+        </figure>
+        <div class="gal-type">
+          <span class="t-en">Every day, twice</span>
+          <strong>12:00과 16:00,<br><em>오븐</em>이 열립니다.</strong>
+          <span class="t-time">Oven time</span>
+        </div>
+        <figure class="gal-item">
+          <img src="cafe-sourdough.jpg" alt="사워도우 단면 클로즈업" width="1200" height="960" loading="lazy">
+          <figcaption class="cap">8년 된 발효종, 오늘의 사워도우</figcaption>
+        </figure>
+        <figure class="gal-item">
+          <img src="cafe-exterior.jpg" alt="아침 문을 여는 밀과 아침 매장 앞" width="1200" height="960" loading="lazy">
+          <figcaption class="cap">골목 끝, 문 여는 시간</figcaption>
+        </figure>
+        <figure class="gal-item">
+          <img src="cafe-cake.jpg" alt="무화과를 곁들인 홀케이크" width="1100" height="1375" loading="lazy">
+          <figcaption class="cap">홀케이크 · 3일 전 예약</figcaption>
+        </figure>
+      </div>
+
+      <div class="reviews">
+        <article class="review" data-reveal>
+          <blockquote>“골목까지 빵 굽는 냄새가 퍼져서 지나가다 들어갔어요. 사워도우 껍질이 진짜 좋습니다. 오후 4시에 맞춰 가면 카눌레도 있어요.”</blockquote>
+          <p class="who">김*진 · 2026.11 · 사워도우</p>
+        </article>
+        <article class="review" data-reveal data-reveal-delay="1">
+          <blockquote>“주말 오전엔 꼭 창가 자리에서 책을 읽어요. 커피도 빵도 제 취향이라, 요즘은 다른 카페를 잘 안 갑니다.”</blockquote>
+          <p class="who">이*현 · 2026.10 · 플랫화이트</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ RESERVE ============================ -->
+  <section class="reserve" id="reserve">
+    <div class="wrap reserve-inner">
+      <div class="reserve-copy">
+        <span class="label label--light" data-reveal>Order &amp; reservation</span>
+        <h2 class="title" data-reveal>홀케이크와 단체 주문은<br><em>미리</em> 말씀해 주세요.</h2>
+        <p class="lead" data-reveal>
+          케이크는 주문 후에 굽고, 단체 빵은 오븐 시간을 비워 두고 준비합니다.
+          아래에서 남겨 주시면 영업일 기준 24시간 안에 문자로 답드립니다.
+        </p>
+
+        <ul class="reserve-guide" data-reveal>
+          <li><span class="n">01</span><div><strong>홀케이크 · 3일 전</strong>지름 15cm / 6~8인 · 38,000원부터. 문구는 무료로 적어 드립니다.</div></li>
+          <li><span class="n">02</span><div><strong>단체 주문 · 20개 이상</strong>빵·커피 모두 10% 할인. 3일 전까지 알려 주세요.</div></li>
+          <li><span class="n">03</span><div><strong>픽업 시간</strong>매일 08:00 – 20:30. 오븐 시간(12:00 · 16:00)에 맞추면 갓 구운 빵으로 드립니다.</div></li>
+          <li><span class="n">04</span><div><strong>변경 · 취소</strong>픽업 하루 전까지 연락 주시면 됩니다. 그 이후에는 재료비가 발생합니다.</div></li>
+        </ul>
+
+        <div class="reserve-contact" data-reveal>
+          <a class="btn btn--outline-cream btn--sm" href="tel:0320000000">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4.2 2.5 6 2l1.3 3-1.5 1.1a8 8 0 0 0 4.1 4.1L11 8.7l3 1.3-.5 1.8c-.2.7-.9 1.1-1.6 1A11.2 11.2 0 0 1 3.2 4.1c-.1-.7.3-1.4 1-1.6Z"/></svg>
+            032-000-0000
+          </a>
+          <a class="btn btn--outline-cream btn--sm" href="https://open.kakao.com/" target="_blank" rel="noopener">카카오톡 채널</a>
+        </div>
+      </div>
+
+      <div class="form-card panel-dark" data-reveal data-reveal-delay="1">
+        <div class="form-card-head">
+          <strong>예약 · 주문 문의</strong>
+          <span>1분이면 됩니다</span>
+        </div>
+
+        <!-- 정적 샘플 폼 · 실제 전송은 form action을 연결하세요 -->
+        <form id="order-form" data-form data-modal="#order-modal" data-summary="#order-summary" novalidate>
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="od-type">문의 구분 <span class="req" aria-hidden="true"></span></label>
+              <select id="od-type" name="type" required>
+                <option value="">선택해 주세요</option>
+                <option>홀케이크 예약</option>
+                <option>단체 주문 (빵 · 커피 20개 이상)</option>
+                <option>공간 대관 · 단체석 문의</option>
+                <option>기타 문의</option>
+              </select>
+              <span class="field-error">문의 구분을 선택해 주세요.</span>
+            </div>
+
+            <div class="field">
+              <label for="od-date">희망 날짜 <span class="req" aria-hidden="true"></span></label>
+              <input id="od-date" name="date" type="date" required>
+              <span class="field-error">날짜를 선택해 주세요.</span>
+            </div>
+
+            <div class="field">
+              <label for="od-time">픽업 시간 <span class="req" aria-hidden="true"></span></label>
+              <select id="od-time" name="time" required>
+                <option value="">선택해 주세요</option>
+                <option>08:00 – 11:00</option>
+                <option>11:00 – 14:00</option>
+                <option>14:00 – 17:00</option>
+                <option>17:00 – 20:30</option>
+              </select>
+              <span class="field-error">시간대를 선택해 주세요.</span>
+            </div>
+
+            <div class="field">
+              <label for="od-name">성함 <span class="req" aria-hidden="true"></span></label>
+              <input id="od-name" name="name" type="text" placeholder="홍길동" required autocomplete="name">
+              <span class="field-error">성함을 입력해 주세요.</span>
+            </div>
+
+            <div class="field">
+              <label for="od-phone">연락처 <span class="req" aria-hidden="true"></span></label>
+              <input id="od-phone" name="phone" type="tel" placeholder="010-0000-0000" required autocomplete="tel" inputmode="tel">
+              <span class="field-error">연락 가능한 번호를 입력해 주세요.</span>
+            </div>
+
+            <div class="field field--full">
+              <label for="od-qty">수량 · 인원</label>
+              <input id="od-qty" name="qty" type="text" placeholder="예) 홀케이크 1개 / 6인, 단체 샌드위치 30개">
+            </div>
+
+            <div class="field field--full">
+              <label for="od-memo">요청 사항</label>
+              <textarea id="od-memo" name="memo" placeholder="케이크 문구, 알레르기, 포장 방식 등 편하게 적어 주세요."></textarea>
+            </div>
+
+            <div class="field field--full">
+              <label class="check" for="od-agree">
+                <input id="od-agree" name="agree" type="checkbox" required>
+                <span>예약 안내를 위한 개인정보(성함·연락처) 수집 및 이용에 동의합니다.</span>
+              </label>
+              <span class="field-error">동의가 필요합니다.</span>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn--clay" type="submit">예약 문의 보내기</button>
+              <span class="form-note">영업일 기준 24시간 안에 문자로 답드립니다.</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ VISIT ============================ -->
+  <section class="section visit" id="visit">
+    <div class="wrap visit-inner">
+      <div data-reveal>
+        <div class="map-card">
+          <div class="map-canvas" aria-hidden="true">
+            <span class="blk b1"></span>
+            <span class="blk b2"></span>
+            <span class="blk b3"></span>
+            <span class="blk b4"></span>
+            <span class="blk b5"></span>
+            <span class="blk b6"></span>
+            <span class="blk b7"></span>
+            <div class="water"></div>
+            <div class="park">센트럴파크</div>
+            <span class="compass">N</span>
+            <div class="road r1"></div>
+            <div class="road r2"></div>
+            <div class="road r3"></div>
+            <div class="road r4"></div>
+            <span class="street s1">컨벤시아대로</span>
+            <span class="street s2">송도 1동</span>
+          </div>
+          <div class="map-pin">
+            <span class="bubble">밀과 아침 · 송도</span>
+            <span class="dot"></span>
+          </div>
+          <div class="map-actions">
+            <a class="btn" href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%20%EC%97%B0%EC%88%98%EA%B5%AC%20%EC%BB%A8%EB%B2%A4%EC%8B%9C%EC%95%84%EB%8C%80%EB%A1%9C%20123" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 14s5-4.2 5-8A5 5 0 0 0 3 6c0 3.8 5 8 5 8Z"/><circle cx="8" cy="6" r="1.7"/></svg>
+              네이버지도
+            </a>
+            <a class="btn" href="https://map.kakao.com/?q=%EC%9D%B8%EC%B2%9C%20%EC%97%B0%EC%88%98%EA%B5%AC%20%EC%BB%A8%EB%B2%A4%EC%8B%9C%EC%95%84%EB%8C%80%EB%A1%9C%20123" target="_blank" rel="noopener">카카오맵</a>
+            <a class="btn" href="sms:0320000000">문자</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="visit-copy">
+        <span class="label" data-reveal>Visit</span>
+        <h2 class="title" data-reveal>찾아오시는 길.</h2>
+        <p class="addr" data-reveal>
+          인천 연수구 컨벤시아대로 123, 1층
+          <span>송도 센트럴파크 도보 6분 · 건물 뒤 주차 3대 (1시간 무료)</span>
+        </p>
+
+        <ul class="hours" data-reveal>
+          <li><span class="k">매일</span><span class="v">08:00 – 21:00</span></li>
+          <li><span class="k">라스트 오더</span><span class="v">20:30</span></li>
+          <li><span class="k">오븐 타임</span><span class="v">12:00 · 16:00</span></li>
+          <li><span class="k">브레이크 타임</span><span class="v">없음</span></li>
+          <li><span class="k">주차</span><span class="v">건물 뒤 3대</span></li>
+          <li><span class="k">반려동물</span><span class="v">테라스만 동반</span></li>
+        </ul>
+
+        <div class="visit-actions" data-reveal>
+          <a class="btn btn--line btn--sm" href="tel:0320000000">전화하기</a>
+          <a class="btn btn--line btn--sm" href="sms:0320000000">문자 보내기</a>
+          <a class="btn btn--line btn--sm" href="https://www.instagram.com/" target="_blank" rel="noopener">인스타그램</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="맨 위로">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21.5V8"/>
+              <path d="M12 13.4c-2.7 0-4.6-1.9-4.6-4.6 2.7 0 4.6 1.9 4.6 4.6Z"/>
+              <path d="M12 13.4c2.7 0 4.6-1.9 4.6-4.6-2.7 0-4.6 1.9-4.6 4.6Z"/>
+              <path d="M12 8.6C9.8 8.6 8.2 7 8.2 4.8 10.4 4.8 12 6.4 12 8.6Z"/>
+              <path d="M12 8.6c2.2 0 3.8-1.6 3.8-3.8C13.6 4.8 12 6.4 12 8.6Z"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <strong>밀과 아침</strong>
+            <em>Wheat &amp; Dawn</em>
+          </span>
+        </a>
+        <p class="footer-tagline">인천 연수구 컨벤시아대로 123, 1층<br>032-000-0000 · 매일 08:00 – 21:00</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#menu">커피 · 음료</a></li>
+            <li><a href="#menu">베이커리 · 디저트</a></li>
+            <li><a href="#reserve">홀케이크 예약</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="#space">공간 안내</a></li>
+            <li><a href="#visit">오시는 길</a></li>
+            <li><a href="#visit">주차 안내</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sample</h4>
+          <ul>
+            <li><a href="https://eunbi061800-lgtm.github.io/portfolio/">포트폴리오 목록</a></li>
+            <li><a href="https://eunbi061800-lgtm.github.io/portfolio/pilates/">샘플 1호 · 온유 필라테스</a></li>
+            <li><a href="https://eunbi061800-lgtm.github.io/portfolio/interior/">샘플 2호 · 더결 인테리어</a></li>
+            <li><a href="https://eunbi061800-lgtm.github.io/portfolio/cleaning/">샘플 3호 · 바른홈케어</a></li>
+            <li><a href="https://eunbi061800-lgtm.github.io/portfolio/academy/">샘플 4호 · 이룸 영수학원</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 WHEAT &amp; DAWN. 대표 박서윤 · 사업자등록번호 000-00-00000</span>
+      <span>인천 연수구 컨벤시아대로 123, 1층</span>
+    </div>
+
+    <p class="sample-credit">
+      이 페이지는 도어릿(DOORLIT) <a href="https://eunbi061800-lgtm.github.io/portfolio/">포트폴리오</a>의 제작 샘플입니다. 등장하는 브랜드·주소·연락처·후기는 예시입니다.
+    </p>
+  </div>
+</footer>
+
+<!-- 모바일 하단 고정 바 -->
+<div class="sticky-bar">
+  <a class="btn btn--line" href="tel:0320000000">전화</a>
+  <a class="btn btn--clay" href="#reserve">홀케이크 · 단체 예약</a>
+</div>
+
+<!-- ============================ MODAL ============================ -->
+<div class="modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title" hidden>
+  <div class="modal-overlay" data-modal-close></div>
+  <div class="modal-card">
+    <button class="modal-close" type="button" data-modal-close aria-label="닫기">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8"/></svg>
+    </button>
+    <div class="modal-icon">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6"/></svg>
+    </div>
+    <h3 id="order-modal-title">예약 문의가 접수되었습니다</h3>
+    <p>남겨 주신 내용을 확인하고, 영업일 기준 24시간 안에 문자로 답드립니다.</p>
+    <dl class="modal-summary" id="order-summary"></dl>
+    <button class="btn btn--block" type="button" data-modal-close>확인</button>
+    <p class="form-note">※ 샘플 페이지라 실제로 전송되지는 않습니다.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- header scroll ---------- */
+  var header = document.querySelector('.site-header');
+  function onScroll(){
+    if(!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* ---------- mobile nav ---------- */
+  var toggle = document.querySelector('.nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  function closeNav(){
+    document.body.classList.remove('nav-open');
+    if(toggle){
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','메뉴 열기');
+    }
+    if(mobileNav) mobileNav.setAttribute('aria-hidden','true');
+  }
+  if(toggle && mobileNav){
+    toggle.addEventListener('click', function(){
+      var open = document.body.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+      mobileNav.setAttribute('aria-hidden', open ? 'false' : 'true');
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', closeNav);
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeNav();
+    });
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window && revealEls.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---------- menu tabs ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.menu-tab'));
+  function selectTab(tab){
+    tabs.forEach(function(t){
+      var selected = t === tab;
+      t.setAttribute('aria-selected', selected ? 'true' : 'false');
+      t.tabIndex = selected ? 0 : -1;
+      var panel = document.getElementById(t.getAttribute('aria-controls'));
+      if(panel) panel.hidden = !selected;
+    });
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){ selectTab(tab); });
+    tab.addEventListener('keydown', function(e){
+      var next = null;
+      if(e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+      if(e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+      if(next){
+        e.preventDefault();
+        next.focus();
+        selectTab(next);
+      }
+    });
+  });
+
+  /* ---------- form ---------- */
+  var form = document.getElementById('order-form');
+  var modal = document.getElementById('order-modal');
+  var summary = document.getElementById('order-summary');
+  var lastFocus = null;
+
+  function openModal(){
+    if(!modal) return;
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    var btn = modal.querySelector('.modal-close');
+    if(btn) btn.focus();
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  if(modal){
+    modal.querySelectorAll('[data-modal-close]').forEach(function(el){
+      el.addEventListener('click', closeModal);
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+  }
+
+  function fieldOf(input){
+    return input.closest('.field') || input.parentElement;
+  }
+  function validate(input){
+    var wrap = fieldOf(input);
+    if(!wrap) return true;
+    var ok = true;
+    if(input.type === 'checkbox'){
+      ok = input.checked;
+    } else if(input.tagName === 'SELECT'){
+      ok = !!input.value;
+    } else {
+      ok = input.value.trim().length > 0;
+      if(ok && input.type === 'tel'){
+        ok = input.value.replace(/[^0-9]/g, '').length >= 9;
+      }
+      if(ok && input.type === 'date'){
+        ok = !!input.value;
+      }
+    }
+    wrap.classList.toggle('has-error', !ok);
+    return ok;
+  }
+
+  if(form){
+    var requiredFields = Array.prototype.slice.call(form.querySelectorAll('[required]'));
+    requiredFields.forEach(function(input){
+      input.addEventListener('input', function(){ validate(input); });
+      input.addEventListener('change', function(){ validate(input); });
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var valid = true;
+      var firstBad = null;
+      requiredFields.forEach(function(input){
+        var ok = validate(input);
+        if(!ok){
+          valid = false;
+          if(!firstBad) firstBad = input;
+        }
+      });
+      if(!valid){
+        if(firstBad) firstBad.focus();
+        return;
+      }
+
+      function val(name){
+        var el = form.elements[name];
+        if(!el) return '';
+        if(el.type === 'checkbox') return el.checked ? '동의함' : '';
+        if(el.tagName === 'SELECT') return el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : el.value;
+        return el.value.trim();
+      }
+      function fmtDate(v){
+        if(!v) return '';
+        var p = v.split('-');
+        return p.length === 3 ? (p[0] + '.' + p[1] + '.' + p[2]) : v;
+      }
+      function fmtPhone(v){
+        var d = String(v).replace(/[^0-9]/g, '');
+        if(d.length === 11) return d.slice(0,3) + '-' + d.slice(3,7) + '-' + d.slice(7);
+        if(d.length === 10) return d.slice(0,3) + '-' + d.slice(3,6) + '-' + d.slice(6);
+        if(d.length === 9) return d.slice(0,2) + '-' + d.slice(2,5) + '-' + d.slice(5);
+        return v;
+      }
+
+      var rows = [
+        ['문의 구분', val('type')],
+        ['희망 날짜', fmtDate(val('date'))],
+        ['픽업 시간', val('time')],
+        ['성함', val('name')],
+        ['연락처', fmtPhone(val('phone'))],
+        ['수량 · 인원', val('qty') || '—'],
+        ['요청 사항', val('memo') || '—']
+      ];
+      if(summary){
+        summary.innerHTML = '';
+        rows.forEach(function(row){
+          var div = document.createElement('div');
+          var dt = document.createElement('dt');
+          var dd = document.createElement('dd');
+          dt.textContent = row[0];
+          dd.textContent = row[1];
+          div.appendChild(dt);
+          div.appendChild(dd);
+          summary.appendChild(div);
+        });
+      }
+      openModal();
+      form.reset();
+      requiredFields.forEach(function(input){
+        var wrap = fieldOf(input);
+        if(wrap) wrap.classList.remove('has-error');
+      });
+    });
+  }
+
+  /* ---------- set min date (today) ---------- */
+  var dateInput = document.getElementById('od-date');
+  if(dateInput){
+    var d = new Date();
+    var iso = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    dateInput.min = iso;
+  }
+})();
+</script>
+</body>
+</html>

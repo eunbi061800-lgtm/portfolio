@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Studio Naru — form handling (validation, summary modal)
+   DOORLIT — form handling (validation, summary modal)
    사용법:
      <form data-form data-modal="#inquiry-modal" data-summary="#inquiry-summary">
    - required 필드와 체크박스를 검사하고, 입력값을 모달 요약으로 보여줍니다.
@@ -111,7 +111,7 @@
       }
 
       if (summary) fillSummary(summary, collect(form));
-      if (window.NaruUI && modal) window.NaruUI.showModal(modal);
+      if (window.DoorlitUI && modal) window.DoorlitUI.showModal(modal);
       form.reset();
       fields.forEach(function (field) {
         setError(field, false);

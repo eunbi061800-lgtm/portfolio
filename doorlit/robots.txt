@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eunbi061800-lgtm.github.io/portfolio/doorlit/sitemap.xml
+Sitemap: https://eunbi061800-lgtm.github.io/sitemap.xml
