@@ -42,6 +42,7 @@ body{
   word-break:keep-all;overflow-x:hidden;
 }
 img{display:block;max-width:100%}
+figure{margin:0}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer}
 h1,h2,h3,h4{margin:0;line-height:1.3;letter-spacing:-.02em}
@@ -188,10 +189,10 @@ h1,h2,h3,h4{margin:0;line-height:1.3;letter-spacing:-.02em}
 .hstat span{display:block;font-size:12.5px;color:var(--muted);margin-top:3px}
 
 /* hero visual : teacher cards */
-.hero-visual{position:relative;min-height:420px}
+.hero-visual{position:relative}
 .teacher-strip{
   position:relative;display:grid;grid-template-columns:repeat(3,1fr);
-  gap:12px;align-items:end;height:100%;
+  gap:12px;align-items:end;
 }
 .tcard{
   position:relative;border-radius:16px;overflow:hidden;
