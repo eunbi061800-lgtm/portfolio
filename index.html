@@ -102,6 +102,28 @@
   .go::after{content:"→";transition:transform .3s ease}
   .card:hover .go::after{transform:translateX(4px)}
 
+  /* ---------- 가격대 필터 ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(22px,3vw,30px)}
+  .filters button{
+    font-family:var(--sans);font-size:13.5px;letter-spacing:-.01em;line-height:1.4;
+    padding:9px 16px;border-radius:999px;border:1px solid var(--line);
+    background:#fff;color:var(--ink-soft);cursor:pointer;
+    transition:background .25s ease,color .25s ease,border-color .25s ease;
+  }
+  .filters button:hover{border-color:#d3cab9;color:var(--ink)}
+  .filters button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .card[hidden]{display:none}
+  .chip-new{
+    align-self:flex-start;
+    font-size:10.5px;letter-spacing:.16em;font-weight:600;
+    padding:3px 9px;border-radius:999px;
+    background:var(--ink);color:var(--paper);
+  }
+  @media (max-width:640px){
+    .filters{gap:6px}
+    .filters button{padding:8px 12px;font-size:12.5px}
+  }
+
   /* ---------- 상담 CTA ---------- */
   .top-right{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end}
   .top-home{font-size:12px;letter-spacing:.08em;color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .3s ease,border-color .3s ease}
@@ -162,8 +184,8 @@
       <p class="eyebrow">Sample Works</p>
       <h1>소상공인·1인 브랜드를 위한<br>홈페이지 제작 샘플</h1>
       <p class="lede">
-        업종별로 직접 만든 페이지 12종입니다. 아래 카드를 누르면 실제 페이지가 새 창에서 열립니다.
-        디자인·구성·모바일 화면까지 그대로 확인하실 수 있습니다.
+        업종별로 직접 만든 페이지 12종입니다. 아래 <strong>가격대 필터</strong>로 골라 보실 수 있고,
+        1섹션 30,000원 샘플이 맨 앞에 있습니다. 카드를 누르면 실제 페이지가 새 창에서 열립니다.
       </p>
       <div class="intro-cta">
         <a class="btn-kakao" href="https://open.kakao.com/o/sUJMxbYi" target="_blank" rel="noopener">카톡으로 무료 상담</a>
@@ -174,12 +196,103 @@
 
   <section class="works" aria-label="제작 샘플">
     <div class="wrap">
+      <div class="filters" role="tablist" aria-label="가격대별 포트폴리오 필터">
+        <button type="button" role="tab" aria-selected="true" data-filter="all">전체 (12)</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="mini">1섹션 30,000원 (2)</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="landing">랜딩 99,000원 (5)</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="deluxe">디럭스 299,000원 (4)</button>
+        <button type="button" role="tab" aria-selected="false" data-filter="premium">프리미엄 649,000원 (1)</button>
+      </div>
+
       <div class="work-grid">
 
-        <a class="card" href="pilates/" target="_blank" rel="noopener">
+        <a class="card" href="roastery/" target="_blank" rel="noopener" data-category="mini">
+          <div class="thumb">
+            <img src="assets/img/mockup-roastery.jpg" alt="로스터리 모노 1섹션 랜딩 페이지를 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
+            <span>SAMPLE 01</span>
+            <span class="badge-deluxe">1 SECTION</span>
+          </div>
+          <div class="card-body">
+            <span class="chip-new">NEW</span>
+            <h2>로스터리 모노</h2>
+            <p>성수동 스페셜티 커피 로스터리. 스크롤 없이 한 화면에서 브랜드 소개·핵심 정보·예약 버튼이 모두 마무리되는 1섹션 구성으로, 초간단 1페이지 상품(30,000원)의 기준을 보여 주는 모델입니다.</p>
+            <div class="tags">
+              <b>초간단 · 1섹션</b><b>한 화면 완결</b><b>1페이지 상품</b>
+            </div>
+            <span class="go">페이지 열기</span>
+          </div>
+        </a>
+
+        <a class="card" href="jeongan/" target="_blank" rel="noopener" data-category="mini">
+          <div class="thumb">
+            <img src="assets/img/mockup-jeongan.jpg" alt="정안 컨설팅 1섹션 랜딩페이지를 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
+            <span>SAMPLE 02</span>
+            <span class="badge-deluxe">1 SECTION</span>
+          </div>
+          <div class="card-body">
+            <span class="chip-new">NEW</span>
+            <h2>정안 컨설팅</h2>
+            <p>1인 스타트업·소상공인의 세무·자금·사업계획을 보는 1인 컨설팅 허브. 딥 네이비·코발트 톤의 한 화면 구성으로, 브랜드 소개·핵심 정보 3줄·상담 예약 버튼과 안내 모달까지 담았습니다.</p>
+            <div class="tags">
+              <b>1인 전문직</b><b>한 화면 완결</b><b>상담 예약 모달</b>
+            </div>
+            <span class="go">페이지 열기</span>
+          </div>
+        </a>
+
+        <a class="card" href="bareun-leaders/" target="_blank" rel="noopener" data-category="deluxe">
+          <div class="thumb">
+            <img src="assets/img/mockup-bareun-leaders.jpg" alt="바른리더스정형외과 5페이지를 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
+            <span>SAMPLE 03</span>
+            <span class="badge-deluxe">DELUXE · 5 PAGES</span>
+          </div>
+          <div class="card-body">
+            <span class="chip-new">NEW</span>
+            <h2>바른리더스정형외과</h2>
+            <p>정형외과 전문의 3인 협진 비수술 통증 치료 클리닉. 딥네이비·티얼 톤의 5페이지 의료기관 모델로, 진료 분야 탭 전환·의료진 약력·비수술 치료 안내·온라인 예약 폼과 휴진 안내 팝업까지 실제로 동작합니다.</p>
+            <div class="tags">
+              <b>의료 · 클리닉</b><b>5페이지 구조</b><b>진료 탭·예약 폼</b>
+            </div>
+            <span class="go">페이지 열기</span>
+          </div>
+        </a>
+
+        <a class="card" href="damon-food/" target="_blank" rel="noopener" data-category="deluxe">
+          <div class="thumb">
+            <img src="assets/img/mockup-damon-food.jpg" alt="담온식품 메인 페이지를 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
+            <span>SAMPLE 04</span>
+            <span class="badge-deluxe">DELUXE · 5 PAGES</span>
+          </div>
+          <div class="card-body">
+            <span class="chip-new">NEW</span>
+            <h2>담온식품</h2>
+            <p>떡·면·소스 전문 식품 제조 기업. 딥 차콜·테라코타 톤의 기업형 5페이지로, 제품 라인업 필터·생산 품질 공정·납품 OEM 문의까지 실제로 동작합니다. B2B 상담으로 이어지는 제조업 모델입니다.</p>
+            <div class="tags">
+              <b>B2B · 제조</b><b>5페이지 구조</b><b>납품·OEM 문의</b>
+            </div>
+            <span class="go">페이지 열기</span>
+          </div>
+        </a>
+
+        <a class="card" href="math-academy/" target="_blank" rel="noopener" data-category="landing">
+          <div class="thumb">
+            <img src="assets/img/mockup-math.jpg" alt="결수학학원 메인 페이지 화면" width="1280" height="720">
+            <span>SAMPLE 05</span>
+          </div>
+          <div class="card-body">
+            <h2>결수학학원</h2>
+            <p>중등·고등 내신·수능 수학 소수 정예 학원. 딥네이비 배경에 선명한 옐로우 포인트, 1초 만에 꽂히는 3줄 훅 카피와 강사진 프로필, 학년별 탭 커리큘럼·시간표, 모바일 하단 고정 CTA 바까지 — 직관형 수학학원 원페이지입니다.</p>
+            <div class="tags">
+              <b>직관 · 훅 카피</b><b>탭 커리큘럼</b><b>하단 고정 CTA</b>
+            </div>
+            <span class="go">페이지 열기</span>
+          </div>
+        </a>
+
+        <a class="card" href="pilates/" target="_blank" rel="noopener" data-category="landing">
           <div class="thumb">
             <img src="assets/img/mockup-beauty.jpg" alt="온유 필라테스 페이지를 노트북과 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
-            <span>SAMPLE 01</span>
+            <span>SAMPLE 06</span>
           </div>
           <div class="card-body">
             <h2>온유 필라테스</h2>
@@ -191,10 +304,10 @@
           </div>
         </a>
 
-        <a class="card" href="interior/" target="_blank" rel="noopener">
+        <a class="card" href="interior/" target="_blank" rel="noopener" data-category="landing">
           <div class="thumb">
             <img src="assets/img/mockup-consulting.jpg" alt="더결 인테리어 페이지를 노트북과 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
-            <span>SAMPLE 02</span>
+            <span>SAMPLE 07</span>
           </div>
           <div class="card-body">
             <h2>더결 인테리어</h2>
@@ -206,10 +319,10 @@
           </div>
         </a>
 
-        <a class="card" href="cleaning/" target="_blank" rel="noopener">
+        <a class="card" href="cleaning/" target="_blank" rel="noopener" data-category="landing">
           <div class="thumb">
             <img src="assets/img/mockup-cleaning.jpg" alt="바른홈케어 페이지를 노트북과 휴대폰 화면으로 보여 주는 목업" width="1536" height="864">
-            <span>SAMPLE 03</span>
+            <span>SAMPLE 08</span>
           </div>
           <div class="card-body">
             <h2>바른홈케어</h2>
@@ -221,10 +334,25 @@
           </div>
         </a>
 
-        <a class="card" href="academy/" target="_blank" rel="noopener">
+        <a class="card" href="cafe/" target="_blank" rel="noopener" data-category="landing">
+          <div class="thumb">
+            <img src="assets/img/mockup-cafe.jpg" alt="밀과 아침 카페 페이지를 PC 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
+            <span>SAMPLE 09</span>
+          </div>
+          <div class="card-body">
+            <h2>밀과 아침</h2>
+            <p>송도 감성 베이커리 카페. 크림·에스프레소 톤과 세리프 타이포로 브랜드 분위기를 먼저 보여 주고, 오븐 시간 안내와 탭 메뉴판, 홀케이크·단체 주문 예약으로 이어지는 원페이지 구성입니다.</p>
+            <div class="tags">
+              <b>감성 · 브랜드</b><b>탭 메뉴판</b><b>예약 · 단체 주문</b>
+            </div>
+            <span class="go">페이지 열기</span>
+          </div>
+        </a>
+
+        <a class="card" href="academy/" target="_blank" rel="noopener" data-category="deluxe">
           <div class="thumb">
             <img src="assets/img/mockup-academy.jpg" alt="이룸 영수학원 메인 페이지 화면" width="1672" height="941">
-            <span>SAMPLE 04</span>
+            <span>SAMPLE 10</span>
             <span class="badge-deluxe">DELUXE · 5 PAGES</span>
           </div>
           <div class="card-body">
@@ -237,56 +365,10 @@
           </div>
         </a>
 
-        <a class="card" href="cafe/" target="_blank" rel="noopener">
-          <div class="thumb">
-            <img src="assets/img/mockup-cafe.jpg" alt="밀과 아침 카페 페이지를 PC 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
-            <span>SAMPLE 05</span>
-          </div>
-          <div class="card-body">
-            <h2>밀과 아침</h2>
-            <p>송도 감성 베이커리 카페. 크림·에스프레소 톤과 세리프 타이포로 브랜드 분위기를 먼저 보여 주고, 오븐 시간 안내와 탭 메뉴판, 홀케이크·단체 주문 예약으로 이어지는 원페이지 구성입니다.</p>
-            <div class="tags">
-              <b>감성 · 브랜드</b><b>탭 메뉴판</b><b>예약 · 단체 주문</b>
-            </div>
-            <span class="go">페이지 열기</span>
-          </div>
-        </a>
-
-        <a class="card" href="math-academy/" target="_blank" rel="noopener">
-          <div class="thumb">
-            <img src="assets/img/mockup-math.jpg" alt="결수학학원 메인 페이지 화면" width="1280" height="720">
-            <span>SAMPLE 06</span>
-          </div>
-          <div class="card-body">
-            <h2>결수학학원</h2>
-            <p>중등·고등 내신·수능 수학 소수 정예 학원. 딥네이비 배경에 선명한 옐로우 포인트, 1초 만에 꽂히는 3줄 훅 카피와 강사진 프로필, 학년별 탭 커리큘럼·시간표, 모바일 하단 고정 CTA 바까지 — 직관형 수학학원 원페이지입니다.</p>
-            <div class="tags">
-              <b>직관 · 훅 카피</b><b>탭 커리큘럼</b><b>하단 고정 CTA</b>
-            </div>
-            <span class="go">페이지 열기</span>
-          </div>
-        </a>
-
-        <a class="card" href="tax-advisory/" target="_blank" rel="noopener">
-          <div class="thumb">
-            <img src="assets/img/mockup-tax.jpg" alt="도원 세무·경영 파트너스 프리미엄 10페이지를 노트북과 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
-            <span>SAMPLE 07</span>
-            <span class="badge-deluxe">PREMIUM · 10 PAGES</span>
-          </div>
-          <div class="card-body">
-            <h2>도원 세무·경영 파트너스</h2>
-            <p>세무·경영 컨설팅 법인을 위한 10페이지 프리미엄 모델. 기장료·법인전환 절세 계산기, 성공 사례 필터와 상세 모달, 월별 세무 캘린더, 실시간 검색 자료실, FAQ 아코디언까지 실제로 동작합니다. 다크네이비·골드 톤과 카운팅·스크롤 모션으로 신뢰감을 설계했습니다.</p>
-            <div class="tags">
-              <b>프리미엄 · 10페이지</b><b>기장료 계산기</b><b>사례·칼럼 모달</b>
-            </div>
-            <span class="go">페이지 열기</span>
-          </div>
-        </a>
-
-        <a class="card" href="clinic/" target="_blank" rel="noopener">
+        <a class="card" href="clinic/" target="_blank" rel="noopener" data-category="deluxe">
           <div class="thumb">
             <img src="assets/img/mockup-clinic.jpg" alt="단아한 한의원 5페이지를 노트북과 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
-            <span>SAMPLE 08</span>
+            <span>SAMPLE 11</span>
             <span class="badge-deluxe">DELUXE · 5 PAGES</span>
           </div>
           <div class="card-body">
@@ -299,70 +381,21 @@
           </div>
         </a>
 
-        <a class="card" href="roastery/" target="_blank" rel="noopener">
+        <a class="card" href="tax-advisory/" target="_blank" rel="noopener" data-category="premium">
           <div class="thumb">
-            <img src="assets/img/mockup-roastery.jpg" alt="로스터리 모노 1섹션 랜딩 페이지를 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
-            <span>SAMPLE 09</span>
-            <span class="badge-deluxe">1 SECTION</span>
-          </div>
-          <div class="card-body">
-            <h2>로스터리 모노</h2>
-            <p>성수동 스페셜티 커피 로스터리. 스크롤 없이 한 화면에서 브랜드 소개·핵심 정보·예약 버튼이 모두 마무리되는 1섹션 구성으로, 초간단 1페이지 상품(30,000원)의 기준을 보여 주는 모델입니다.</p>
-            <div class="tags">
-              <b>초간단 · 1섹션</b><b>한 화면 완결</b><b>1페이지 상품</b>
-            </div>
-            <span class="go">페이지 열기</span>
-          </div>
-        </a>
-
-        <a class="card" href="damon-food/" target="_blank" rel="noopener">
-          <div class="thumb">
-            <img src="assets/img/mockup-damon-food.jpg" alt="담온식품 메인 페이지를 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
-            <span>SAMPLE 10</span>
-            <span class="badge-deluxe">DELUXE · 5 PAGES</span>
-          </div>
-          <div class="card-body">
-            <h2>담온식품</h2>
-            <p>떡·면·소스 전문 식품 제조 기업. 딥 차콜·테라코타 톤의 기업형 5페이지로, 제품 라인업 필터·생산 품질 공정·납품 OEM 문의까지 실제로 동작합니다. B2B 상담으로 이어지는 제조업 모델입니다.</p>
-            <div class="tags">
-              <b>B2B · 제조</b><b>5페이지 구조</b><b>납품·OEM 문의</b>
-            </div>
-            <span class="go">페이지 열기</span>
-          </div>
-        </a>
-
-        <a class="card" href="bareun-leaders/" target="_blank" rel="noopener">
-          <div class="thumb">
-            <img src="assets/img/mockup-bareun-leaders.jpg" alt="바른리더스정형외과 5페이지를 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
-            <span>SAMPLE 11</span>
-            <span class="badge-deluxe">DELUXE · 5 PAGES</span>
-          </div>
-          <div class="card-body">
-            <h2>바른리더스정형외과</h2>
-            <p>정형외과 전문의 3인 협진 비수술 통증 치료 클리닉. 딥네이비·티얼 톤의 5페이지 의료기관 모델로, 진료 분야 탭 전환·의료진 약력·비수술 치료 안내·온라인 예약 폼과 휴진 안내 팝업까지 실제로 동작합니다.</p>
-            <div class="tags">
-              <b>의료 · 클리닉</b><b>5페이지 구조</b><b>진료 탭·예약 폼</b>
-            </div>
-            <span class="go">페이지 열기</span>
-          </div>
-        </a>
-
-        <a class="card" href="jeongan/" target="_blank" rel="noopener">
-          <div class="thumb">
-            <img src="assets/img/mockup-jeongan.jpg" alt="정안 컨설팅 1섹션 랜딩페이지를 브라우저와 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
+            <img src="assets/img/mockup-tax.jpg" alt="도원 세무·경영 파트너스 프리미엄 10페이지를 노트북과 휴대폰 화면으로 보여 주는 목업" width="1672" height="941">
             <span>SAMPLE 12</span>
-            <span class="badge-deluxe">1 SECTION</span>
+            <span class="badge-deluxe">PREMIUM · 10 PAGES</span>
           </div>
           <div class="card-body">
-            <h2>정안 컨설팅</h2>
-            <p>1인 스타트업·소상공인의 세무·자금·사업계획을 보는 1인 컨설팅 허브. 딥 네이비·코발트 톤의 한 화면 구성으로, 브랜드 소개·핵심 정보 3줄·상담 예약 버튼과 안내 모달까지 담았습니다.</p>
+            <h2>도원 세무·경영 파트너스</h2>
+            <p>세무·경영 컨설팅 법인을 위한 10페이지 프리미엄 모델. 기장료·법인전환 절세 계산기, 성공 사례 필터와 상세 모달, 월별 세무 캘린더, 실시간 검색 자료실, FAQ 아코디언까지 실제로 동작합니다. 다크네이비·골드 톤과 카운팅·스크롤 모션으로 신뢰감을 설계했습니다.</p>
             <div class="tags">
-              <b>1인 전문직</b><b>한 화면 완결</b><b>상담 예약 모달</b>
+              <b>프리미엄 · 10페이지</b><b>기장료 계산기</b><b>사례·칼럼 모달</b>
             </div>
             <span class="go">페이지 열기</span>
           </div>
         </a>
-
       </div>
     </div>
   </section>
@@ -391,5 +424,16 @@
   </div>
 </footer>
 
+<script>
+  const pfButtons = Array.from(document.querySelectorAll('.filters button'));
+  const pfCards = Array.from(document.querySelectorAll('.work-grid .card'));
+  function pfFilter(value) {
+    const valid = value === 'all' || pfCards.some(c => c.dataset.category === value);
+    const target = valid ? value : 'all';
+    pfButtons.forEach(b => b.setAttribute('aria-selected', b.dataset.filter === target ? 'true' : 'false'));
+    pfCards.forEach(c => { c.hidden = !(target === 'all' || c.dataset.category === target); });
+  }
+  pfButtons.forEach(b => b.addEventListener('click', () => pfFilter(b.dataset.filter)));
+</script>
 </body>
 </html>
