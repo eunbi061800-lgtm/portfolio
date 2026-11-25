@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한도·상환 계산기 | 다운페이론</title>
+<meta name="description" content="희망 금액·기간·금리로 예상 월 납입액과 총 이자를 실시간 계산하고, 3단계 간편 한도 조회로 상담을 신청하세요. 다운페이대부중개 정식 등록 업체.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B1F3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="한도·상환 계산기 | 다운페이론">
+<meta property="og:description" content="희망 금액·기간·금리로 예상 월 납입액과 총 이자를 실시간 계산하고, 3단계 간편 한도 조회로 상담을 신청하세요. 다운페이대부중개 정식 등록 업체.">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><div class="progress__bar"></div></div>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="다운페이론 홈">
+      <span class="brand__name">다운페이론</span>
+      <span class="brand__sub">Downpay&nbsp;Loan&nbsp;·&nbsp;다운페이대부중개</span>
+    </a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="index.html">홈</a>
+      <a href="products.html">상품안내</a>
+      <a href="calculator.html" class="is-active" aria-current="page">한도·상환 계산기</a>
+      <a href="about.html">회사소개</a>
+      <a href="https://www.downpayloan.com/info" target="_blank" rel="noopener">금융정보<svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+    </nav>
+    <div class="header-cta">
+      <a class="header-tel" href="tel:01074471747"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 3.08 6 2 2 0 0 1 5.06 4h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L9.09 11.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>010-7447-1747</a>
+      <a class="btn btn--navy btn--sm" href="calculator.html#inquiry">간편 상담</a>
+    </div>
+    <button class="burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="wrap">
+      <a href="index.html">홈</a>
+      <a href="products.html">상품안내</a>
+      <a href="calculator.html">한도·상환 계산기</a>
+      <a href="about.html">회사소개</a>
+      <a href="https://www.downpayloan.com/info" target="_blank" rel="noopener">금융정보</a>
+      <div class="m-tel">
+        <a class="btn btn--line" href="tel:01074471747">010-7447-1747 전화</a>
+        <a class="btn btn--navy" href="sms:01074471747">문자 상담</a>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumb" aria-label="현재 위치"><a href="index.html">홈</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg><span>한도·상환 계산기</span></nav>
+    <h1>한도·상환 계산기</h1>
+    <p>희망 금액과 기간, 예상 금리를 조절해 월 납입액을 확인하고, 바로 상담까지 이어가실 수 있습니다. 계산 결과는 예상치이며 실제 조건은 심사 결과에 따릅니다.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap calc-layout" style="align-items:start">
+    <div>
+      <div class="calc-card reveal" data-calc>
+  <div class="calc-card__head">
+    <h3>예상 월 납입액 계산</h3>
+    <span>원리금 균등 분할상환</span>
+  </div>
+
+  <div class="slider-row">
+    <div class="slider-label"><span>희망 금액</span><output><b data-out-amount>1,000</b>만원</output></div>
+    <input class="range" type="range" data-calc-amount min="1000000" max="30000000" step="1000000" value="10000000"
+           aria-label="희망 금액" aria-valuetext="1,000만원">
+    <div class="range-scale"><span>100만원</span><span>3,000만원</span></div>
+  </div>
+
+  <div class="slider-row">
+    <div class="slider-label"><span>상환 기간</span><output><b data-out-term>12</b>개월</output></div>
+    <input class="range" type="range" data-calc-term min="1" max="18" step="1" value="12"
+           aria-label="상환 기간" aria-valuetext="12개월">
+    <div class="range-scale"><span>1개월</span><span>18개월</span></div>
+  </div>
+
+  <div class="slider-row">
+    <div class="slider-label"><span>예상 연 금리</span><output>연 <b data-out-rate>12</b>%</output></div>
+    <input class="range" type="range" data-calc-rate min="5" max="20" step="0.5" value="12"
+           aria-label="예상 연 금리" aria-valuetext="연 12%">
+    <div class="range-scale"><span>연 5%</span><span>연 20%</span></div>
+  </div>
+
+  <div class="calc-result">
+    <p class="calc-result__label">월 예상 납입액</p>
+    <p class="calc-result__value"><span data-out-monthly>888,488</span><small>원</small></p>
+    <div class="calc-result__grid">
+      <div><span>총 이자</span><strong><span data-out-interest>661,856</span>원</strong></div>
+      <div><span>총 상환액</span><strong><span data-out-total>10,661,856</span>원</strong></div>
+    </div>
+    <p class="calc-note">계산 결과는 예상치이며, 실제 금리·기간·납입액은 카드 한도와 심사 결과에 따라 달라집니다. 연체 시 연 20% 이내의 연체금리가 적용될 수 있습니다.</p>
+    <a class="btn btn--navy btn--block" href="calculator.html#inquiry">이 조건으로 상담하기</a>
+  </div>
+</div>
+    </div>
+    <div class="wizard-card reveal" data-delay="1" id="inquiry">
+  <div class="wizard-card__head">
+    <h3>3단계 간편 한도 조회</h3>
+    <p>희망 분야와 상황만 고르시면, 확인 후 순서대로 연락드립니다.</p>
+    <div class="wiz-progress">
+      <div class="wiz-progress__bar"><i style="width:33.33%"></i></div>
+      <span>1 / 3 단계</span>
+    </div>
+  </div>
+  <form class="wizard" id="limitWizard" novalidate>
+    <div class="wiz-body">
+      <div class="wiz-step is-active" data-step="1" role="group" aria-labelledby="wq1">
+        <p class="wiz-q" id="wq1">1. 어떤 자금이 필요하신가요?<small>상담 분야를 선택해 주세요.</small></p>
+        <div class="choice-grid">
+          <label class="choice"><input type="radio" name="field" value="personal" data-label="개인 신용카드"><span>개인 신용카드<small>잔여한도·결제대금</small></span></label>
+          <label class="choice"><input type="radio" name="field" value="corporate" data-label="법인카드"><span>법인카드<small>사업자·법인 운영자금</small></span></label>
+          <label class="choice choice--wide"><input type="radio" name="field" value="unknown" data-label="상담 후 결정"><span>아직 모름 — 상담으로 정할게요</span></label>
+        </div>
+      </div>
+
+      <div class="wiz-step" data-step="2" role="group" aria-labelledby="wq2">
+        <p class="wiz-q" id="wq2">2. 지금 상황에 가장 가까운 것은?<small>카드 상태를 알려 주시면 안내가 빨라집니다.</small></p>
+        <div class="choice-grid">
+          <label class="choice"><input type="radio" name="situation" value="limit" data-label="카드 잔여한도"><span>카드 잔여한도 안내</span></label>
+          <label class="choice"><input type="radio" name="situation" value="payment" data-label="결제대금 대납"><span>결제대금 대납</span></label>
+          <label class="choice"><input type="radio" name="situation" value="delinquent" data-label="연체 중"><span>결제일이 지났거나 연체 중</span></label>
+          <label class="choice"><input type="radio" name="situation" value="unknown" data-label="상담 후 결정"><span>잘 모르겠음</span></label>
+        </div>
+      </div>
+
+      <div class="wiz-step" data-step="3" role="group" aria-labelledby="wq3">
+        <p class="wiz-q" id="wq3">3. 연락받으실 정보를 입력해 주세요.<small>상담 목적으로만 사용하고 완료 후 파기합니다.</small></p>
+        <div class="field">
+          <label for="w-name">이름</label>
+          <input type="text" id="w-name" name="name" placeholder="홍길동" autocomplete="name">
+          <span class="field-error">이름을 2자 이상 입력해 주세요.</span>
+        </div>
+        <div class="field">
+          <label for="w-phone">연락처</label>
+          <input type="tel" id="w-phone" name="phone" placeholder="010-0000-0000" autocomplete="tel" inputmode="tel">
+          <span class="field-error">연락처를 정확히 입력해 주세요. (숫자 10~11자리)</span>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="agree">
+          <span><b>[필수]</b> 상담 진행을 위한 개인정보 수집·이용에 동의합니다. (이름·연락처, 상담 목적, 상담 완료 후 파기)</span>
+        </label>
+        <p class="field-error" data-consent-error style="margin-top:6px">개인정보 수집·이용에 동의해 주세요.</p>
+        <div class="wiz-actions">
+          <button class="btn-back" type="button" data-back>이전</button>
+          <button class="btn btn--navy" type="submit">상담 신청하기</button>
+        </div>
+        <p class="wiz-note">전화·문자 상담만 운영합니다. 365일 24시간 접수되며, 카카오톡 상담은 하지 않습니다.</p>
+      </div>
+
+      <button class="btn btn--navy btn--block" type="button" data-next style="margin-top:22px">다음 단계</button>
+      <p class="wiz-error">항목을 선택해 주세요.</p>
+    </div>
+  </form>
+  <div class="wiz-done" role="status" aria-live="polite">
+    <svg class="check-anim" viewBox="0 0 56 56" aria-hidden="true">
+  <circle cx="28" cy="28" r="24"/>
+  <path d="M17 28.5 24.5 36 39 21"/>
+</svg>
+    <h3>상담 신청이 접수되었습니다</h3>
+    <p>확인 후 순서대로 연락드립니다. 급하시면 <a href="tel:01074471747">010-7447-1747</a>로 바로 전화 주세요.</p>
+    <div class="wiz-summary" data-summary></div>
+    <a class="btn btn--line btn--block" href="tel:01074471747">전화로 바로 상담하기</a>
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="section section--soft section--tight">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Example</p>
+      <h2 class="section-title">월 납입 예시</h2>
+      <p class="section-desc">같은 금액이라도 기간과 금리에 따라 월 납입액과 총 이자가 달라집니다. 아래는 이해를 돕기 위한 예시입니다.</p>
+    </div>
+    <div class="table-wrap reveal" style="margin-top:36px">
+      <table class="compare">
+        <thead>
+          <tr><th scope="col">이용 금액</th><th scope="col">기간</th><th scope="col">예상 연 금리</th><th scope="col">월 예상 납입액</th><th scope="col">총 이자</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">5,000,000원</th><td>12개월</td><td>연 12.0%</td><td>444,244원</td><td>330,927원</td></tr>
+          <tr><th scope="row">10,000,000원</th><td>12개월</td><td>연 12.0%</td><td>888,488원</td><td>661,855원</td></tr>
+          <tr><th scope="row">10,000,000원</th><td>18개월</td><td>연 15.0%</td><td>623,848원</td><td>1,229,262원</td></tr>
+          <tr><th scope="row">30,000,000원</th><td>18개월</td><td>연 15.0%</td><td>1,871,544원</td><td>3,687,785원</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">원리금 균등 분할상환 기준의 단순 예시이며, 실제 적용 금리·기간·납입액은 심사 결과와 상환 일정에 따라 달라집니다. 연체 시 연 20% 이내의 연체금리가 적용될 수 있습니다.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="info-grid" style="margin-top:0">
+      <div class="info-card reveal">
+        <p class="num">01</p>
+        <h3>이렇게 계산했습니다</h3>
+        <p>원리금 균등 분할상환 방식으로, 매달 원금과 이자를 합한 금액이 같아지도록 계산했습니다. 기간이 길수록 월 납입액은 줄지만 총 이자는 늘어납니다.</p>
+      </div>
+      <div class="info-card reveal" data-delay="1">
+        <p class="num">02</p>
+        <h3>결과가 실제와 다른 이유</h3>
+        <p>계산에는 입력하신 예상 금리를 그대로 적용했습니다. 실제 금리는 신용 상태·상환 능력에 따라 연 5%~20% 범위에서 차등 적용되며, 카드 한도에 따라 가능 금액도 달라집니다.</p>
+      </div>
+      <div class="info-card reveal" data-delay="2">
+        <p class="num">03</p>
+        <h3>상환 계획 먼저</h3>
+        <p>대출 실행 시 신용점수가 하락할 수 있고, 상환 능력을 넘는 대출은 부담이 됩니다. 매달 감당 가능한 금액을 먼저 정하신 뒤 상담해 주세요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-inner">
+    <div>
+      <h2>먼저 조건을 확인하고, 그다음에 결정하세요.</h2>
+      <p>가능 금액과 금리·기간을 먼저 안내드립니다. 진행 여부는 안내를 받으신 뒤 정하시면 됩니다.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn--line" href="tel:01074471747">010-7447-1747</a>
+      <a class="btn btn--navy" href="calculator.html#inquiry">간편 상담 신청<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<section class="legal" id="legal">
+  <div class="wrap">
+    <div class="legal-head">
+      <h2>대부중개업 필수 고지 사항</h2>
+      <span>등록 대부중개업체 광고물 · 최종 조건은 심사 결과에 따라 달라집니다</span>
+    </div>
+    <dl class="legal-grid">
+      <div><dt>상호</dt><dd>다운페이대부중개 (브랜드명 다운페이론)</dd></div>
+      <div><dt>대표자</dt><dd>안병욱</dd></div>
+      <div><dt>등록번호</dt><dd>2025-경기안산-0006-대부중개</dd></div>
+      <div><dt>등록기관</dt><dd>경기안산시청 (031-481-2827)</dd></div>
+      <div><dt>사업자번호</dt><dd>601-05-84278</dd></div>
+      <div><dt>주소</dt><dd>경기도 안산시 단원구 고잔동 535-2</dd></div>
+      <div><dt>상담전화</dt><dd><a href="tel:01074471747">010-7447-1747</a> (전화·문자)</dd></div>
+      <div><dt>대출금리</dt><dd>연 5%~20% (금액별 차등) · 연체금리 <span style="white-space:nowrap">연 20% 이내</span></dd></div>
+      <div><dt>상환방법</dt><dd>원리금 균등 분할상환 (1~18개월)</dd></div>
+      <div><dt>수수료</dt><dd>취급수수료 등 기타 부대비용 없음</dd></div>
+      <div><dt>조기상환</dt><dd>조기상환 수수료 및 조기상환 조건 없음</dd></div>
+      <div><dt>중개수수료</dt><dd>이자 외에 별도 중개수수료를 수취하는 것은 불법입니다.</dd></div>
+    </dl>
+    <ul class="legal-warn">
+      <li class="warn-strong">과도한 빚, 고통의 시작입니다. 상환 능력을 넘는 대출은 피해 주세요.</li>
+      <li>대출 실행 시 신용점수가 하락할 수 있습니다. 신용등급 하락에 따른 불이익을 먼저 확인하시기 바랍니다.</li>
+      <li>대출 신청 결과와 금리·한도는 금융사 심사에 따라 결정되며, 심사 결과에 따라 거절될 수 있습니다.</li>
+      <li>본 페이지는 대부중개업 등록 업체의 광고물이며, 게시된 조건은 상담 시점의 기준입니다. 최종 조건은 개인의 신용 상태·상환 능력 등 심사 결과에 따라 달라질 수 있습니다.</li>
+    </ul>
+    <p class="legal-note">상담은 전화·문자로만 운영하며 카카오톡 상담은 운영하지 않습니다. (365일 24시간 접수) · 금리 연 5%~20% 범위에서 개인 신용 상태에 따라 차등 적용됩니다.</p>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand__name">다운페이론</span>
+        <span class="brand__sub">Downpay&nbsp;Loan&nbsp;·&nbsp;다운페이대부중개</span>
+        <p>정식 등록 대부중개업체로서 신용카드 잔여한도와 결제대금 대납 상담을 전화·문자로 안내합니다.</p>
+      </div>
+      <div class="footer-col">
+        <h4>메뉴</h4>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="products.html">상품안내</a></li>
+          <li><a href="calculator.html">한도·상환 계산기</a></li>
+          <li><a href="about.html">회사소개</a></li>
+          <li><a href="https://www.downpayloan.com/info" target="_blank" rel="noopener">금융정보</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>상품</h4>
+        <ul>
+          <li><a href="products.html#p1">신용카드 소지자 대출</a></li>
+          <li><a href="products.html#p2">신용카드 대납 대출</a></li>
+          <li><a href="products.html#p3">법인카드 소지자 대출</a></li>
+          <li><a href="products.html#p4">법인카드 대납 대출</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>상담</h4>
+        <a class="f-tel" href="tel:01074471747">010-7447-1747</a>
+        <p>전화·문자 상담 · 365일 24시간<br>카카오톡 상담 미운영</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>다운페이대부중개 · 대표 안병욱 · 등록번호 2025-경기안산-0006-대부중개 · 사업자번호 601-05-84278</span>
+      <span>경기도 안산시 단원구 고잔동 535-2 · 010-7447-1747</span>
+      <span class="sample">© 2026 다운페이론. 이 페이지는 홈페이지 제작용 시안입니다.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
