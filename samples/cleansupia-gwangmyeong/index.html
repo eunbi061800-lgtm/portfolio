@@ -177,6 +177,7 @@ button{font:inherit}
 .svc-row:nth-child(even){grid-template-columns:.98fr 1.02fr}
 .svc-row:nth-child(even) .svc-media{order:2}
 .svc-media{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/11;background:var(--mist)}
+@media (min-width:1025px){.svc-media{aspect-ratio:auto;align-self:stretch;min-height:320px}}
 .svc-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .svc-row:hover .svc-media img{transform:scale(1.03)}
 .svc-media .lbl{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-radius:9px;padding:6px 11px;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink-2)}
@@ -254,7 +255,7 @@ button{font:inherit}
 .badge-demo svg{width:13px;height:13px;color:#8fe0e7}
 
 /* ---------- footer ---------- */
-footer{background:#f7fbfd;border-top:1px solid var(--line);padding:44px 0 40px;margin-top:80px;font-size:13px;color:var(--muted)}
+footer{background:#f7fbfd;border-top:1px solid var(--line);padding:44px 0 40px;margin-top:0;font-size:13px;color:var(--muted)}
 .foot-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start}
 .foot-brand{display:flex;flex-direction:column;gap:9px;max-width:420px}
 .foot-brand strong{font-size:16px;color:var(--ink);letter-spacing:-.03em}
@@ -337,6 +338,8 @@ footer{background:#f7fbfd;border-top:1px solid var(--line);padding:44px 0 40px;m
   .faq-item summary{font-size:14.5px;padding:18px 18px;gap:10px}
   .faq-a{padding:0 18px 20px 42px;font-size:13.5px}
   .contact{padding:30px 22px}
+  .contact .cta-row{flex-direction:column}
+  .contact .cta-row .btn{width:100%}
   .info-card{padding:18px 18px}
   .info-card .row{flex-direction:column;gap:3px}
   .info-card .k{flex:none}
@@ -440,7 +443,7 @@ footer{background:#f7fbfd;border-top:1px solid var(--line);padding:44px 0 40px;m
     <div class="wrap trust-grid">
       <div class="trust-item">
         <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h16M6.5 8.5V6a1.6 1.6 0 0 1 1.6-1.6h7.8A1.6 1.6 0 0 1 17.5 6v2.5"/><rect x="3" y="8.5" width="18" height="8.5" rx="2.2"/><path d="M7 17v2M17 17v2"/></svg></span>
-        <div><strong>독일 카처(KARCHER) 장비</strong><span>건식·습식 세탁 전용 장비로 케어</span></div>
+        <div><strong>독일 카처 장비</strong><span>KARCHER 건·습식 세탁 장비로 케어</span></div>
       </div>
       <div class="trust-item">
         <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5c-4.4-2-7-5-7-8.9 0-2.6 1.9-4.6 4.4-4.6 1.3 0 2.2.5 2.6 1.2.4-.7 1.3-1.2 2.6-1.2 2.5 0 4.4 2 4.4 4.6 0 3.9-2.6 6.9-7 8.9Z"/></svg></span>
@@ -720,13 +723,13 @@ footer{background:#f7fbfd;border-top:1px solid var(--line);padding:44px 0 40px;m
           <div class="area-art" aria-hidden="true">
             <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
               <rect width="400" height="250" fill="#e3f4f8"/>
-              <g stroke="#cbe7ef" stroke-width="10" stroke-linecap="round" opacity=".9">
-                <path d="M-20 70C90 40 150 96 240 66s150-6 200 20"/>
-                <path d="M-20 168C70 150 140 196 236 168s150-24 200 8"/>
-                <path d="M110 -20c20 90-10 150 6 290"/>
-                <path d="M296 -20c-16 80 14 160-6 290"/>
+              <g stroke="#cbe7ef" stroke-width="10" stroke-linecap="round" opacity=".9" fill="none">
+                <path d="M-20 70C90 40 150 96 240 66s150-6 200 20" fill="none"/>
+                <path d="M-20 168C70 150 140 196 236 168s150-24 200 8" fill="none"/>
+                <path d="M110 -20c20 90-10 150 6 290" fill="none"/>
+                <path d="M296 -20c-16 80 14 160-6 290" fill="none"/>
               </g>
-              <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".85">
+              <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".85" fill="none">
                 <path d="M-20 70C90 40 150 96 240 66s150-6 200 20"/>
                 <path d="M-20 168C70 150 140 196 236 168s150-24 200 8"/>
                 <path d="M110 -20c20 90-10 150 6 290"/>
@@ -760,7 +763,7 @@ footer{background:#f7fbfd;border-top:1px solid var(--line);padding:44px 0 40px;m
   </section>
 
   <!-- CONTACT -->
-  <section class="sec" id="contact" style="padding-top:0">
+  <section class="sec" id="contact" style="padding-top:0;padding-bottom:64px">
     <div class="wrap">
       <div class="contact">
         <div class="contact-grid">
@@ -779,7 +782,7 @@ footer{background:#f7fbfd;border-top:1px solid var(--line);padding:44px 0 40px;m
             </div>
             <span class="badge-demo">
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M8 7.2v4M8 4.9v.1"/></svg>
-              전화·카카오톡 채널은 사장님 확인 후 연결해 드립니다
+              시안 단계 · 전화·카카오톡 채널 연결 전
             </span>
           </div>
 
